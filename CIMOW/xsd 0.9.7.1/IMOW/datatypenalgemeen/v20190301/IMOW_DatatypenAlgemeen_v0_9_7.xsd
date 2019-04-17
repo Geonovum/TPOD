@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190301"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           targetNamespace="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190301"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="0.9.7-1">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/datatypenalgemeen</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">0.9.7</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190301</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2019-04-15T11:45:07Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.52.4</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/datatypenalgemeen/v20190301/IMOW_DatatypenAlgemeen_v0_9_7.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:element name="WaardeEenheid" type="da:WaardeEenheid" abstract="false"/>
+   <xs:complexType name="WaardeEenheid" abstract="false">
+      <xs:sequence>
+         <xs:element name="waarde" type="xs:decimal" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een numerieke waarde. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="eenheid" type="xs:string" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De eenheid van de waarde, voluit geschreven. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="Identificatie">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een uniek en vaststaand gegeven.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="\S.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>
