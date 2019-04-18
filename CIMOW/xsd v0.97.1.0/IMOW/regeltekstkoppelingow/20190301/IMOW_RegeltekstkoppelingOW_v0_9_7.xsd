@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.9.7-2">
+	<xs:annotation>
+		<xs:appinfo source="http://www.imvertor.org/schema-info/uri">https://modellen.omgevingswet.overheid.nl/conceptueel/regels</xs:appinfo>
+		<xs:appinfo source="http://www.imvertor.org/schema-info/version">0.9.7</xs:appinfo>
+		<xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+		<xs:appinfo source="http://www.imvertor.org/schema-info/release">20190301</xs:appinfo>
+		<xs:appinfo source="http://www.imvertor.org/schema-info/generated">2019-03-25T13:46:34Z</xs:appinfo>
+		<xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.52.2</xs:appinfo>
+		<xs:appinfo source="http://www.imvertor.org/schema-info/owner">Kadaster</xs:appinfo>
+		<xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/regels/v20190301/IMOWPP_RegeltekstKoppelingOP_v0_9_7.xsd</xs:documentation>
+		<xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+		<xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Juridische regels in het domein van de omgevingswet t.b.v. digitaal stelsel omgevingswet. </xs:documentation>
+	</xs:annotation>
+	<xs:attribute name="regeltekstId" type="xs:string"/>
+</xs:schema>
