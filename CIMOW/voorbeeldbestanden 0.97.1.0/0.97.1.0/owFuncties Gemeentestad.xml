@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301" xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190301" xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190301" xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190301" xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.97.1 ../xsd/bestanden-ow/deelbestand-ow/v20190301/IMOW_Deelbestand_v0_9_7.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Functie</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Functie rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000001">
+					<rol:identificatie>nl.imow-gm.0000.functie.2019000001</rol:identificatie>
+					<rol:naam>Bedrijf categorie 2</rol:naam>
+					<rol:categorie>bedrijf</rol:categorie>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+						<!-- oId van de Locatie -->
+					</rol:geldtVoor>
+				</rol:Functie>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Functie rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000012">
+					<rol:identificatie>nl.imow-gm.0000.functie.2019000002</rol:identificatie>
+					<rol:naam>Centrumgebied</rol:naam>
+					<rol:categorie>centrumgebied</rol:categorie>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000004"/>
+						<!-- oId van de Locatie -->
+					</rol:geldtVoor>
+				</rol:Functie>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>
