@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301" xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190301" xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190301" xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190301" xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" xsi:schemaLocation="http://www.geostandaarden.nl/imow/0.97.1 ../xsd/bestanden-ow/deelbestand-ow/v20190301/IMOW_Deelbestand_v0_9_7.xsd">
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0801</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Activiteit</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+
+		<!-- artikel 2.4 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000002">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0510</rol:identificatie>
+					<rol:naam>omgevingsplanactiviteit</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<!-- Activiteit wordt gedefinieerd met bovenliggende activiteit -->
+						<rol-ref:ActiviteitRef xlink:href="NULL"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/><!-- artikel 2.4 -->
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000004"/><!-- artikel 2.10 -->
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000002">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0520</rol:identificatie>
+					<rol:naam>uitoefenen van bedrijfstypen van categorie 2</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000002">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0530</rol:identificatie>
+					<rol:naam>wonen in een bedrijfswoning</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+						<!-- GW: Dit gaat fout. Ik ben nu de koppeling tussen specifieke regeltekst en specifiek locatie kwijt. -->
+						<l-ref:LocatieRef xlink:href="11"/> <!-- art 2.11 --> 
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000002">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0550</rol:identificatie>
+					<rol:naam>aanleggen en instandhouden van nutsvoorzieningen</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000002">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0560</rol:identificatie>
+					<rol:naam>aanleggen en instandhouden van voorzieningen voor de waterhuishouding</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000002">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0570</rol:identificatie>
+					<rol:naam>aanleggen en instandhouden van tuin en/of erf</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000002">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0530</rol:identificatie>
+					<rol:naam>uitoefenen van detailhandel in ter plaatse vervaardigde goederen</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000002"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+
+		<!-- artikel 2.5 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000003">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0730</rol:identificatie>
+					<rol:naam>exploiteren van inrichtingen</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000003">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0740</rol:identificatie>
+					<rol:naam>exploiteren van risicovolle inrichtingen</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000003">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0750</rol:identificatie>
+					<rol:naam>opslagterrein</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+
+		<!-- artikel 2.6 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000005">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0530</rol:identificatie>
+					<rol:naam>uitoefenen van detailhandel in ter plaatse vervaardigde goederen</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000003"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000006">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0530</rol:identificatie>
+					<rol:naam>uitoefenen van detailhandel in ter plaatse vervaardigde goederen</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000003"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+
+		<!-- artikel 2.7 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000007">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0540</rol:identificatie>
+					<rol:naam>exploiteren van een verkooppunt voor motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:categorie>milieubelastende activiteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-mn002/tpod/act/act0020"/>
+					</rol:is>
+					<rol:gerelateerd> <!-- Regels van gerelateerde activiteit zijn contextueel relevant --> 
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0760"/>
+					</rol:gerelateerd>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000007">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0760</rol:identificatie>
+					<rol:naam>opslaan van motorbrandstoffen niet zijnde lpg</rol:naam>
+					<rol:categorie>milieubelastende activiteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-mn002/tpod/act/act0020"/>
+					</rol:is>			
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000001"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+
+		<!-- artikel 2.10 -->
+		<!-- GW: Alleen de activiteit 'exploiteren van een speelautomatenhal' is opgenomen. -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000008">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0660</rol:identificatie>
+					<rol:naam>exploiteren van een speelautomatenhal</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000007"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+
+		<!-- artikel 2.11 -->
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Activiteit rkow:regeltekstId="nl.imow-gm.0000.regeltekst.2019000003">
+					<rol:identificatie>nl.imow-gm0000/tpod/act/act0520</rol:identificatie>
+					<rol:naam>wonen in een bedrijfswoning</rol:naam>
+					<rol:categorie>gebruiksactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm0000/tpod/act/act0510"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000004"/>
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+
+	</sl:standBestand>
+</ow-dc:owBestand>
