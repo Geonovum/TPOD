@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190301" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:imvert="http://www.imvertor.org/schema/system" xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190301" xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190301" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" targetNamespace="http://www.geostandaarden.nl/imow/locatie/v20190301" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.9.7-1">
 	<xs:annotation>
+		<xs:documentation>
+		Dit schema is gemaakt voor oplevering 0.97.1 van april 2019. 
+		
+		Changelog:  
+		Toevoeging van gml:Surface als mogelijkheid voor geometrie, in complexType VlakOfMultivlak, conform SF-2.  
+		
+		</xs:documentation>
 		<xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/locatie</xs:appinfo>
 		<xs:appinfo source="http://www.imvertor.org/schema-info/version">0.9.7</xs:appinfo>
 		<xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
@@ -98,6 +105,7 @@
 	<xs:complexType name="VlakOfMultivlak" abstract="false">
 		<xs:choice minOccurs="1" maxOccurs="1">
 			<xs:element ref="gml:Polygon"/>
+			<xs:element ref="gml:Surface"/> <!-- nieuw sinds eind april 2019 --> 
 			<xs:element ref="gml:MultiSurface"/>
 		</xs:choice>
 	</xs:complexType>
