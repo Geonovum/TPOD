@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301" xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190301" xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190301" xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190301" xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190301" xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301 ../xsd/bestanden-ow/deelbestand-ow/v20190301/IMOW_Deelbestand_v0_9_7.xsd">
+	<!-- Voorbeeld bestand template voor de OW bestanden behorende bij STOP versie 0.97.1 van april 2019 
+
+	Documentatie zoals het bijbehorende (C)IMOW in de keten van plan tot publiciatie is te vinden op: 
+	https://github.com/Geonovum/TPOD/ 
+
+	In het bijzonder de volgende documenten: 
+	CIMOW versie 0.97.5 - het informatiemodel 
+	IMOW - plan tot publicatie - hulpdocument voor het toepassen van het informatiemodel in deze keten.
+	-->
+	<sl:standBestand>
+		<sl:dataset>Gemeentestad</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Gemeentestad</sl:gebied>
+			<sl:leveringsId>abc-20190221-0803</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Omgevingsnorm</sl:objectType>
+				<sl:objectType>Omgevingswaarde</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingswaarde>
+					<rol:identificatie>nl.imow-gm.0000.omgevingswaarde.2019000001</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:beschrijving>Gebieden waar norm geldt</rol:beschrijving>
+							<rol:geldtVoor>
+								<l-ref:LocatieRef xlink:href="kies een locatie"/>
+								<l-ref:LocatieRef xlink:href="kies nog een locatie"/>
+							</rol:geldtVoor>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>vul de naam van de norm in</rol:naam>
+					<rol:categorie>waarde uit de bijbehorende waardelijst</rol:categorie>
+					<rol:verplichting>waarde uit de bijbehorende waardelijst</rol:verplichting>
+					<rol:termijn>vul de termijn in</rol:termijn>
+				</rol:Omgevingswaarde>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<rol:Omgevingsnorm>
+					<rol:identificatie>nl.imow-gm.0000.omgevingswaarde.2019000001</rol:identificatie>
+					<rol:normwaarde>
+						<rol:Normwaarde>
+							<rol:beschrijving>Gebied(en) waar de omgevingswaarde geldt, een straal rondom het aangegeven punt</rol:beschrijving>
+							<rol:waarde>
+								<da:waarde>1</da:waarde>
+								<da:eenheid>eenheid</da:eenheid>
+							</rol:waarde>
+							<rol:referentiepunt>
+								<rol:geometrie>
+									<gml:Point gml:id="zelfde-als-identificatie" srsName="urn:ogc:def:crs:EPSG::28992">
+										<gml:pos>138963.90400585 423863.769638232</gml:pos>
+									</gml:Point>
+								</rol:geometrie>
+							</rol:referentiepunt>
+							<rol:geldtVoor>
+								<l-ref:LocatieRef xlink:href="kies een locatie"/> <!-- expliciet aangegeven/berekend gebied --> 
+							</rol:geldtVoor>
+						</rol:Normwaarde>
+					</rol:normwaarde>
+					<rol:naam>vul de naam van de norm in</rol:naam>
+					<rol:categorie>waarde uit de bij behorende waardelijst</rol:categorie>
+					<rol:geldigheid>Vul een tekstuele beschrijving in, bv. tijdens avonduren.</rol:geldigheid>
+				</rol:Omgevingsnorm>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>
