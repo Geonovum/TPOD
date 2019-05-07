@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301" xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190301" xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190301" xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190301" xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301 ../xsd/bestanden-ow/deelbestand-ow/v20190301/IMOW_Deelbestand_v0_9_7.xsd">
+	<sl:standBestand>
+		<sl:dataset>Rijk_artikel_voorbeeld</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Rijk</sl:gebied>
+			<sl:leveringsId>rr-20190221-0800</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Activiteit</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+			<ow-dc:owObject>
+				<!-- GW: Verwijzing naar de rijksregels. -->
+				<rol:Activiteit rkow:regeltekstId="rr_art_4_3">
+					<!-- TOP LEVEL ACTIVITEIT -->
+					<rol:identificatie>nl.imow-mn.002.activiteit.2019000010</rol:identificatie>
+					<rol:naam>activiteiten met gevolgen voor de fysieke leefomgeving</rol:naam>
+					<rol:categorie>omgevingswetactiviteit</rol:categorie> <!-- waardelijst bevat geen geschiktere --> 
+					<rol:is>
+						<!-- Is de meest bovenliggende activiteit,  de root activiteit, deze heeft geen 'is bovenliggende' -->
+						<rol-ref:ActiviteitRef xlink:href="NULL"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000005"/><!-- Nederland -->
+						<!-- Identificatie van de Locatie -->
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<!-- GW: Verwijzing naar de rijksregels. -->
+				<rol:Activiteit rkow:regeltekstId="rr_art_4_3">
+					<!-- Artikel 4.3 omgevingswet ACTIVITEIT -->
+					<rol:identificatie>nl.imow-mn.002.activiteit.2019000020</rol:identificatie>
+					<rol:naam>milieubelastende activiteiten</rol:naam>
+					<rol:categorie>milieubelastende activiteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-mn.002.activiteit.2019000010"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000005"/>
+						<!-- Nederland -->
+						<!-- Identificatie van de Locatie -->
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<!-- GW: Verwijzing naar de rijksregels. -->
+				<rol:Activiteit rkow:regeltekstId="rr_art_4_3">
+					<!-- Algemene activiteit, als een activiteit niet valt onder in 4.3 benoemde activiteiten ACTIVITEIT -->
+					<rol:identificatie>nl.imow-mn.002.activiteit.2019000030</rol:identificatie>
+					<rol:naam>omgevingsplanactiviteit</rol:naam>
+					<rol:categorie>omgevingsplanactiviteit</rol:categorie>
+					<rol:is>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-mn.002.activiteit.2019000010"/>
+					</rol:is>
+					<rol:geldtVoor>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0000.gebied.2019000005"/>
+						<!-- Nederland -->
+					</rol:geldtVoor>
+				</rol:Activiteit>
+			</ow-dc:owObject>
+		</sl:stand>
+	</sl:standBestand>
+</ow-dc:owBestand>
