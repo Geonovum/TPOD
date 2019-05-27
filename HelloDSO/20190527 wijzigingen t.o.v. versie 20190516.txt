@@ -1,0 +1,55 @@
+Besluit.xml:
+
+	citeertitel
+	-----------
+		was: afwezig
+		wordt: nieuw toegevoegd
+
+	id van regeling
+	---------------
+		was: /akn/nl/act/gm0513/2018/omgevingsplan
+		wordt: /akn/nl/act/gm0513/2018/omgevingsplan-Hello_DSO
+
+	verwijzing naar WijzigBijlage
+	-----------------------------
+		was: cmp_A
+		wordt: #cmp_A
+
+	verwijzing naar Profiel
+	-----------------------
+		was: Toestand v0.97.2
+		wordt: Toestand v0.97
+
+	referentie naar GIO vanuit artikel tekst
+	----------------------------------------
+		was: afwezig
+		wordt: nieuw toegevoegd
+
+Regelteksten.xml:
+
+	wIdRegeling
+	-----------
+		was: /akn/nl/act/gm0513/2018/omgevingsplan
+		wordt: /akn/nl/act/gm0513/2018/omgevingsplan-Hello_DSO
+
+manifest.xml
+
+	algemene bestandsopbouw
+	-----------------------
+		was: 0.90 formaat
+		wordt: 0.97 formaat
+	
+manifest-ow.xml:
+
+	id van regeling
+	---------------
+		was: /akn/nl/act/gm0513/2018/omgevingsplan
+		wordt: /akn/nl/act/gm0513/2018/omgevingsplan-Hello_DSO
+
+manifest-ow.xml
+
+	algemene bestandsopbouw
+	-----------------------
+		was: 0.90 formaat
+		wordt: 0.97 formaat
+

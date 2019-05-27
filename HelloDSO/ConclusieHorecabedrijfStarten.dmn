@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Hello, DSO! - versie 16 mei 2019 -->
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20151101/dmn.xsd" 
+xmlns:feel="http://www.omg.org/spec/FEEL/20140401" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:inter="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/Interactieregel"
+	xmlns:bedr="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/Bedrijfsregel" 
+	xmlns:uitv="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/Uitvoeringsregel" 
+	xmlns:content="http://toepasbare-regels.omgevingswet.overheid.nl/v1.0/Content"
+xmlns="http://toepasbare-regels.omgevingswet.overheid.nl/00000001001997956000" 
+namespace="http://toepasbare-regels.omgevingswet.overheid.nl/00000001001997956000" id="_4392924c-a4b9-4e3d-a406-9d916d4f4d92" name="ConclusieHorecabedrijfStarten">
+  <dmn:extensionElements>
+    <inter:regelgroepen>
+      <inter:regelgroep id="RegelGroep01">
+        <inter:naam>Vragen</inter:naam>
+        <inter:prioriteit>1</inter:prioriteit>
+      </inter:regelgroep>
+    </inter:regelgroepen>
+    <uitv:uitvoeringsregels>
+      <uitv:uitvoeringsregel id="UitvId0001">
+        <uitv:regelgroepRef href="#RegelGroep01"/>
+        <inter:prioriteit>1</inter:prioriteit>
+        <uitv:vraag>
+          <uitv:gegevensType>boolean</uitv:gegevensType>
+          <uitv:vraagTekst>Is er voldoende parkeergelegenheid bij uw te starten horecabedrijf?</uitv:vraagTekst>
+        </uitv:vraag>
+      </uitv:uitvoeringsregel>
+    </uitv:uitvoeringsregels>
+  </dmn:extensionElements>
+  <dmn:inputData id="InputData0001" name="Voldoende parkeergelegenheid">
+    <dmn:extensionElements>
+      <uitv:uitvoeringsregelRef href="#UitvId0001"/>
+    </dmn:extensionElements>
+    <dmn:variable id="InputData0001.var" name="Voldoende parkeergelegenheid" typeRef="feel:boolean"/>
+  </dmn:inputData>
+  <dmn:decision id="Decision0001" name="ConclusieHorecabedrijfStarten">
+    <dmn:extensionElements>
+      <bedr:functioneleStructuurRef href="#http://toepasbare-regels.omgevingswet.overheid.nl/00000001001997956000/id/concept/ConclusieHorecabedrijfStarten"/>
+    </dmn:extensionElements>
+    <dmn:variable id="Decision0001.var" name="ConclusieHorecabedrijfStarten" typeRef="feel:string"/>
+    <dmn:informationRequirement>
+      <dmn:requiredInput href="#InputData0001"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable hitPolicy="ANY" outputLabel="ConclusieHorecabedrijfStarten">
+      <dmn:input>
+        <dmn:inputExpression typeRef="feel:boolean">
+          <dmn:text>Voldoende parkeergelegenheid</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output>
+        <dmn:outputValues>
+          <dmn:text>"Vergunningplicht","Plichtenvrij","Verbod","Meldingsplicht","Informatieplicht","NeemContactOpMet","NietVanToepassing"</dmn:text>
+        </dmn:outputValues>
+      </dmn:output>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Vergunningplicht"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+      <dmn:rule>
+        <dmn:inputEntry>
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry>
+          <dmn:text>"Verbod"</dmn:text>
+        </dmn:outputEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+</dmn:definitions>

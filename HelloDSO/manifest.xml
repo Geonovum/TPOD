@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hello, DSO! - versie 27 mei 2019 -->
+<lvbb:manifest xmlns:lvbb="http://www.overheid.nl/2017/lvbb">
+    <lvbb:bestand>
+        <lvbb:bestandsnaam>Besluit.xml</lvbb:bestandsnaam>
+        <lvbb:contentType>application/xml</lvbb:contentType>
+    </lvbb:bestand>
+    <lvbb:bestand>
+        <lvbb:bestandsnaam>opdracht.xml</lvbb:bestandsnaam>
+        <lvbb:contentType>application/xml</lvbb:contentType>
+    </lvbb:bestand>
+    <lvbb:bestand>
+        <lvbb:bestandsnaam>manifest.xml</lvbb:bestandsnaam>
+        <lvbb:contentType>application/xml</lvbb:contentType>
+    </lvbb:bestand>
+    <!-- 
+TIJDELIJK VOOR PI10
+Bestand met vaste naam manifest-ow.xml. Dit is een tijdelijke
+versie van de "STOP envelop" die aangeeft hoe de CIM-OW
+modules passen bij de juridische informatie.
+-->
+<lvbb:bestand>
+<lvbb:bestandsnaam>domeinmanifest.xml</lvbb:bestandsnaam>
+<lvbb:contentType>application/xml</lvbb:contentType>
+</lvbb:bestand>
+<!-- 
+Alle bestanden met de CIM-OW informatie staan zowel in
+manifest-ow.xml als in dit manifest. In manifest-ow.xml
+is aangegeven hoe de bestanden gebruikt moeten worden,
+hier hoe ze gelezen moeten worden.
+-->
+<lvbb:bestand>
+<lvbb:bestandsnaam>Activiteiten.xml</lvbb:bestandsnaam>
+<lvbb:contentType>application/xml</lvbb:contentType>
+</lvbb:bestand>
+<lvbb:bestand>
+<lvbb:bestandsnaam>Locaties.xml</lvbb:bestandsnaam>
+<lvbb:contentType>application/xml</lvbb:contentType>
+</lvbb:bestand>
+<lvbb:bestand>
+<lvbb:bestandsnaam>Regelteksten.xml</lvbb:bestandsnaam>
+<lvbb:contentType>application/xml</lvbb:contentType>
+</lvbb:bestand>
+</lvbb:manifest>
