@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hello, DSO! - versie 16 mei 2019 -->
+<ow-dc:owBestand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301" xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190301" xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190301" xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190301" xmlns:rkow="http://www.geostandaarden.nl/imow/regeltekstkoppelingow/v20190301" xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190301" xmlns:r-ref="http://www.geostandaarden.nl/imow/regels-ref/v20190301" xsi:schemaLocation="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190301 ../xsd/bestanden-ow/deelbestand-ow/v20190301/IMOW_Deelbestand_v0_9_7.xsd">
+	<sl:standBestand>
+		<sl:dataset>Regelteksten Omgevingsplan Gouda</sl:dataset>
+		<sl:inhoud>
+			<sl:gebied>Beheergebied Gemeente Gouda</sl:gebied>
+			<sl:leveringsId>12345</sl:leveringsId>
+			<sl:objectTypen>
+				<sl:objectType>Regeltekst</sl:objectType>
+			</sl:objectTypen>
+		</sl:inhoud>
+		<sl:stand>
+		<ow-dc:owObject>
+			<r:Regeltekst wIdRegeling="/akn/nl/act/gm0513/2018/omgevingsplan-Hello_DSO" wId="gm0513_v1_chp_1_art001">
+				<r:identificatie>nl.imow-gm.0513.Regeltekst.adb90afc</r:identificatie>	
+			</r:Regeltekst>				
+		</ow-dc:owObject>
+		</sl:stand>
+		<sl:stand>
+			<ow-dc:owObject>
+				<r:JuridischeRegel>
+					<r:regelkwalificatie>
+						<r:regelKwalificatie>vergunningplicht</r:regelKwalificatie>
+					</r:regelkwalificatie>
+					<r:beschrijftEenActiviteit>
+						<rol-ref:ActiviteitRef xlink:href="nl.imow-gm.0513.Activiteit.adb90cfc"/>
+					</r:beschrijftEenActiviteit>
+					<r:heeftAlsWerkingsgebied>
+						<l-ref:LocatieRef xlink:href="nl.imow-gm.0513.Gebied.BinnenstadWest"/>
+					</r:heeftAlsWerkingsgebied>
+					<r:isOpgenomenIn>
+						<r-ref:RegeltekstRef xlink:href="nl.imow-gm.0513.Regeltekst.adb90afc"/>
+					</r:isOpgenomenIn>
+				</r:JuridischeRegel>
+			</ow-dc:owObject>
+		</sl:stand>		
+	</sl:standBestand>
+</ow-dc:owBestand>

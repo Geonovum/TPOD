@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Hello, DSO! - versie 27 mei 2019 -->
+<Besluit xmlns="http://www.overheid.nl/imop/def#" xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.overheid.nl/imop/def#
+  https://gitlab.com/koop/PR04/PR04-Overdracht/raw/master/xsd/stop/0.97/imop.xsd">
+  <Metadata>
+    <Uitspraak eigenschap="imop:citeertitel">
+          <Waarde type="xs:string">Omgevingsplan Hello DSO</Waarde>
+      </Uitspraak>
+    <Uitspraak eigenschap="imop:datumBekendmaking">
+      <Waarde type="xs:date">2019-07-01</Waarde>
+    </Uitspraak>
+    <Uitspraak eigenschap="imop:bevoegdGezag">
+      <Waarde type="xs:string">gm0513</Waarde>
+    </Uitspraak>
+    <Uitspraak eigenschap="imop:soortPublicatie">
+      <Waarde type="xs:string">Gemeenteblad</Waarde>
+    </Uitspraak>
+    <Uitspraak eigenschap="imop:typeBevoegdGezag">
+      <Waarde type="xs:string">Gemeente</Waarde>
+    </Uitspraak>
+    <Uitspraak eigenschap="imop:typeDocument">
+      <Waarde type="xs:string">Omgevingsplan</Waarde>
+    </Uitspraak>
+    <Uitspraak eigenschap="imop:conformProfiel">
+      <Waarde type="xs:string">Besluit v0.97</Waarde>
+    </Uitspraak>
+    <Uitspraak eigenschap="imop:identificatie">
+      <Object type="imop:AKNIdentification">
+        <Eigenschap naam="imop:FRBRWork">
+          <Object type="imop:FRBRWorkIdentification">
+            <Eigenschap naam="imop:FRBRthis">
+              <Waarde type="xs:string">/akn/nl/bill/gm0513/2019/omgevingsplan-Hello_DSO/!main</Waarde>
+            </Eigenschap>
+            <Eigenschap naam="imop:FRBRuri">
+              <Waarde type="xs:string">/akn/nl/bill/gm0513/2019/omgevingsplan-Hello_DSO</Waarde>
+            </Eigenschap>
+          </Object>
+        </Eigenschap>
+        <Eigenschap naam="imop:FRBRExpression">
+          <Object type="imop:FRBRExpressionIdentification">
+            <Eigenschap naam="imop:FRBRthis">
+              <Waarde type="xs:string">/akn/nl/bill/gm0513/2019/omgevingsplan-Hello_DSO/nld@2019-01-01/!main</Waarde>
+            </Eigenschap>
+            <Eigenschap naam="imop:FRBRuri">
+              <Waarde type="xs:string">/akn/nl/bill/gm0513/2019/omgevingsplan-Hello_DSO/nld@2019-01-01</Waarde>
+            </Eigenschap>
+          </Object>
+        </Eigenschap>
+      </Object>
+    </Uitspraak>
+    <Uitspraak eigenschap="imop:heeftDatacollectie">
+
+      <Object type="imop:GeoInformatieobject">
+        <Eigenschap naam="imop:identificatie">
+          <Object type="imop:JOINIdentification">
+            <Eigenschap naam="imop:FRBRWork">
+              <Object type="imop:FRBRWorkIdentification">
+                <Eigenschap naam="imop:FRBRthis">
+                  <Waarde type="xs:string">/join/id/regdata/gm0513/2019/loc_BW-Hello_DSO</Waarde>
+                </Eigenschap>
+              </Object>
+            </Eigenschap>
+            <Eigenschap naam="imop:FRBRExpression">
+              <Object type="imop:FRBRExpressionIdentification">
+                <Eigenschap naam="imop:FRBRthis">
+                  <Waarde type="xs:string">/join/id/regdata/gm0513/2019/loc_BW-Hello_DSO@2019-01-01</Waarde>
+                </Eigenschap>
+              </Object>
+            </Eigenschap>
+          </Object>
+        </Eigenschap>
+        <Eigenschap naam="imop:noemer">
+			<Waarde type="xs:string">Binnenstad West</Waarde>
+        </Eigenschap>
+        <Eigenschap naam="imop:collectietype">
+			<Waarde type="xs:string">imop:Geometrie</Waarde>
+        </Eigenschap>
+        <Eigenschap naam="imop:inhoud">
+          <Object oId="040E19F7-CCF1-48CE-8886-1B52C7FB431F" type="imop:Locatie">
+            <Eigenschap naam="imop:geometrie">
+				<Geometrie>
+					<gml:Surface gml:id="zone.loc_BW" srsName="urn:ogc:def:crs:EPSG::28992">
+						<gml:patches>
+							<gml:PolygonPatch>
+								<gml:exterior>
+									<gml:LinearRing>
+										<gml:posList>108380.215 447516.983 108362.72 447535.945 108361.56 447537.202 108357.722 447541.302 108351.437 447548.015 108337.288 447563.127 108135.214 447377.494 108104.099 447348.911 108070.713 447315.061 108051.976 447284.378 108046.992 447270.661 108045.163 447260.042 108044.541 447235.122 108043.789 447232.313 108034.621 447222.583 108015.289 447202.068 107984.818 447211.255 107983.878 447211.538 108027.082 447166.358 108026.75 447067.833 108034.356 447042.761 108040.83 447030.566 108049.567 447014.108 108066.117 446992.577 108122.489 446937.775 108158.22 446905.747 108161.27 446903.013 108203.777 446864.911 108245.741 446834.222 108304.347 446793.033 108348.19 446768.857 108350.975 446767.657 108412.613 446741.099 108448.403 446733.04 108499.933 446729.898 108558.609 446727.199 108636.839 446676.586 108645.475 446670.999 108685.793 446644.914 108687.66 446648.039 108697.358 446664.274 108708.865 446669.861 108706.255 446675.987 108699.09 446692.803 108695.013 446702.374 108693.2 446706.628 108692.846 446707.459 108688.869 446716.794 108688.031 446718.76 108687.639 446719.681 108682.695 446731.283 108680.086 446738.096 108678.212 446742.988 108675.301 446750.029 108669.536 446761.609 108659.08 446781.058 108648.905 446797.895 108625.425 446838.29 108614.876 446856.437 108599.375 446883.574 108594.458 446893.19 108590.145 446904.006 108589.764 446904.96 108560.816 446956.579 108555.797 446964.971 108547.592 446976.065 108539.87 446985.423 108531.355 446994.501 108524.942 447000.152 108512.255 447011.33 108490.506 447030.493 108470.965 447050.231 108468.989 447052.863 108467.297 447055.118 108476.524 447064.924 108486.402 447074.318 108504.803 447091.276 108507.698 447096.449 108514.379 447113.271 108507.834 447110.875 108500 447113.92 108487.37 447118.83 108484.72 447120.05 108469.296 447126.514 108468.44 447126.873 108468.975 447128.326 108454.239 447132.519 108454.275 447132.661 108451.735 447133.42 108441.664 447136.43 108442.377 447139.584 108442.985 447144.021 108443.289 447150.1 108443.256 447157.058 108442.863 447164.14 108442.469 447170.041 108441.879 447184.793 108440.165 447198.209 108440.107 447198.66 108440.271 447207.104 108440.269 447207.236 108440.118 447216.341 108439.662 447221.386 108439.077 447227.866 108438.52 447233.155 108438.363 447236.862 108438.025 447248.036 108437.931 447250 108437.774 447253.301 108437.985 447264.938 108438.047 447270.215 108438.149 447270.259 108438.245 447273.59 108438.012 447277.909 108438.091 447277.934 108437.492 447284.192 108436.809 447291.771 108436.04 447295.775 108434.712 447303.165 108431.692 447316.28 108431.444 447317.587 108429.77 447326.412 108440.436 447335.026 108463.868 447353.672 108463.212 447354.836 108460.986 447358.786 108458.357 447363.453 108457.648 447364.714 108452.376 447374.087 108447.105 447383.46 108443.496 447389.606 108439.002 447396.951 108438.488 447397.971 108438.341 447401.847 108439.049 447402.07 108438.683 447405.347 108440.57 447402.545 108440.606 447402.466 108440.925 447401.772 108441.821 447402.139 108442.519 447400.718 108446.431 447402.802 108447.715 447403.486 108447.828 447403.546 108450.747 447405.101 108450.979 447405.224 108451.227 447405.356 108449.264 447408.374 108460.594 447416.104 108460.514 447416.222 108461.662 447416.898 108465.074 447418.91 108464.368 447419.919 108463.662 447420.927 108460.447 447425.52 108455.742 447432.242 108439.264 447420.897 108438.911 447424.378 108438.414 447424.328 108438.111 447427.313 108438.609 447427.363 108437.896 447434.404 108436.462 447448.97 108434.954 447464.275 108433.592 447476.911 108433.398 447478.711 108433.222 447480.344 108433.048 447481.196 108432.234 447485.174 108429.656 447495.574 108429.094 447497.119 108418.953 447490.445 108407.674 447481.989 108407.198 447482.411 108397.395 447494.278 108380.215 447516.983</gml:posList>
+									</gml:LinearRing>
+								</gml:exterior>
+							</gml:PolygonPatch>
+						</gml:patches>
+					</gml:Surface>              
+				</Geometrie>
+            </Eigenschap>
+            <Eigenschap naam="imop:bronbeschrijving">
+              <Waarde type="xs:string">top10nl</Waarde>
+            </Eigenschap>
+            <Eigenschap naam="imop:bronactualiteit">
+              <Waarde type="xs:date">2019-01-01</Waarde>
+            </Eigenschap>
+            <Eigenschap naam="imop:brontype">
+              <Waarde type="xs:string">achtergrond</Waarde>
+            </Eigenschap>
+            <Eigenschap naam="imop:nauwkeurigheid">
+              <Waarde type="xs:decimal">10</Waarde>
+            </Eigenschap>
+          </Object>
+        </Eigenschap>
+      </Object>
+
+    </Uitspraak>
+  </Metadata>
+  <Regeling id="reg">
+    <RegelingOpschrift eId="longTitle" wId="longTitle">
+      <Al>Vaststelling van "Voorbeeldregels Hello DSO" van de gemeente Gouda</Al>
+    </RegelingOpschrift>
+    <Lichaam eId="body" wId="body">
+      <WijzigArtikel eId="art_I" wId="gm0513_1__art_I">
+        <Metadata>
+          <Uitspraak eigenschap="imop:datumInwerkingtreding">
+            <!-- de informatie mbt de inwerkingtreding -->
+            <Waarde type="xs:date">2019-10-01</Waarde>
+          </Uitspraak>
+          <Uitspraak eigenschap="imop:wijzigBijlage">
+            <!--hier een verwijzing naar de WijzigBijlage waar de nieuwe regeling in is opgenomen. -->
+            <Waarde type="xs:string">#cmp_A</Waarde>
+          </Uitspraak>
+          <!-- Profiel voor validatie van de Toestand -->
+          <!-- Afspraak is om Toestand v0.97 voor de voorbeeldbestanden v0.97 te gebruiken) -->
+          <Uitspraak eigenschap="imop:conformProfiel">
+            <Waarde type="xs:string">Toestand v0.97</Waarde>
+          </Uitspraak>
+        </Metadata>
+        <Kop>
+          <Label>Artikel</Label>
+          <Nummer>I</Nummer>
+        </Kop>
+        <Wat>De "Voorbeeldregels Hello DSO" opgenomen in de bijlage wordt vastgesteld.</Wat>
+      </WijzigArtikel>
+      <Artikel eId="art_II" wId="gm0513_1__art_II">
+        <Kop>
+          <Label>Artikel</Label>
+          <Nummer>II</Nummer>
+        </Kop>
+        <Inhoud>
+          <Al>Dit besluit treedt in werking per 1 oktober 2019.</Al>
+        </Inhoud>
+      </Artikel>
+    </Lichaam>
+    <Sluiting id="sluiting">
+      <Al rol="gegeven">Gegeven te Gouda, 1 januari 2019</Al>
+      <Ondertekening eId="signature" wId="signature">
+        <Al rol="organisatie">Gemeenteraad Gouda</Al>
+        <Al rol="naam">B. Uffen</Al>
+        <Al rol="functie">burgemeester</Al>
+        <Al rol="naam">J. de Jong</Al>
+        <Al rol="functie">gemeentesecretaris</Al>
+      </Ondertekening>
+    </Sluiting>
+    <WijzigBijlage eId="cmp_A" wId="gm0513_1__cmp_A">
+      <Metadata>
+        <!-- de 'was'-versie van de regeling bij het BG is niet nodig, omdat dit een nieuwe regeling betreft. -->
+		<!-- De 'wordt'-versie is nodig om een relatie te kunnen leggen tussen de regeling bij het BG en de door de LVBB gegenereerde Toestand. -->
+        <Uitspraak eigenschap="imop:wordtVersie">
+          <Waarde type="xs:string">/akn/nl/act/gm0513/2018/omgevingsplan-Hello_DSO/nld@2;2018-12-16</Waarde>
+        </Uitspraak>
+      </Metadata>
+      <Kop>
+        <Label>Bijlage</Label>
+        <Nummer>A</Nummer>
+        <Opschrift>Bijlage bij artikel I</Opschrift>
+      </Kop>
+      <MaakInitieleRegeling>
+        <RegelingOpschrift eId="longTitle" wId="longTitle">
+          <Al>Voorbeeldregels Hello DSO</Al>
+        </RegelingOpschrift>
+        <Lichaam eId="001" wId="gm0513_v1_001">
+			<Hoofdstuk eId="chp_1" wId="gm0513_v1_chp_1">
+				<Kop>
+					<Label>Hoofdstuk</Label>
+					<Nummer>1</Nummer>
+					<Opschrift>Horeca</Opschrift>
+				</Kop>
+				<Artikel eId="chp_1_art001" wId="gm0513_v1_chp_1_art001">
+					<Metadata>
+						<Uitspraak eigenschap="imop:werkingsgebied">
+							<Waarde type="xs:string">/join/id/regdata/gm0513/2019/loc_BW-Hello_DSO@2019-01-01</Waarde>
+						</Uitspraak>
+					</Metadata>
+					<Kop>
+						<Label>artikel</Label>
+						<Nummer>1</Nummer>
+						<Opschrift>Regels voor horeca</Opschrift>
+					</Kop>
+					<Inhoud>
+						<Al>Het starten van een horecabedrijf is toegestaan in <IntIoRef
+                    doel="gm0513_X__cmp_I__list_1__item_1__ref_1" eId="gm0513_v1_chp_1_art001__ref_1"
+                    type="vaststellend" wId="gm0513_v1_chp_1_art001__ref_1"
+                    >Binnenstad West</IntIoRef>, mits er voldoende parkeergelegenheid aanwezig is en er een vergunning is verleend.
+                        </Al>
+					</Inhoud>
+				</Artikel>
+			</Hoofdstuk>
+		</Lichaam>
+        <Bijlage eId="cmp_I" wId="gm0513_X__cmp_I">
+          <Kop>
+            <Label>Bijlage</Label>
+            <Nummer>I</Nummer>
+            <Opschrift>Overzicht Informatieobjecten</Opschrift>
+          </Kop>
+          <Inhoud>
+            <Begrippenlijst eId="cmp_I__list" wId="gm0513_X__cmp_I__list_1">
+              <Begrip eId="cmp_X__list_1__item_1" wId="gm0513_X__cmp_I__list_1__item_1">
+                <Term>Binnenstad West</Term>
+                <Definitie>
+                  <Al>
+                    <ExtIoRef doel="/join/id/regdata/gm0513/2019/loc_BW-Hello_DSO@2019-01-01"
+                      eId="cmp_I__list_1__item_1__ref_1" soort="JOIN"
+                      wId="gm0513_X__cmp_I__list_1__item_1__ref_1"
+                      >/join/id/regdata/gm0513/2019/loc_BW-Hello_DSO@2019-01-01</ExtIoRef>
+                  </Al>
+                </Definitie>
+              </Begrip>
+            </Begrippenlijst>
+          </Inhoud>
+        </Bijlage>
+      </MaakInitieleRegeling>
+    </WijzigBijlage>
+  </Regeling>
+</Besluit>
