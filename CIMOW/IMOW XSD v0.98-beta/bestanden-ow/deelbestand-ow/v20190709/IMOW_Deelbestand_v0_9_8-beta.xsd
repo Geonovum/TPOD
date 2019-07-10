@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (http://www.altova.com) by Paul Janssen (Geonovum) -->
+<xs:schema xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190709" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" xmlns:l="http://www.geostandaarden.nl/imow/locatie/v20190709" xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190709" xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190709" xmlns:g="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" targetNamespace="http://www.geostandaarden.nl/imow/bestanden/deelbestand/v20190709" elementFormDefault="qualified" version="0.9.8. beta">
+	<xs:import namespace="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek/v20190301" schemaLocation="../../generiek/v20190301/standlevering-generiek_1_0_0.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/locatie/v20190709" schemaLocation="../../../IMOW/locatie/v20190709/IMOW_Locatie_v0_9_8.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/regels/v20190709" schemaLocation="../../../IMOW/regels/v20190709/IMOW_Regel_v0_9_8.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/regelsoplocatie/v20190709" schemaLocation="../../../IMOW/regelsoplocatie/v20190709/IMOW_RegelsOpLocatie_v0_9_8.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing/v20190709" schemaLocation="../../../IMOW/gebiedsaanwijzing/v20190709/IMOW_Gebiedsaanwijzing_v0_9_8.xsd"/>
+	<xs:element name="owBestand">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sl:standBestand"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="owObject" type="ow-dc:owObject" substitutionGroup="sl:modelObject"/>
+	<xs:complexType name="owObject">
+		<xs:complexContent>
+			<xs:extension base="sl:modelObject">
+				<xs:choice>
+					<xs:element ref="r:Regeltekst"/>
+					<xs:element ref="r:JuridischeRegel"/>
+					<xs:element ref="rol:Activiteit"/>
+					<xs:element ref="rol:Omgevingsnorm"/>
+					<xs:element ref="rol:Omgevingswaarde"/>
+					<xs:element ref="g:Gebiedsaanwijzing"/>
+					<xs:element ref="l:Gebied"/>
+					<xs:element ref="l:Gebiedengroep"/>
+					<xs:element ref="l:Punt"/>
+					<xs:element ref="l:Puntengroep"/>
+					<xs:element ref="l:Lijn"/>
+					<xs:element ref="l:Lijnengroep"/>
+				</xs:choice>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
