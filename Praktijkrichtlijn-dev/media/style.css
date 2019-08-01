@@ -1,0 +1,117 @@
+﻿/*-------------------------------------------------------------------------------------
+//-- File. . . :  style.css
+//-- Bevat . . :  Template voor de  stylesheet voor respec  
+//--              Gebaseerd op https://github.com/Geonovum/respec/wiki
+//--              Deze file mag worden neergezet in de root-directory van de 
+//--              betreffende standaard, maar ook 1 niveau lager in de map "media"
+//--              gedefinieerde stijlen overschrijven de default stijlen.  
+//-- Door. . . :  Jan van Gelder
+//-------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------
+//-- Log . . . :  20181009 - JvG - Initiele versie 
+//-----------------------------------------------------------------------------------*/
+@import url('https://tools.geostandaarden.nl/respec/style/fonts/ro-fonts.css');
+
+/*-- ADSMDOW: Aangepaste Header en Title --------------------------------------------*/
+.head
+{
+  background-color: #39870c !important;
+  color: white !important;
+  padding: 2em !important;
+}
+
+.head > a:first-child 
+{
+  float: none !important;
+}
+
+.head a, .head a:visited, .head a:hover, .head h1, .head h2, .head h3
+{
+  color: white !important;
+}
+
+/*-- ADSMDOW: Aangepaste TOC -------------------------------------------------------*/
+#toc
+{
+  background-color: #e1eddb !important;
+}
+
+.secno, .toc a
+{
+  color:#154273 !important;
+}
+
+/*--ADSMDO: per specStatus: custom doc status / banner (left-side) for Omgevingswet , choose the one needed */
+body 
+{
+  background-image: url('https://tools.geostandaarden.nl/respec/style/logos/tpod-def.svg') !important;
+  font-family:  'RO Sans', Arial, Sans-serif !important;
+}
+
+/*-- ADSMDO: Definite van tabellen -------------------------------------------------*/
+table
+{
+  empty-cells: show;
+  min-width: 90%;
+  border-color:white;
+  border-style: solid;
+}
+
+/*-- ADSMDO: Definite van de kopregel van een tabel ----------------------------------------*/
+thead
+{
+  background-color:  #39870c !important; 
+  color: white !important;
+}
+
+/*-- ADSMDO: Definite van de body van een tabel --------------------------------------------*/
+tbody
+{
+  border-color: white !important;
+  background-color: #d9d9d9 !important;
+}
+
+/*-- ADSMDO: Definitie van de tabel-rij (deze zorgt voor 2 kleuren in de rijen) ------------*/
+tr:nth-child(even) 
+{
+  background-color:  #e1eddb !important;
+}
+
+/*-- ADSMDO: Definite van de tabel-cel (data) ----------------------------------------------*/
+td 
+{
+  min-width: 100px;     /* lege kolommen hebben deze minimale breedte */
+}
+
+/*-- ADSMDO: Kleur van de teksten ---------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+  font-family:  'RO Sans', Calibri , Arial, Sans-serif !important;
+  color: #154273 !important;
+}
+
+#title
+{
+  color: white !important;
+}
+
+/*-- Definitie van Image ------------------------------------------------------------*/
+img 
+{
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+/*-- Definitie van het Logo bovenaan Respec document is niet 100% breed -------------*/
+img#TopLogo
+{
+  height: 130px;
+  width: 400px;
+}
+
+/*-- Definite van rode tekst -------------------------------------------------------*/
+r
+{
+  color: red;
+}

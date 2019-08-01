@@ -1,0 +1,34 @@
+#### Raadplegen van gegevens
+
+De versies van regelingen zijn op te halen via de raadpleegservice op het
+bronhoudersoppelvlak. Voor het ophalen van versies van regelingen is de volgende
+service ontworpen: Raadplegen.
+
+Deze operatie levert op basis van een AKN IRI gegevens op. Het resultaat is
+afhankelijk van het soort AKN IRI die is opgegeven:
+
+-   Als de AKN IRI naar een regeling verwijst zal de metadata van alle versies
+    van die regeling teruggegeven worden;
+
+-   Als de AKN IRI naar een versie van een regeling verwijst, zal de complete
+    versie teruggegeven worden.
+
+Het antwoord zal bestaan uit twee delen: een indicatie die aangeeft of de
+bewerking geslaagd is of niet en daarnaast een zip-bestand met data.
+
+Dit sequence diagram geeft aan hoe de service naar verwachting door de software
+van het bevoegd gezag gebruikt zal worden.
+
+De volgende stappen worden doorlopen:
+
+1.  De service wordt aangeroepen met een AKN IRI van een regeling;
+
+2.  Een lijst van de metadata, waaronder de AKN IRI van de beschikbare versies
+    van de regeling wordt teruggegeven;
+
+3.  Uit de lijst selecteert het bevoegd gezag de AKN IRI van een bepaalde
+    versie;
+
+4.  De service wordt opnieuw aangeroepen, maar nu met de AKN IRI van een versie;
+
+5.  De complete versie van de regeling wordt teruggegeven.

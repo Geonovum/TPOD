@@ -1,0 +1,46 @@
+#### Digikoppeling
+
+Digikoppeling is een set van standaarden voor elektronisch berichtenverkeer
+tussen overheidsorganisaties. Het is een bouwsteen van de Nederlandse Overheid
+Referentie Architectuur en onderdeel van de generieke digitale infrastructuur
+van de overheid. 
+
+De digikoppeling loop via:
+
+-   DK Grote Berichten voor leveringen
+
+-   DK-profiel: ebMS
+
+-   Authenticatie via PKI-certificaat
+
+De verantwoordelijkheid voor de volgorde ligt bij de bronhouder. De LVBB doet
+een WAS=WAS controle om te bepalen of de actuele stand wordt gemuteerd. Het
+WAS-gedeelte wordt niet meegenomen, maar moet wel worden berekend en opgeslagen.
+De bronhouder wordt tevens actief geïnformeerd bij mutatie door een andere
+bronhouder.
+
+Er bestaat een directe en een indirecte respons. De directe respons houdt in dat
+een HTTP bericht technisch wel/niet goed ontvangen is of te verwerken is. Een
+indirect respons wordt gegeven op het XML-bericht (bijv. Xml foutrapportage).
+Status van verwerking is dan: levering is opgehaald, gecontroleerd,
+geregistreerd of bekendgemaakt.
+
+STOP modelleert het besluit als een mutatie van de geconsolideerde regeling,
+maar modelleert niet de juridische regeling. Het stapelen van omgevingsbesluiten
+wordt gebruikt bij consolidatie.
+
+*Digikoppeling bericht*
+
+Een opdracht aan de LVBB bestaat uit een gecomprimeerd (zip) bestand dat
+tenminste twee XML bestanden bevat:
+
+• manifest.xml Een XML bestand dat informatie bevat over de bestanden in het zip
+bestand.
+
+• opdracht.xml Een XML bestand met een beschrijving van de opdracht.
+
+In het manifest staat voor elk bestand in het zip bestand, inclusief
+manifest.xml en opdracht.xml, aangegeven wat de naam is en wat voor type content
+(MIME type) in het bestand is opgeslagen. Bij de validatie wordt nagegaan dat
+alle genoemde bestanden aanwezig zijn, en dat voor het uitvoeren van de opdracht
+geen bestand nodig is dat niet in het manifest staat.
