@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:k="http://www.geostandaarden.nl/imow/kaartrecept/v20190901"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
+           xmlns:rol-ref="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
+           xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
+           xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
+           targetNamespace="http://www.geostandaarden.nl/imow/kaartrecept/v20190901"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="0.9.8.2-1">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/kaartrecept</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">0.9.8.2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190901</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2019-09-04T13:47:07Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.53.4 - EVALUATION VERSION, PLEASE REGISTER!</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/kaartrecept/v20190901/IMOW_Kaartrecept_v0_9_8_2.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
+              schemaLocation="../../../IMOW/datatypenalgemeen/v20190709/IMOW_DatatypenAlgemeen_v0_9_8.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/regelsoplocatie-ref/v20190709"
+              schemaLocation="../../../IMOW/regelsoplocatie-ref/v20190709/IMOW_RegelsOpLocatieRef_v0_9_8.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
+              schemaLocation="../../../IMOW/gebiedsaanwijzing-ref/v20190709/IMOW_GebiedsAanwijzingRef_v0_9_8.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/owobject/v20190709"
+              schemaLocation="../../../IMOW/owobject/v20190709/IMOW_OWobject_v0_9_8.xsd"/>
+   <xs:element name="Range" type="k:Range" abstract="false"/>
+   <xs:complexType name="Range" abstract="false">
+      <xs:sequence>
+         <xs:element name="waardeMin" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="waardeMax" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Kaart" type="k:Kaart" abstract="false"/>
+   <xs:complexType name="Kaart" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="kaartnaam" type="xs:string" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="kaartnummer" type="xs:string" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="minimumSchaalniveau"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="maximumSchaalniveau"
+                           type="xs:integer"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="kaartuitsnede" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="k:Kaartextent" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="activiteit" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol-ref:ActiviteitRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="symbolisatie" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="k:Symbolisatiecollectie" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="omgevingswaarde" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol-ref:OmgevingswaardeRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="gebiedsaanwijzing" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="ga-ref:GebiedsaanwijzingRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="omgevingsnorm" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol-ref:OmgevingsnormRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Symbolisatiecollectie"
+               type="k:Symbolisatiecollectie"
+               abstract="false"/>
+   <xs:complexType name="Symbolisatiecollectie" abstract="false">
+      <xs:sequence>
+         <xs:element name="symbolisatieItem" minOccurs="1" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="k:SymbolisatieItem" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="optional"/>
+   </xs:complexType>
+   <xs:element name="Kaartextent" type="k:Kaartextent" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Minimale en maximale x en y waarden van de coordinaten in de kaart.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Kaartextent" abstract="false">
+      <xs:sequence>
+         <xs:element name="minX" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="minY" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="maxX" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="maxY" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Kaartrecept" type="k:Kaartrecept" abstract="false"/>
+   <xs:complexType name="Kaartrecept" abstract="false"/>
+   <xs:element name="SymbolisatieItem" type="k:SymbolisatieItem" abstract="false"/>
+   <xs:complexType name="SymbolisatieItem" abstract="false">
+      <xs:sequence>
+         <xs:element name="objecttype" type="xs:string" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="attribuut" type="xs:string" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="range" type="k:Range" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="waarde" type="xs:string" minOccurs="0" maxOccurs="1"/>
+         <xs:element name="symboolcode" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>
