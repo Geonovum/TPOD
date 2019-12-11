@@ -1,0 +1,3076 @@
+﻿{
+	"waardelijsten": {
+		"waardelijst": [
+			{
+				"naam": "Activiteitengroep",
+				"type": "gesloten",
+				"Toelichting": "Attribuut dat zorgt voor filteren en weergave van de symbolisatie van Activiteit op de kaart. Als verbeelding op de activiteitengroep niet gewenst is, of een specifieke activiteitengroep is nog niet voorhanden, dan is het nog steeds mogelijk dat een bevoegd gezag een eigen symbolisatie koppelt aan de activiteitennaam, welke door het bevoegd gezag zelf ingevuld kan worden.",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "beperkingengebiedactiviteit",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object. Deze groep dient gebruikt te worden indien het werk of object niet voorkomt in de lijst Activiteitengroep. Als een activiteit in meerdere groepen kan vallen en de toelichting geeft geen uitsluitsel, dan is het de keuze van het bevoegd gezag op welke activiteitengroep gefilterd moet kunnen worden en van welke activiteitiengroep de verbeelding de voorkeur aan gegeven wordt. De standaard laat deze keuze vrij.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengebiedactiviteit m.b.t. een bergingsgebied",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengebiedactiviteit m.b.t. een oppervlaktewaterlichaam",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengebiedactiviteit m.b.t. een overig waterstaatswerk",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengebiedactiviteit m.b.t. een waterkering",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengebiedactiviteit m.b.t. een zuiveringstechnisch werk",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengebiedactiviteit m.b.t. grondwater",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengebiedactiviteit m.b.t. zeegebied",
+							"Toelichting": "Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingenbiedactiviteit m.b.t. een weg",
+							"Toelichting": "Art. 5.1, tweede lid, aanhef, onderdeel f, onder 1 Ow. Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengbiedactiviteit m.b.t. een luchthaven",
+							"Toelichting": "Art. 5.1, tweede lid, aanhef, onderdeel f, onder 3 Ow. Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengbiedactiviteit m.b.t. een spoorweg",
+							"Toelichting": "Art. 5.1, tweede lid, aanhef, onderdeel f, onder 4 Ow. Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "beperkingengbiedactiviteit m.b.t. een leiding",
+							"Toelichting": "Uit huidige dubbelbestemmingen. Alleen te gebruiken indien het een daadwerkelijk beperkingengebied betreft, als zodanig expliciet aangewezen of gedefinieerd in het instrument, of waar het gebied zich de facto als beperkingengebied gedraagt, nl dat alle activiteiten gereguleerd zijn ter bescherming van een werk of object.",
+							"Definitie": ""
+						},
+						{
+							"naam": "bodemactiviteit",
+							"Toelichting": "Veelal decentrale activiteit. Zelfstandige activiteit op of in de bodem, dwz geen activiteit op of in de bodem sterk gerelateerd aan andere activiteiten zoals bouwactiviteiten (dan nl bouwactiviteit ipv bodemactiviteit). Bodemactiviteit kan ipv de activiteitengroep \"verrichten-van-werken-en-werkzaamhedenactiviteit\" worden gebruikt als deze laatste veels te breed en niet specifiek genoeg is naar oordeel van het bevoegd gezag. Te denken valt aan (o.a.) opslag van stoffen, opbrengen van meststoffen, graven, doen van boringen, aanbrengen van aardpennen, borgen intacte bodemlagen (bij aardkundig waardevol gebied). Bodemactiviteit is minder van toepassing indien de activiteit in of op de bodem betreft een grondwateractivitiet, een beperkingengebiedactiviteit, een stortingsactiviteit, een lozingsactiviteit, een wateronttrekkingsactiviteit, een milieubelastende activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "bouwactiviteit technisch",
+							"Toelichting": "Betreft de bouwtechnische bouwactiviteit. Activiteit inhoudende het bouwen van een bouwwerk (art. 5.1, tweede lid, aanhef, onderdeel a Ow)",
+							"Definitie": ""
+						},
+						{
+							"naam": "in stand houden van bouwwerken",
+							"Toelichting": "Vermeld in Ow artikel 4.3, lid 1 a",
+							"Definitie": ""
+						},
+						{
+							"naam": "flora- en fauna-activiteit",
+							"Toelichting": "Activiteit met mogelijke gevolgen voor van nature in het wild levende dieren of planten (art. 5.1, tweede lid, aanhef, onderdeel g, oW)",
+							"Definitie": ""
+						},
+						{
+							"naam": "grondwateractiviteit",
+							"Toelichting": "Veelal decentrale activiteit. Activiteit waarbij grondwater wordt gebruikt of anderszins beïnvloed en waarbij grondwater beschermd dient te worden. Het gaat hier niet om het onttrekken van water aan de bodem (voor dat geval is er de activiteitengroep wateronttrekkingsactiviteit). Betreft verder alle activiteiten mbt grondwater zijnde geen beperkingengebiedactiviteit, geen ontgrondingsactiviteit, geen stortingsactiviteit, geen lozingsactiviteit, geen milieubelastende activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "jachtgeweeractiviteit",
+							"Toelichting": "het gebruik van een geweer om in het wild levende dieren te doden (art. 5.1, eerste lid, onderdeel h Ow)",
+							"Definitie": ""
+						},
+						{
+							"naam": "lozingsactiviteit",
+							"Toelichting": "Gericht op lozingsactiviteit wat geen milieubelastende activiteit betreft.",
+							"Definitie": ""
+						},
+						{
+							"naam": "mijnbouwlocatieactiviteit",
+							"Toelichting": "Activiteit inhoudende het gebruiken van een locatie in een oppervlaktewaterlichaam voor: a. een mijnbouwinstallatie, met inbegrip van het voor die installatie geldende beperkingengebied, of b. een verkenningsonderzoek, met uitzondering van het bij dat onderzoek gebruiken van ontplofbare stoffen (art. 5.1, tweede lid, aanhef, onderdeel e, Ow).",
+							"Definitie": ""
+						},
+						{
+							"naam": "milieubelastende activiteit",
+							"Toelichting": "Activiteit die nadelige gevolgen voor het milieu kan veroorzaken, niet zijnde een lozingsactiviteit op een oppervlaktelichaam of een lozingsactiviteit op een zuiveringstechnisch werk of een wateronttrekkingsactiviteit (art. 5.1, tweede lid, onderdeel b, Ow).In sommige gevallen kan de keuze tussen een specifieke activiteitengroep en de groep milieubelastende activiteit vooral liggen bij het bevoegd gezag en diens inschatting wat de behoefte is onderscheidende kaartbeelden te zien en wat de behoefte is mbt breed of gericht filteren op activiteitengroep naar regels. De activiteitengroep milieubelastende activiteit is nl erg breed.",
+							"Definitie": ""
+						},
+						{
+							"naam": "milieubelastende activiteit met beperkt effect",
+							"Toelichting": "Activiteit die nadelige gevolgen voor het milieu kan veroorzaken, zijnde geen milieubelastende activiteit (veelal gereguleerd door Rijksregels ihkv Seveso-richtlijn, Richtlijn Industriële Emissies, mbt geluidhinder en geluidemissies) en zijnde geen milieubelastende activiteit overig. Veelal decentrale activiteit, gereguleerd in omgevingsverordening en/of omgevingsplan en/of waterschapsverordening. Dit kunnen -ingeval van omgevingsplan- bijv. milieubelastende activiteiten zijn uitgevoerd in een bestaande woonwijk, zoals het hobbymatig maken van meubels, ambachtelijke bedrijven aan huis etc. In sommige gevallen kan de keuze tussen een specifieke activiteitengroep en de groep milieubelastende activiteit met beperkt effect vooral liggen bij het bevoegd gezag en diens inschatting wat de behoefte is onderscheidende kaartbeelden te zien en wat de behoefte is mbt breed of gericht filteren op activiteitengroep naar regels.",
+							"Definitie": ""
+						},
+						{
+							"naam": "milieubelastende activiteit overig",
+							"Toelichting": "Activiteit die nadelige gevolgen voor het milieu kan veroorzaken, zijnde geen milieubelastende activiteit (veelal gereguleerd door Rijksregels ihkv Seveso-richtlijn, Richtlijn Industriële Emissies, mbt geluidhinder en geluidemissies) en zijnde geen milieubelastende activiteit met beperkt effect (veelal decentrale activiteiten). De activiteitengroep milieubelastende activiteit overig zijn veelal activiteiten gereguleerd door Rijksregels. In sommige gevallen kan de keuze tussen een specifieke activiteitengroep en de groep milieubelastende activiteit overig vooral liggen bij het bevoegd gezag en diens inschatting wat de behoefte is onderscheidende kaartbeelden te zien en wat de behoefte is mbt breed of gericht filteren op activiteitengroep naar regels.",
+							"Definitie": ""
+						},
+						{
+							"naam": "rijksmonumentenactiviteit",
+							"Toelichting": "Activiteit inhoudende het slopen, verstoren, verplaatsen of wijzigen van een rijksmonument of een voorbeschermd rijksmonument of het herstellen of gebruiken daarvan waardoor het wordt ontsierd of in gevaar gebracht (art. 5.1, eerste lid, aanhef. Onderdeel b Ow)",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natura 2000-activiteit",
+							"Toelichting": "Activiteit, inhoudende het realiseren van een project dat of het verrichten van een andere handeling die, gelet op de instandhoudingsdoelstellingen voor een Natura 2000-gebied, de kwaliteit van de natuurlijke habitats of de habitats van soorten in dat gebied kan verslechteren of een significant verstorend gevolg kan hebben voor de soorten waarvoor dat gebied is aangewezen (art. 5.1, eerste lid, aanhef, onderdeel g Ow)",
+							"Definitie": ""
+						},
+						{
+							"naam": "Noordzee-activiteit",
+							"Toelichting": "Een activiteit in/bij/mbt de Noordzee, zijnde geen lozingsactiviteit, geen ontgrondingsactiviteit, geen beperkingengebiedactiviteit, geen mijnbouwactiviteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "ontgrondingsactiviteit",
+							"Toelichting": "Activiteit inhoudende het ontgronden (art. 5.1, eerste lid, aanhef, onderdeel c Ow)",
+							"Definitie": ""
+						},
+						{
+							"naam": "stortingsactiviteit",
+							"Toelichting": "Kan ook stortingsactiviteit op zee inhouden. Kan ook milieubelastende activiteit inhouden.",
+							"Definitie": ""
+						},
+						{
+							"naam": "valkeniersactiviteit",
+							"Toelichting": "Het gebruik van een vogel voor het vangen of doden van een dier (art. 5.1, eerste lid, aanhef, onderdeel i Ow)",
+							"Definitie": ""
+						},
+						{
+							"naam": "wateronttrekkingsactiviteit",
+							"Toelichting": "Activiteit inhoudende: a. het onttrekken van water aan een oppervlaktewaterlichaam, b. het onttrekken van grondwater door een daarvoor bestemde voorziening, of c. het in de bodem brengen van water, ter aanvulling van het grondwater, iin samenhang met het onttrekken van grondwater door een daarvoor bestemde voorziening (art. 5.1, tweede lid, aanhef, onderdeel d, Ow)",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterstaatswerkenactiviteit",
+							"Toelichting": "Activiteit mbt een waterstaatwerk dat geen beperkingengebied inhoudt.",
+							"Definitie": ""
+						},
+						{
+							"naam": "werelderfgoedactiviteit",
+							"Toelichting": "Activiteit mbt op het grondgebied van Nederland gelegen cultureel en natuurlijk erfgoed dat op grond van het werelderfgoedverdrag is opgenomen in de Lijst van het Werelderfgoed (Unesco) of dat is voorgedragen om op de lijst geplaatst te worden.",
+							"Definitie": ""
+						},
+						{
+							"naam": "aansluitactiviteit",
+							"Toelichting": "Uit Verordening ondergrondse infrastructuur. Betreft activiteiten mbt communicatienetwerken. Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultureel-erfgoedactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "evenementactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "festiviteitactiviteit",
+							"Toelichting": "Betreft festiviteiten die (in de APV) expliciet niet als evenement zijn gedefinieerd. Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "kampeeractiviteit",
+							"Toelichting": "Betreft kampeeractiviteiten geregeld in de APV.",
+							"Definitie": ""
+						},
+						{
+							"naam": "kapactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "ligplaatsactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "opslagactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "parkeeractiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "reclameactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "sloopactiviteit",
+							"Toelichting": "Sloopactiviteit geregeld in instrumenten ongeacht bestuurslaag (voor zowel Rijksregels als voor decentrale regels).",
+							"Definitie": ""
+						},
+						{
+							"naam": "standplaatsactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "uitritactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "verrichten-van-werken-en-werkzaamhedenactiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "wegactiviteit",
+							"Toelichting": "Hier valt ook een aanlegactiviteit onder. De aanlegactiviteit kan in de activiteitennaam geplaatst worden. Via de activiteitennaam kan men onderscheid aanbrengen in (1) weg/verandering aanbrengen in de wijze van aanleg van een weg & (2) gebruik van de weg (bijv. plaatsen voorwerpen op of aan de weg). Veelal decentrale activiteit geregeld in omgevingsverordeningen, waterschapsverordeningen en omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "hemelwaterafvoeractiviteit",
+							"Toelichting": "Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "bouwactiviteit ruimtelijk",
+							"Toelichting": "Ruimtelijke bouwactiviteit. Veelal decentrale activiteit geregeld in omgevingsverordeningen, waterschapsverordeningen en omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "grafactiviteit",
+							"Toelichting": "Betreft o.a. regels over privé begraafplaatsen. Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "monumentactiviteit",
+							"Toelichting": "Activiteit mbt een monument zijnde geen (voorbeschermd) Rijksmonument op grond van de Erfgoedwet. Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of waterschapsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "alarminstallatieactiviteit",
+							"Toelichting": "in, op of aan een onroerende zaak een alarminstallatie hebben die een voor de omgeving opvallend geluid of lichtsignaal kan produceren",
+							"Definitie": ""
+						},
+						{
+							"naam": "dierenactiviteit",
+							"Toelichting": "Voorzover niet gedekt door andere activiteitengroepen, slaat de dierenactiviteit op regels omtrent het uitlaten van huisdieren (honden) of het (kleinschalig) houden van (pluim)vee. Veelal decentrale activiteit geregeld in omgevingsverordeningen en/of omgevingsplannen.",
+							"Definitie": ""
+						},
+						{
+							"naam": "exploitatieactiviteit bedrijf",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultuuractiviteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "exploitatieactiviteit detailhandel",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "dienstverleningsactiviteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "exploitatieactiviteit horeca",
+							"Toelichting": "Incl. terrasactiviteiten. Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "exploitatieactiviteit kantoor",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "maatschappelijke activiteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "natuuractiviteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "ontspanningsactiviteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "overig",
+							"Toelichting": "De activiteitengroep overig dient primair gebruikt te worden als er geen andere toepasselijke specifieke activiteitengroep voorhanden is. Dit kan het geval zijn indien er geen enkele behoefte tot kaartverbeelding en/of zoek- en filterfunctionaliteit verwacht wordt op basis van een specifieke activiteitengroep en waarbij het voldoende is deze te baseren op basis van de activiteitennaam. Dit kan echter ook het geval zijn indien dergelijke behoeften (obv activiteitengroep) wel bestaan, maar de gewenste activiteitengroep nog niet voorkomt in de waardelijst activiteitengroep. Hierbij kan de activiteitengroep overig gekozen worden tijdens het proces van opstellen, waarbij activiteiten worden geannoteerd en tijdelijk de activiteitengroep wordt gekozen (tot het moment dat de gewenste specifieke activiteitengroep via het beheer-proces van de standaard / catalogus wel aanwezig is in de catalogus). Er kan ook voor gekozen worden de activiteitengroep overig te behouden voorbij het moment van beschikbaar stellen, en achteraf via evt / bijv migratie-trajecten, relevante annotaties met de activiteitengroep overig te vervangen met de specifieke activiteitengroep.",
+							"Definitie": ""
+						},
+						{
+							"naam": "recreatieactiviteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "sportactiviteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						},
+						{
+							"naam": "woonactiviteit",
+							"Toelichting": "Voorheen bekend als planologische activiteit.",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Activiteitregelkwalificatie",
+				"type": "gesloten",
+				"Toelichting": "Attribuut indien type Juridische regel = regel voor iedereen en annotatie Activiteit toegepast",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "gebod",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "informatieplicht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "meldingsplicht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "toegestaan",
+							"Toelichting": "Toegestaan zonder dat vergunning of melding vereist is",
+							"Definitie": ""
+						},
+						{
+							"naam": "verbod",
+							"Toelichting": "Absoluut verbod",
+							"Definitie": ""
+						},
+						{
+							"naam": "vergunningplicht",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "InstructieregelTaakuitoefening",
+				"type": "gesloten",
+				"Toelichting": "Attribuut indien type Juridische regel = instructieregel en gekozen is voor attribuut InstructieregelTaakuitoefening",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "faunabeheereenheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "gemeentebestuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "provinciebestuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "rijk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterschapsbestuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "wildbeheereenheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zonebeheerder",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Eenheid",
+				"type": "open",
+				"Toelichting": "Eenheid is het element dat aangeeft in welke grootheid de numerieke waarde wordt uitgedrukt",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "%",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "°C",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "aantal",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "avondperiode",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "cm",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "dagperiode",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "dB",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "dB(A)",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Laeq",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "km",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "km2",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kPa",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Laeq",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Lden",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "liter",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Lnight",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "m2",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "m3",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "meter",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mg N",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mg/l",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mg/l-N",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mg/l-P",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "minuut",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mm",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "nachtperiode",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "odour unit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "seconde",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Tkook",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Tkrit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "uur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "watt",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "μg/kg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "μg/l",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "μg/m3",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Idealisatie",
+				"type": "gesloten",
+				"Toelichting": "Attribuut dat vastlegt op welke manier de begrenzing van Locatie geïnterpreteerd moet worden en door het bevoegd gezag bedoeld is.",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "exact",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "indicatief",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "InstructieregelInstrument",
+				"type": "gesloten",
+				"Toelichting": "Attribuut indien type Juridische regel = instructieregel en gekozen is voor attribuut instructieregelInstrument",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "besluit tot aanwijzing natuurgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "besluit tot het buiten toepassing laten van regels",
+							"Toelichting": "Als bedoeld in artikel 5.53 Ow",
+							"Definitie": ""
+						},
+						{
+							"naam": "besluit tot instellen zwemverbod of geven negatief zwemadvies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "besluit tot vaststelling van geluidproductieplafonds als omgevingswaarden",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "besluit tot vaststelling van geluidwerende maatregelen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "calamiteitenplan",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "legger",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "maatwerkvoorschrift",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "monitoringsprogramma",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "omgevingsplan",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "omgevingsverordening",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "peilbesluit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "plan waarvoor passende beoordeling gemaakt moet worden",
+							"Toelichting": "Zie artikel 2.25 lid 1 onder b jo 16.53a Ow, via Aanvullingswet natuur",
+							"Definitie": ""
+						},
+						{
+							"naam": "programma",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "projectbesluit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterschapsverordening",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Omgevingsnormgroep",
+				"type": "gesloten",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van Omgevingsnorm op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "bouwaanduiding",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "externe veiligheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "geluid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "geur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "licht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "luchtkwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "maatvoering bouwen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "overig",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "parkeren",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "trilling",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "water",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bodem",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "groen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "natuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "wateroverlast",
+							"Toelichting": "Bedoeld voor gebiedsnorm",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Omgevingswaardegroep",
+				"type": "gesloten",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van Omgevingswaarde op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "geluid",
+							"Toelichting": "Waaronder geluidproductieplafonds",
+							"Definitie": ""
+						},
+						{
+							"naam": "luchtkwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "overig",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "veiligheid waterkering",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zwemwaterkwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Thema",
+				"type": "open",
+				"Toelichting": "Tekstgebonden attribuut dat kernachtig de grondgedachte van de Juridische regel of de beleidstekst geeft. Het attribuut ‘Thema’ is bedoeld om juridische regels of delen van beleid die inhoudelijk bij elkaar horen in samenhang te kunnen tonen. Voor de juridische regels gaat het over onderdelen van de fysieke leefomgeving, zoals beschreven in artikel 1.2 lid 2 van de wet of over de gevolgen van activiteiten voor de leefomgeving (artikel 1.2 lid 3) Daarnaast: (1) Thema is een open waardelijst, waar een bevoegd gezag eigen toevoegingen aan kan doen. (2) Het staat een bevoegd gezag volledig vrij een of meerdere Thema’s niet te gebruiken, evt gefaciliteerd door richtlijnen of door implementaties / configuraties van de maaksoftware. (3) Er mogen net zoveel Thema’s geannoteerd worden aan een Juridische regel of beleidstekst, als nodig zijn.",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "Bodem",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bodem - aardkundige waarden",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bodem - bodemdaling",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bodem - aardkundige waarden",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bodem - bodemkwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bodem - ontgrondingen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bouwwerken",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bouwwerken-ruimtelijke aspecten",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Cultureel erfgoed en landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Cultureel erfgoed en landschap- archeologie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Cultureel erfgoed en landschap- cultureel erfgoed",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Cultureel erfgoed en landschap- cultuurlandschappen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Externe veiligheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geluid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geluid van wegen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geluid van spoorwegen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geluid van industrieterreinen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geluid van activiteiten",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geluid van luchthavens en luchtvaart",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geur van veehouderijen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geur van RWZI's",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geur van industriele activiteiten",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - fietsInfrastructuur - en wandelpaden",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - leidingen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - spoorwegen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - vaarwegen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - wegen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - kabels en leidingen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - hoogspanningsnet",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Infrastructuur - luchthavens",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Klimaat",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Klimaat - klimaatmitigatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landbouw - glastuinbouw",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landbouw - veehouderij",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landbouw - vollegrondteelt",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landelijke functies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landelijke functies - natuurbegraven",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landelijke functies - vrijkomende (agrarische) bebouwing",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landschap - bijzonder reliëf landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landschap - kleinschalig besloten landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landschap - landschappelijke waarden",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landschap - waardevol open landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Luchtkwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Milieu algemeen en overige milieuaspecten",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Milieu algemeen en overige milieuaspecten - algemeen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Milieu algemeen en overige milieuaspecten - lichthinder",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Milieu algemeen en overige milieuaspecten - trillingen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurbescherming",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurbescherming - ecologie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurbescherming - natuurbeheer",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurbescherming - natuurgebieden",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurbescherming - natuurnetwerk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurbescherming - overige natuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen - mijnbouw",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen - bodemenergiesystemen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen - geothermie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen - biomassa",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen - wind",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen - waterkracht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurlijke hulpbronnen - zon",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - financiele zekerheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - handhaving en uitvoering",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - heffingen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - kostenverhaal",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - overgangsrecht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - monitoring",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - schade",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - milieueffectrapportage",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Procedures - voorkeursrecht en onteigening",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - dagrecreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - fiets en wandelroutes",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - jachthaven",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - kleinschalige recreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - leisure",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - recreatiewoning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - toerisme",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie en toerisme - verblijfsrecreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Stedelijke functies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Stedelijke functies - bedrijventerreinen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Stedelijke functies - detailhandel",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Stedelijke functies - ruimte voor toekomstige functies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Stedelijke functies - voorzieningen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Stedelijke functies - wonen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Toegankelijkheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen - zwemwaterkwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen - drinkwater",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen - grondwater (bescherming)",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen - oppervlaktewater (bescherming)",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen - wateroverlast",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen - watersystemen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersystemen - waterveiligheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - duurzaamheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - logistiek",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - regionale samenwerking",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - ruimtelijke kwaliteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - energietransitie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleids thema's voor visies en programma's - bereikbaarheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's- klimaatadaptatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - biodiversiteit",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - circulaire economie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - economisch vestigingsklimaat",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - regionale woonagenda",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleids thema's voor visies en programma's - woon - en leefklimaat",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Brede beleidsthema's voor visies en programma's - gezondheid",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "TypeGebiedsaanwijzing",
+				"type": "gesloten",
+				"Toelichting": "Attribuut dat aangeeft welk type Gebiedsaanwijzing wordt geannoteerd",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "Beperkingengebied",
+							"Toelichting": "Beperkingengebiedgroep is het attribuut van het object Beperkingengebied dat zorgt voor weergave van de symbolisatie van Beperkingengebied op de kaart",
+							"Definitie": ""
+						},
+						{
+							"naam": "Bodem",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Defensie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Energievoorziening",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Erfgoed",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Externe veiligheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Functie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geluid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Geur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Leiding",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Lucht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Mijnbouw",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Recreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Ruimtelijk gebruik",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Verkeer",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Water en watersysteem",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Beperkingengebied",
+				"type": "open",
+				"Toelichting": "Beperkingengebiedgroep is het attribuut van het object Beperkingengebied dat zorgt voor weergave van de symbolisatie van Beperkingengebied op de kaart",
+				"Definitie": "Beperkingengebied is een bij of krachtens de wet aangewezen gebied waar, vanwege de aanwezigheid van een werk of object, regels gelden over activiteiten die gevolgen hebben of kunnen hebben voor dat werk of object.",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "installatie in waterstaatswerk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "luchthaven",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "molen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "overig",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "spoorweg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterstaatswerk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "weg",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Bodem",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Bodem op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "bodembeheergebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mijnsteengebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stortplaats (open)",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stortplaats (gesloten)",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bodemdalingsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "ontgrondingsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zandwinning",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Defensie",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Defensie op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "militair terrein",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "radarverstoringsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "verstoringsgebied militaire zend- en ontvangsinstallatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "militaire laagvliegroute",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Energievoorziening",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Energievoorziening op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "bodemenergiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kernenergiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "windturbinegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zonne-energiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "energieproductiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "hoogspanningsverbinding",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "grootschalige elektriciteitsopwekking",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Erfgoed",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Erfgoed op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "aardkundig waardevol gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "archeologie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "buitenplaats",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultuurhistorie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "linie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "werelderfgoed",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "beschermd monument",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultuurhistorisch waardevol gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultuurhistorisch beschermd landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Externe veiligheid",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Externe veiligheid op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "aandachtsgebied externe veiligheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "belemmeringengebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "risicogebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "voorschriftengebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "gebied met ontplofbare stoffen en explosieven",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Functie",
+				"type": "open",
+				"Toelichting": "Functiegroep is het attribuut van het object Functie dat zorgt voor weergave van de symbolisatie van Functie op de kaart. De waarden van overige Gebiedsaanwijzingsgroepen zijn onder functie opgenomen.",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "aandachtsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "aandachtsgebied externe veiligheid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "aandachtsgebied geluid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "aandachtsgebied lucht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "aardkundige waarde",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "agrarisch",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "archeologie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bebouwingscontour",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bedrijf",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bedrijventerrein",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "belemmeringengebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "beschermd gezicht",
+							"Toelichting": "Bedoeld voor beschermd dorpsgezicht en beschermd stadsgezicht",
+							"Definitie": ""
+						},
+						{
+							"naam": "beschermd landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "beschermd monument",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "beschermde boom",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "beschermende gebieden",
+							"Toelichting": "Beschermde gebieden waterschappen; niet oppervlaktewaterlichaam- en/ of waterkering-gerelateerd",
+							"Definitie": ""
+						},
+						{
+							"naam": "bodembeheergebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bodembeheergebied oppervlaktewaterlichamen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bodemdalingsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bodemenergiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "buisleiding",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "buitenplaats",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "centrumgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "compartimentskering",
+							"Toelichting": "Regionale kering die als zodanig geen directe waterkerende functie heeft, tenzij in geval van doorbraak of overstroming van een primaire waterkering",
+							"Definitie": ""
+						},
+						{
+							"naam": "concentratiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "contour",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "contour beregeningsbeleid",
+							"Toelichting": "Begrenzing van de gebieden die het beregeningsbeleid van het waterschap vastleggen",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultuurhistorie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "cultuurhistorisch waardevol gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "dagrecreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "detailhandel",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "dienstverlening",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "duingebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "duinwatergebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "energieproductiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "gaswinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "gebiedsnorm wateroverlast",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "glastuinbouw",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "groen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "grondwater",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "grondwaterbeschermingsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "grondwaterdeelgebied",
+							"Toelichting": "Gebieden waarbinnen het zelfde grondwaterpeil geldt",
+							"Definitie": ""
+						},
+						{
+							"naam": "herkomstgebied mijnsteen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "herstructureringsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "horeca",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "industrie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "industrieterrein",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "installatie in waterstaatswerk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kade",
+							"Toelichting": "Type waterkering, beschoeide of gemetselde oeverstrook, waaraan de schepen kunnen aanleggen",
+							"Definitie": ""
+						},
+						{
+							"naam": "kantoor",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kantoorlocatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kernenergiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kleinschalige voorzieningen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landbouw",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-agrarisch",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-hoofdfunctie natuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-stedelijk uitloopgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-verweving van functies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "linie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "luchthaven",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "luchtvaart",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "maatschappelijk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mergelwinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mijnsteengebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "militair terrein",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "molen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "nationaal landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "nationaal natuurgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "nationaal park",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "natura 2000",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "natuurbeek",
+							"Toelichting": "Een oppervlaktewater dat een functie waternatuur heeft, op basis van bestaande of potentiële aquatische of semi-aquatische natuurwaarden",
+							"Definitie": ""
+						},
+						{
+							"naam": "natuurbeheergebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "natuurnetwerk nederland",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oliewinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "onderhoudspad",
+							"Toelichting": "Werkpad naast de watergang in eigendom van het waterschap, gebied binnen de beschermingszone waar aanvullende regels gelden",
+							"Definitie": ""
+						},
+						{
+							"naam": "ontspanning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "open landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "openbaar gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam",
+							"Toelichting": "Samenhangend geheel van vrij aan het aardoppervlak voorkomend water, met de daarin aanwezige stoffen, alsmede de bijbehorende bodem, oevers en, voor zover uitdrukkelijk aangewezen krachtens deze wet, drogere oevergebieden, alsmede flora en fauna",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam primair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam profiel van vrije ruimte",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam secundair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam tertiair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "overig",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "overige gebieden",
+							"Toelichting": "Overige gebieden waar waterschapsverordening-regels gelden, bij voorbeeld te gebruiken voor gebieden \"verbod verhard oppervlak/afkoppelen\")",
+							"Definitie": ""
+						},
+						{
+							"naam": "peilgebied",
+							"Toelichting": "Gebieden met een vastgesteld peil; een cluster van afwateringsgebieden waarin één en hetzelfde peil wordt nagestreefd",
+							"Definitie": ""
+						},
+						{
+							"naam": "projectgebied",
+							"Toelichting": "Regels voor bescherming van toekomstige projecten",
+							"Definitie": ""
+						},
+						{
+							"naam": "provinciaal natuurgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "radarverstoringsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "receatiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "reserveringsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "risicogebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "schaliegas",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "specifiek benoemd gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "specifiek teeltgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "spoorweg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "sport",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-buiten centrum",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-centrum dorps",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-centrum stedelijk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-groen stedelijk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stiltegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stortplaats (open)",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stortplaats (gesloten)",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "toepassingsgebied mijnsteen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "tracé hoogspanning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "transformatiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "vaarweg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "veehouderij",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "verblijfsrecreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "voorschriftengebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waarde",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "water",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterberging",
+							"Toelichting": "Gebied voor waterstaatkundige doeleinden, niet zijnde een oppervlaktewaterlichaam of onderdeel daarvan, dat dient ter verruiming van de bergingscapaciteit van een of meer watersystemen en ook als bergingsgebied op de legger is opgenomen",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering",
+							"Toelichting": "Een waterkerende en/of scheidende, kunstmatige of natuurlijke hoogte of hooggelegen gronden inclusief de daarin aanwezige waterkerende elementen",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering overig",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering primair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering profiel van vrije ruimte",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering regionaal",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterstaat",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterstaatswerk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterweg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterwingebied",
+							"Toelichting": "Gebied aangewezen voor het winnen van drinkwater",
+							"Definitie": ""
+						},
+						{
+							"naam": "weg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "werelderfgoed",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "windturbinegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "wonen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "woongebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zandwinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zonne-energiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zoutwinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zuiveringstechnisch werk",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Geluid",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Geluid op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "aandachtsgebied geluid",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "contour",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stiltegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "agglomeratie",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Geur",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Geur op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "bebouwingscontour",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "concentratiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Landschap",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Landschap op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "nationaal landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "open landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "specifiek benoemd landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Leiding",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Leiding op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "buisleiding",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "reserveringsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "tracé hoogspanning",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Lucht",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Lucht op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "locatie uitgezonderd van NIBM",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "varend ontgassen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zone richtlijnen luchtkwaliteit en gevaarlijke stoffen in de lucht",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "aandachtsgebied lucht",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Mijnbouw",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Mijnbouw op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "gaswinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "mergelwinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oliewinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "schaliegaswinning",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zoutwinning",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Natuur",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Natuur op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "Nationaal Natuurgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Nationaal Park",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natura 2000",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurbeheergebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Natuurnetwerk Nederland",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "Provinciaal Natuurgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bebouwingscontour houtkap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bebouwingscontour jacht",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Recreatie",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Recreatie op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "verblijfsrecreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "dagrecreatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kleinschalige voorzieningen",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Ruimtelijkgebruik",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Ruimtelijk gebruik op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "afvalstoffen",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bebouwingscontour",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "bedrijventerrein",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "detailhandel",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "glastuinbouw",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "industrieterrein",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "kantoorlocatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landbouw",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-agrarisch",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-hoofdfunctie natuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-hoofdfunctie landschap",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-stedelijk uitloopgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "landelijk gebied-verweving van functies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "receatiegebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "specifiek teeltgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-buiten centrum",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-centrum dorps",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-centrum stedelijk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "stedelijk gebied-groen stedelijk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "veehouderij",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "ontwikkeling stedelijke functies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "ontwikkeling landelijke functies",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "overig",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "infrastructuur",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "water",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "Verkeer",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Verkeer op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "luchtvaart",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "spoorweg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "vaarweg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "weg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "recreatieve routenetwerken",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "reserveringsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			},
+			{
+				"naam": "WaterEnWatersysteem",
+				"type": "open",
+				"Toelichting": "Attribuut dat zorgt voor weergave van de symbolisatie van de gebiedsaanwijzing Water en watersysteem op de kaart",
+				"Definitie": "",
+				"waarden": {
+					"waarde": [
+						{
+							"naam": "beschermde gebieden",
+							"Toelichting": "Beschermde gebieden waterschappen; niet oppervlaktewaterlichaam- en/ of waterkering-gerelateerd",
+							"Definitie": ""
+						},
+						{
+							"naam": "compartimentskering",
+							"Toelichting": "Regionale kering die als zodanig geen directe waterkerende functie heeft, tenzij in geval van doorbraak of overstroming van een primaire waterkering",
+							"Definitie": ""
+						},
+						{
+							"naam": "contour beregeningsbeleid",
+							"Toelichting": "Begrenzing van de gebieden die het beregeningsbeleid van het waterschap vastleggen",
+							"Definitie": ""
+						},
+						{
+							"naam": "duingebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "duinwatergebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "gebiedsnorm wateroverlast",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "grondwaterbeschermingsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "grondwaterdeelgebied",
+							"Toelichting": "Gebieden waarbinnen het zelfde grondwaterpeil geldt",
+							"Definitie": ""
+						},
+						{
+							"naam": "kade",
+							"Toelichting": "Type waterkering, beschoeide of gemetselde oeverstrook, waaraan de schepen kunnen aanleggen",
+							"Definitie": ""
+						},
+						{
+							"naam": "natuurbeek",
+							"Toelichting": "Een oppervlaktewater dat een functie waternatuur heeft, op basis van bestaande of potentiële aquatische of semi-aquatische natuurwaarden",
+							"Definitie": ""
+						},
+						{
+							"naam": "onderhoudspad",
+							"Toelichting": "Werkpad naast de watergang in eigendom van het waterschap, gebied binnen de beschermingszone waar aanvullende regels gelden",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam primair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam profiel van vrije ruimte",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam secundair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterlichaam tertiair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "overige gebieden",
+							"Toelichting": "Overige gebieden waar waterschapsverordening-regels gelden, bij voorbeeld te gebruiken voor gebieden \"verbod verhard oppervlak/afkoppelen\"",
+							"Definitie": ""
+						},
+						{
+							"naam": "peilgebied",
+							"Toelichting": "Gebieden met een vastgesteld peil; een cluster van afwateringsgebieden waarin één en hetzelfde peil wordt nagestreefd",
+							"Definitie": ""
+						},
+						{
+							"naam": "projectgebied",
+							"Toelichting": "Regels voor bescherming van toekomstige projecten",
+							"Definitie": ""
+						},
+						{
+							"naam": "vaarweg",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterberging",
+							"Toelichting": "Gebied voor waterstaatkundige doeleinden, niet zijnde een oppervlaktewaterlichaam of onderdeel daarvan, dat dient ter verruiming van de bergingscapaciteit van een of meer watersystemen en ook als bergingsgebied op de legger is opgenomen",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering",
+							"Toelichting": "Een waterkerende en/of scheidende, kunstmatige of natuurlijke hoogte of hooggelegen gronden inclusief de daarin aanwezige waterkerende elementen",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering overig",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering primair",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering profiel van vrije ruimte",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterkering regionaal",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterstaatswerk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "waterwingebied",
+							"Toelichting": "Gebied aangewezen voor het winnen van drinkwater",
+							"Definitie": ""
+						},
+						{
+							"naam": "zuiveringstechnisch werk",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "reserveringsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "zwemlocatie",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "boringsvije zone",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervaktewaterbeschermingsgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "intrekgebied",
+							"Toelichting": "",
+							"Definitie": ""
+						},
+						{
+							"naam": "oppervlaktewaterbeheergebied",
+							"Toelichting": "",
+							"Definitie": ""
+						}
+					]
+				}
+			}
+		]
+	}
+}

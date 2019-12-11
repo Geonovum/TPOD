@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:vt-ref="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           targetNamespace="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="0.9.8.2-">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/vrijetekst-ref</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">0.9.8.2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190901</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2019-12-09T13:37:22Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.55.2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/vrijetekst-ref/v20190901/IMOW_VrijeTekstRef_v0_9_8_2.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+              schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="HoofdlijnRef" type="vt-ref:HoofdlijnRef" abstract="false"/>
+   <xs:complexType name="HoofdlijnRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="TekstdeelRef" type="vt-ref:TekstdeelRef" abstract="false"/>
+   <xs:complexType name="TekstdeelRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="FormeleDivisieRef"
+               type="vt-ref:FormeleDivisieRef"
+               abstract="false"/>
+   <xs:complexType name="FormeleDivisieRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

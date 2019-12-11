@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.geostandaarden.nl/basisgeometrie/v20190901"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:gmlsf="http://www.opengis.net/gmlsf"
+  xmlns:geo="http://www.geostandaarden.nl/basisgeometrie/v20190901"
+  elementFormDefault="qualified" >
+<import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd" />
+<import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" />
+<annotation>
+  <appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+    <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+  </appinfo>
+</annotation>
+<element name="FeatureCollectionGeometrie"
+  type="geo:FeatureCollectionGeometrieType"
+  substitutionGroup="gml:AbstractGML"/>
+<complexType name="FeatureCollectionGeometrieType">
+  <complexContent>
+    <extension base="gml:AbstractFeatureType">
+      <sequence minOccurs="0" maxOccurs="unbounded">
+       <element name="featureMember">
+         <complexType>
+           <complexContent>
+             <extension base="gml:AbstractFeatureMemberType">
+               <sequence>
+                 <element ref="gml:AbstractFeature"/>
+               </sequence>
+             </extension>
+           </complexContent>
+         </complexType>
+       </element>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+<element name="Geometrie" type="geo:GeometrieType" substitutionGroup="gml:AbstractFeature"/>
+<complexType name="GeometrieType">
+  <complexContent>
+    <extension base="gml:AbstractFeatureType">
+      <sequence>
+        <element name="id" minOccurs="1" maxOccurs="1" type="string"/>
+        <element name="geometrie" minOccurs="1" maxOccurs="1" type="gml:GeometryPropertyType"/>
+      </sequence>
+    </extension>
+  </complexContent>
+</complexType>
+</schema>
