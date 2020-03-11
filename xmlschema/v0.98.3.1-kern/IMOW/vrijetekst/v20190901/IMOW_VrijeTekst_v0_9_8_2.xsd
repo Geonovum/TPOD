@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst/v20190901"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
+           xmlns:r="http://www.geostandaarden.nl/imow/regels/v20190901"
+           xmlns:vt-ref="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
+           xmlns:l-ref="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
+           xmlns:ga-ref="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
+           xmlns:ow="http://www.geostandaarden.nl/imow/owobject/v20190709"
+           xmlns:op="http://www.geostandaarden.nl/imow/opobject/v20190901"
+           targetNamespace="http://www.geostandaarden.nl/imow/vrijetekst/v20190901"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="0.9.8.3">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/vrijetekst</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">0.9.8.2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20190901</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2019-12-09T13:37:22Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.55.2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/vrijetekst/v20190901/IMOW_VrijeTekst_v0_9_8_2.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen/v20190709"
+              schemaLocation="../../../IMOW/datatypenalgemeen/v20190709/IMOW_DatatypenAlgemeen_v0_9_8.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/regels/v20190901"
+              schemaLocation="../../../IMOW/regels/v20190901/IMOW_Regel_v0_9_8_2.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/vrijetekst-ref/v20190901"
+              schemaLocation="../../../IMOW/vrijetekst-ref/v20190901/IMOW_VrijeTekstRef_v0_9_8_2.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/locatie-ref/v20190901"
+              schemaLocation="../../../IMOW/locatie-ref/v20190901/IMOW_LocatieRef_v0_9_8_2.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing-ref/v20190709"
+              schemaLocation="../../../IMOW/gebiedsaanwijzing-ref/v20190709/IMOW_GebiedsaanwijzingRef_v0_9_8.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/owobject/v20190709"
+              schemaLocation="../../../IMOW/owobject/v20190709/IMOW_OWobject_v0_9_8.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/opobject/v20190901"
+              schemaLocation="../../../IMOW/opobject/v20190901/IMOW_OPobject_v0_9_8_2.xsd"/>
+   <xs:element name="Hoofdlijn" type="vt:Hoofdlijn" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Element dat de hoofdlijn weergeeft van het beleid voor of de kwaliteit, ontwikkeling of staat van de fysieke leefomgeving dat of die in het Tekstdeel wordt beschreven.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Hoofdlijn" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="naam" type="xs:string" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="soort" type="xs:string" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="gerelateerdeHoofdlijn" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="vt-ref:HoofdlijnRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="optional"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Tekstdeel" type="vt:Tekstdeel" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Tekstdeel is de kleinste zelfstandige eenheid van (een of meer) bij elkaar horende Juridische teksten in een tekst met Vrijetekststructuur, te weten een FormeleInhoud.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Tekstdeel" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="idealisatie"
+                           type="r:Idealisatie"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="thema" type="r:Thema" minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Is afgeleid van, en altijd gelijk aan, de regels die zijn opgenomen in de regeltekst. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="hoofdlijnaanduiding" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="vt-ref:HoofdlijnRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="formeleDivisie" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="vt-ref:FormeleDivisieRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="locatieaanduiding" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="l-ref:LocatieRef"/>
+                        <xs:element ref="l-ref:GebiedRef"/>
+                        <xs:element ref="l-ref:GebiedengroepRef"/>
+                        <xs:element ref="l-ref:PuntRef"/>
+                        <xs:element ref="l-ref:PuntengroepRef"/>
+                        <xs:element ref="l-ref:LijnengroepRef"/>
+                        <xs:element ref="l-ref:LijnRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="gebiedsaanwijzing" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="ga-ref:GebiedsaanwijzingRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="FormeleDivisie" type="vt:FormeleDivisie" abstract="false"/>
+   <xs:complexType name="FormeleDivisie" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="op:OPobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="optional"/>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+</xs:schema>
