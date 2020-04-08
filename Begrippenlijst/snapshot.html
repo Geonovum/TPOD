@@ -1,0 +1,607 @@
+<!DOCTYPE html><html lang="nl"><!-- HTML-Header - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta charset="utf-8"><meta name="generator" content="ReSpec 24.5.2">
+        
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- File. . . :  index.html                                                                 -->
+        <!-- Bevat . . :  Template voor de index.html die verplicht is voor respec                   -->
+        <!--              Gebaseerd op https://github.com/Geonovum/respec/wiki                       -->
+        <!--              Deze file moet worden neergezet in de root-directory van de                -->
+        <!--              betreffende standaard.                                                     -->
+        <!-- Door. . . :  Jan van Gelder                                                             -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Log . . . :  20181015 - JvG - Initiele versie                                           -->
+        <!-- - - - - - - -20191127 - SP - Begrippenlijst STOP/TPOD v0.98.1-kern- - - - - - - - - - - -->
+        <!-- - - - - - - -20200406 - LH/GK - Begrippenlijst STOP/TPOD v0.98.2-kern  - - - - - - - -- -->
+		
+        <!-- meta tags - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        
+        
+        <!-- Invullen: de titel van de standaard of het document - - - - - - - - - - - - - - - - - - -->
+        <title>Begrippenlijst STOP/TPOD v0.98.2-kern</title>    
+
+        <!-- Kan hier een 'ondertitel' tag worden gemaakt? -->
+		
+        <!-- Invullen: de naam van de lokale CSS file  - - - - - - - - - - - - - - - - - - - - - - - -->
+        <link rel="stylesheet" type="text/css" href="./media/ADSMOstyle.css">
+		<link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
+        
+        
+    <style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+#references :target {
+  background: #eaf3ff;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd>p:first-child {
+  margin-top: 0;
+}
+
+.section dd>p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary>ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details>* {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: 0.3em;
+  background-color: white;
+  padding-bottom: 0.5em;
+}
+
+details.respec-tests-details[open]>summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details>ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details>li {
+  padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/GN-WV.css"><link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico"><script id="initialUserConfig" type="application/json">{
+  "specStatus": "GN-WV",
+  "specType": "ST",
+  "format": "markdown",
+  "github": "https://github.com/geonovum/TPOD",
+  "editors": [
+    {
+      "name": "Silvie Pluim",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl/geo-standaarden/omgevingswet"
+    },
+    {
+      "name": "Lindy Heesters",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Beheer- en ontwikkelteam TPOD-Standaarden",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    }
+  ],
+  "shortName": "begr",
+  "pubDomain": "tpod",
+  "licence": "cc-by",
+  "localBiblio": {
+    "PUB-1": {
+      "title": "Titel van Publicatie-1",
+      "href": "https://www.link-naar-publicatie-1.nl",
+      "status": "V1.0.1",
+      "publisher": "Publisher-1",
+      "company": "Companynaam"
+    },
+    "PUB-2": {
+      "title": "Titel van Publicatie-2",
+      "href": "https://www.link-naar-publicatie-2.nl",
+      "status": "V1.0.1",
+      "publisher": "Publisher-2",
+      "company": "Companynaam"
+    },
+    "PUB-3": {
+      "title": "Titel van Publicatie-3",
+      "href": "https://www.link-naar-publicatie-3.nl",
+      "status": "V1.0.1",
+      "publisher": "Publisher-3",
+      "company": "Companynaam"
+    }
+  },
+  "postProcess": [
+    null
+  ],
+  "previousPublishDate": "2019-12-11",
+  "previousMaturity": "VV",
+  "logos": [
+    {
+      "src": "https://tools.geostandaarden.nl/respec/style/logos/OmgevingswetLogo.svg",
+      "alt": "Standaarden Omgevingswet",
+      "id": "TopLogo",
+      "height": 67,
+      "width": 300,
+      "url": "https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD"
+    }
+  ],
+  "publishISODate": "2020-04-08T00:00:00.000Z",
+  "generatedSubtitle": "Werkversie 08 april 2020"
+}</script><script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org/",
+      "@language": "nl",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "datePublished": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      "inLanguage": {
+        "@language": null
+      },
+      "isBasedOn": {
+        "@type": "@id"
+      },
+      "license": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://geonovum.github.io/TPOD/",
+  "type": [
+    "TechArticle"
+  ],
+  "name": "Begrippenlijst STOP/TPOD v0.98.2-kern",
+  "inLanguage": "nl",
+  "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "datePublished": "2020-04-08",
+  "copyrightHolder": {
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "discussionUrl": "https://github.com/geonovum/TPOD/issues/",
+  "alternativeHeadline": "",
+  "isBasedOn": "https://docs.geostandaarden.nl/tpod/-st-begr-20191211/",
+  "editor": [
+    {
+      "type": "Person",
+      "name": "Silvie Pluim",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl/geo-standaarden/omgevingswet"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Lindy Heesters",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl"
+      }
+    }
+  ],
+  "contributor": [
+    {
+      "type": "Person",
+      "name": "Beheer- en ontwikkelteam TPOD-Standaarden",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl"
+      }
+    }
+  ],
+  "citation": []
+}</script></head>
+    <!-- HTML-Body - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <body class="h-entry"><div class="head">
+  <a href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD" class="logo"><img id="TopLogo" alt="Standaarden Omgevingswet" src="https://tools.geostandaarden.nl/respec/style/logos/OmgevingswetLogo.svg" width="300" height="67"></a>
+  <h1 class="title p-name" id="title">Begrippenlijst STOP/TPOD v0.98.2-kern</h1>
+  
+  <h2>Geonovum Standaard<br>
+  Werkversie <time class="dt-published" datetime="2020-04-08">08 april 2020</time></h2>
+  <dl>
+    <dt>Deze versie:</dt><dd><a class="u-url" href="https://geonovum.github.io/TPOD/">https://geonovum.github.io/TPOD/</a></dd><dt>Laatst gepubliceerde versie:</dt><dd>geen</dd>
+    
+    <dt>Vorige versie:</dt><dd><a href="https://docs.geostandaarden.nl/tpod/-st-begr-20191211/">https://docs.geostandaarden.nl/tpod/-st-begr-20191211/</a></dd>
+    <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/TPOD/">https://geonovum.github.io/TPOD/</a></dd>
+    <dt>Redacteurs:</dt>
+    <dd class="p-author h-card vcard"><span class="p-name fn">Silvie Pluim</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl/geo-standaarden/omgevingswet">Geonovum</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Lindy Heesters</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl">Geonovum</a></dd>
+    <dt>Auteur:</dt><dd class="p-author h-card vcard"><span class="p-name fn">Beheer- en ontwikkelteam TPOD-Standaarden</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl">Geonovum</a></dd>
+    <dt>Doe mee:</dt><dd>
+      <a href="https://github.com/geonovum/TPOD/">GitHub geonovum/TPOD</a>
+    </dd><dd>
+      <a href="https://github.com/geonovum/TPOD/issues/">Dien een melding in</a>
+    </dd><dd>
+      <a href="https://github.com/geonovum/TPOD/commits/">Revisiehistorie</a>
+    </dd><dd>
+      <a href="https://github.com/geonovum/TPOD/pulls/">Pull requests</a>
+    </dd>
+  </dl>
+  
+  
+    <dl>
+          <dt>Rechtenbeleid:</dt>
+          <dd>
+            <div class="copyright" style="margin: 0.25em 0;">
+              <abbr title="Creative Commons Attribution 4.0 International Public License">
+              <a href="https://creativecommons.org/licenses/by/4.0/legalcode"><img src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Creative Commons Attribution 4.0 International Public License" width="115" height="40"></a>
+            </abbr>
+              <div style="display:inline-block; vertical-align:top">
+                <p style="font-size: small;">Creative Commons Attribution 4.0 International Public License<br>(CC-BY)</p>
+              </div>
+            </div>
+          </dd>
+        </dl>
+  <hr title="Separator for header">
+</div><section id="abstract" data-format="markdown" data-include="" class="introductory"><h2></h2></section><section id="sotd" class="introductory"><h2>Status van dit document</h2><p>
+    <em>Deze paragraaf beschrijft de status van dit document ten tijde van publicatie. Het is mogelijk dat er actuelere versies van dit document bestaan. Een lijst van Geonovum publicaties en de laatste gepubliceerde versie van dit document zijn te vinden op <a href="https://www.geonovum.nl/geo-standaarden/alle-standaarden">https://www.geonovum.nl/geo-standaarden/alle-standaarden</a>.</em>
+  </p><p>
+
+
+  Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen door de werkgroep goedgekeurde consultatieversie.
+
+
+
+
+
+
+
+</p><p>Begrippenlijst v0.98.2-kern. Oplevering PI13 Sprint 6 06-04-2020
+</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#begrip-activiteit"><span class="secno">1. </span>Activiteit</a></li><li class="tocline"><a class="tocxref" href="#begrip-activiteitengroep"><span class="secno">2. </span>Activiteitengroep</a></li><li class="tocline"><a class="tocxref" href="#begrip-annotatie-annoteren"><span class="secno">3. </span>Annotatie / Annoteren</a></li><li class="tocline"><a class="tocxref" href="#begrip-artikelstructuur"><span class="secno">4. </span>Artikelstructuur</a></li><li class="tocline"><a class="tocxref" href="#begrip-authentiek-besluit"><span class="secno">5. </span>Authentiek besluit</a></li><li class="tocline"><a class="tocxref" href="#begrip-beperkingengebied"><span class="secno">6. </span>Beperkingengebied</a></li><li class="tocline"><a class="tocxref" href="#begrip-beperkingengebiedgroep"><span class="secno">7. </span>Beperkingengebiedgroep</a></li><li class="tocline"><a class="tocxref" href="#begrip-beschikking"><span class="secno">8. </span>Beschikking</a></li><li class="tocline"><a class="tocxref" href="#begrip-besluit"><span class="secno">9. </span>Besluit</a></li><li class="tocline"><a class="tocxref" href="#begrip-bronhouderskoppelvlak"><span class="secno">10. </span>Bronhouderskoppelvlak</a></li><li class="tocline"><a class="tocxref" href="#begrip-consolideren"><span class="secno">11. </span>Consolideren</a></li><li class="tocline"><a class="tocxref" href="#begrip-functie"><span class="secno">12. </span>Functie</a></li><li class="tocline"><a class="tocxref" href="#begrip-functiegroep"><span class="secno">13. </span>Functiegroep</a></li><li class="tocline"><a class="tocxref" href="#begrip-gebied"><span class="secno">14. </span>Gebied</a></li><li class="tocline"><a class="tocxref" href="#begrip-gebiedengroep"><span class="secno">15. </span>Gebiedengroep</a></li><li class="tocline"><a class="tocxref" href="#begrip-gebiedsaanwijzing"><span class="secno">16. </span>Gebiedsaanwijzing</a></li><li class="tocline"><a class="tocxref" href="#begrip-geconsolideerde-versie"><span class="secno">17. </span>Geconsolideerde versie</a></li><li class="tocline"><a class="tocxref" href="#begrip-geografisch-informatieobject"><span class="secno">18. </span>Geografisch informatieobject</a></li><li class="tocline"><a class="tocxref" href="#begrip-geometrie"><span class="secno">19. </span>Geometrie</a></li><li class="tocline"><a class="tocxref" href="#begrip-hoofdlijn"><span class="secno">20. </span>Hoofdlijn</a></li><li class="tocline"><a class="tocxref" href="#begrip-idealisatie"><span class="secno">21. </span>Idealisatie</a></li><li class="tocline"><a class="tocxref" href="#begrip-informatieobject"><span class="secno">22. </span>Informatieobject</a></li><li class="tocline"><a class="tocxref" href="#begrip-initieel-besluit"><span class="secno">23. </span>Initieel besluit</a></li><li class="tocline"><a class="tocxref" href="#begrip-instructieregel"><span class="secno">24. </span>Instructieregel</a></li><li class="tocline"><a class="tocxref" href="#begrip-intrekkingsbesluit"><span class="secno">25. </span>Intrekkingsbesluit</a></li><li class="tocline"><a class="tocxref" href="#begrip-inwerkingtredingsbesluit"><span class="secno">26. </span>Inwerkingtredingsbesluit</a></li><li class="tocline"><a class="tocxref" href="#begrip-juridisch-authentiek-product"><span class="secno">27. </span>Juridisch authentiek product</a></li><li class="tocline"><a class="tocxref" href="#begrip-juridische-regel"><span class="secno">28. </span>Juridische regel</a></li><li class="tocline"><a class="tocxref" href="#begrip-kenmerken"><span class="secno">29. </span>Kenmerken</a></li><li class="tocline"><a class="tocxref" href="#begrip-lijn"><span class="secno">30. </span>Lijn</a></li><li class="tocline"><a class="tocxref" href="#begrip-lijnengroep"><span class="secno">31. </span>Lijnengroep</a></li><li class="tocline"><a class="tocxref" href="#begrip limitatieve waardelijst"><span class="secno">32. </span>Limitatieve waardelijst</a></li><li class="tocline"><a class="tocxref" href="#begrip-locatie"><span class="secno">33. </span>Locatie</a></li><li class="tocline"><a class="tocxref" href="#begrip-locatieaanduiding"><span class="secno">34. </span>Locatieaanduiding</a></li><li class="tocline"><a class="tocxref" href="#begrip-muteren"><span class="secno">35. </span>Muteren</a></li><li class="tocline"><a class="tocxref" href="#begrip-naamgevingsconventie"><span class="secno">36. </span>Naamgevingsconventie</a></li><li class="tocline"><a class="tocxref" href="#begrip-noemer"><span class="secno">37. </span>Noemer</a></li><li class="tocline"><a class="tocxref" href="#begrip-norm"><span class="secno">38. </span>Norm</a></li><li class="tocline"><a class="tocxref" href="#begrip-normwaarde"><span class="secno">39. </span>Normwaarde</a></li><li class="tocline"><a class="tocxref" href="#begrip-officiële-bekendmaking"><span class="secno">40. </span>Officiële bekendmaking</a></li><li class="tocline"><a class="tocxref" href="#begrip-omgevingsnorm"><span class="secno">41. </span>Omgevingsnorm</a></li><li class="tocline"><a class="tocxref" href="#begrip-omgevingsnormgroep"><span class="secno">42. </span>Omgevingsnormgroep</a></li><li class="tocline"><a class="tocxref" href="#begrip-omgevingswaarde"><span class="secno">43. </span>Omgevingswaarde</a></li><li class="tocline"><a class="tocxref" href="#begrip-omgevingswaardegroep"><span class="secno">44. </span>Omgevingswaardegroep</a></li><li class="tocline"><a class="tocxref" href="#begrip-omgevingswaarderegel"><span class="secno">45. </span>Omgevingswaarderegel</a></li><li class="tocline"><a class="tocxref" href="#begrip-punt"><span class="secno">46. </span>Punt</a></li><li class="tocline"><a class="tocxref" href="#begrip-puntengroep"><span class="secno">47. </span>Puntengroep</a></li><li class="tocline"><a class="tocxref" href="#begrip-raadpleegverzoek"><span class="secno">48. </span>Raadpleegverzoek</a></li><li class="tocline"><a class="tocxref" href="#begrip-regel-voor-iedereen"><span class="secno">49. </span>Regel voor iedereen</a></li><li class="tocline"><a class="tocxref" href="#begrip-regeling"><span class="secno">50. </span>Regeling</a></li><li class="tocline"><a class="tocxref" href="#begrip-regelingstructuur"><span class="secno">51. </span>Regelingstructuur</a></li><li class="tocline"><a class="tocxref" href="#begrip-regeltekst"><span class="secno">52. </span>Regeltekst</a></li><li class="tocline"><a class="tocxref" href="#begrip-service-informatie"><span class="secno">53. </span>Service-informatie</a></li><li class="tocline"><a class="tocxref" href="#begrip-serviceproduct"><span class="secno">54. </span>Serviceproduct</a></li><li class="tocline"><a class="tocxref" href="#begrip-structuurelementen"><span class="secno">55. </span>Structuurelementen</a></li><li class="tocline"><a class="tocxref" href="#begrip-symbolisatietabel"><span class="secno">56. </span>Symbolisatietabel</a></li><li class="tocline"><a class="tocxref" href="#begrip-tekstdeel"><span class="secno">57. </span>Tekstdeel</a></li><li class="tocline"><a class="tocxref" href="#begrip-tekststructuur"><span class="secno">58. </span>Tekststructuur</a></li><li class="tocline"><a class="tocxref" href="#begrip-thema"><span class="secno">59. </span>Thema</a></li><li class="tocline"><a class="tocxref" href="#begrip-tijdreizen"><span class="secno">60. </span>Tijdreizen</a></li><li class="tocline"><a class="tocxref" href="#begrip-toepassingsprofiel"><span class="secno">61. </span>Toepassingsprofiel</a></li><li class="tocline"><a class="tocxref" href="#begrip-toestand"><span class="secno">62. </span>Toestand</a></li><li class="tocline"><a class="tocxref" href="#begrip uitbreidbare waardelijst"><span class="secno">63. </span>Uitbreidbare waardelijst</a></li><li class="tocline"><a class="tocxref" href="#begrip-verrijkt-besluit"><span class="secno">64. </span>Verrijkt besluit</a></li><li class="tocline"><a class="tocxref" href="#begrip-vervanging"><span class="secno">65. </span>Vervanging</a></li><li class="tocline"><a class="tocxref" href="#begrip-vrijetekststructuur"><span class="secno">66. </span>Vrijetekststructuur</a></li><li class="tocline"><a class="tocxref" href="#begrip-waardelijst"><span class="secno">67. </span>Waardelijst</a></li><li class="tocline"><a class="tocxref" href="#begrip-werkingsgebied"><span class="secno">68. </span>Werkingsgebied</a></li><li class="tocline"><a class="tocxref" href="#begrip-wijzigingsbesluit"><span class="secno">69. </span>Wijzigingsbesluit</a></li></ol></nav><section id="begrip-activiteit" data-format="markdown"><!--OddPage--><h2 id="x1-activiteit"><span class="secno">1. </span>Activiteit</h2><p><strong>Activiteiten</strong> zijn alle handelingen die de Omgevingswet reguleert.</p><p>Een activiteit betreft ieder menselijk handelen waarbij, of ieder menselijk
+nalaten, waardoor een verandering of effect in de fysieke leefomgeving wordt of
+kan worden bewerkstelligd.</p><p>Het is één van de <a href="#begrip-annotatie-annoteren">annotaties</a> in DSO.</p><p><em>bron: TPOD</em></p></section><section id="begrip-activiteitengroep" data-format="markdown"><!--OddPage--><h2 id="x2-activiteitengroep"><span class="secno">2. </span>Activiteitengroep</h2><p><strong>Activiteitengroep</strong> is de categorie waartoe de <a href="#begrip-activiteit">activiteit</a> behoort. Voor activiteitengroep bestaat
+een <a href="#begrip-limitatieve-waardelijst">limitatieve waardelijst</a> 'Activiteitengroep'.</p><p>Iedere activiteitengroep heeft een eigen symboliek. Door te annoteren met een Activiteit met de eigenschap Activiteitengroep
+kunnen de locaties van alle activiteiten in een (interactieve) viewer worden weergegeven op een kaart, zoals bijvoorbeeld in het DSO-LV.</p><p><em>bron: TPOD</em></p></section><section id="begrip-annotatie-annoteren" data-format="markdown"><!--OddPage--><h2 id="x3-annotatie-annoteren"><span class="secno">3. </span>Annotatie / Annoteren</h2><p><strong>Annoteren</strong> is het toevoegen van gegevens aan (onderdelen van) <a href="#begrip-besluit">besluiten</a> en <a href="#begrip-regeling">regelingen</a>, gegevens die die besluiten
+en regelingen machineleesbaar maken. Dit zorgt er voor dat het besluit of de regeling gestructureerd bevraagbaar is en dat <a href="#begrip-werkingsgebied">werkingsgebieden</a>
+en andere gegevens op een kaart weergegeven worden.</p><p>Het annoteren maakt ook bij het verbinden van toepasbare regels, oftewel vragenbomen, aan regels met werkingsgebieden mogelijk. De gegevens die bij het annoteren worden 
+toegevoegd worden niet in de voor de mens leesbare tekst weergegeven. Voor degene die dat wil zijn ze wel terug te vinden. In het Informatiemodel Omgevingswet (IMOW)
+wordt aangegeven wat het doel is van een betreffende annotatie, met andere woorden: wat levert de extra inspanning van het annoteren op aan meerwaarde voor gebruiker
+en opsteller?
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-artikelstructuur" data-format="markdown"><!--OddPage--><h2 id="x4-artikelstructuur"><span class="secno">4. </span>Artikelstructuur</h2><p><strong>Artikelstructuur</strong> is de <a href="#begrip-tekststructuur">tekststructuur</a> van het lichaam van een (formele) <a href="#begrip-regeling">regeling</a> die is opgebouwd uit
+één of meer artikelen.</p><p>*bron: STOP en TPOD</p></section><section id="begrip-authentiek-besluit" data-format="markdown"><!--OddPage--><h2 id="x5-authentiek-besluit"><span class="secno">5. </span>Authentiek besluit</h2><p>Het <strong>authentieke besluit</strong> is de term die door juristen wordt gebruikt om de vastlegging van de beslissing aan te duiden die in het besluitvormingsproces
+door het bevoegd gezag is vastgesteld.</p><p><em>bron: STOP</em></p></section><section id="begrip-beperkingengebied" data-format="markdown"><!--OddPage--><h2 id="x6-beperkingengebied"><span class="secno">6. </span>Beperkingengebied</h2><p>Een <strong>beperkingengebied</strong> is een bij of krachtens de Omgevingswet aangewezen gebied waar vanwege de aanwezigheid van een werk of object regels gelden over
+<a href="#begrip-activiteit">activiteiten</a> die gevolgen hebben of kunnen hebben voor dat werk of object.</p><p>Het is één van de <a href="#begrip-annotatie-annoteren">annotaties</a> in DSO.</p><p><em>bron: TPOD</em></p></section><section id="begrip-beperkingengebiedgroep" data-format="markdown"><!--OddPage--><h2 id="x7-beperkingengebiedgroep"><span class="secno">7. </span>Beperkingengebiedgroep</h2><p><strong>Beperkingengebiedgroep</strong> is de categorie waartoe de <a href="#begrip-beperkingengebied">beperkingengebied</a> behoort.
+Voor beperkingengebiedgroep bestaat een <a href="#begrip-limititatieve-waardelijst">limititatieve waardelijst</a> 'Beperkingengebiedgroep'.</p><p><em>bron: TPOD</em></p></section><section id="begrip-beschikking" data-format="markdown"><!--OddPage--><h2 id="x8-beschikking"><span class="secno">8. </span>Beschikking</h2><p>Een <strong>beschikking</strong>, als bedoeld in artikel 1:3 lid 2 van de Algemene wet bestuursrecht, is een <a href="#begrip-besluit">besluit</a> dat niet van algemene 
+strekkking is, met inbegrip van de afwijzing van een aanvraag daarvan.
+</p><p><em>bron: Awb</em></p></section><section id="begrip-besluit" data-format="markdown"><!--OddPage--><h2 id="x9-besluit"><span class="secno">9. </span>Besluit</h2><p>Een <strong>besluit</strong>, als bedoeld in artikel 1:3 lid 1 van de Algemene wet bestuursrecht, is een schriftelijke beslissing van een bestuursorgaan,
+inhoudende een publiekrechtelijke rechtshandeling.</p><p><em>bron: Awb</em></p></section><section id="begrip-bronhouderskoppelvlak" data-format="markdown"><!--OddPage--><h2 id="x10-bronhouderskoppelvlak"><span class="secno">10. </span>Bronhouderskoppelvlak</h2><p>Het <strong>bronhouderskoppelvlak</strong> is een technische voorziening tussen de LVBB (Landelijke Voorziening Bekendmaken en Beschikbaar stellen) en (software van) 
+een bevoegd gezag. In dat koppelvlak worden technische en inhoudelijke standaarden toegepast, waardoor inhoudelijke, proces- of foutinformatie tussen de 
+systemen kan worden uitgewisseld.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-consolideren" data-format="markdown"><!--OddPage--><h2 id="x11-consolideren"><span class="secno">11. </span>Consolideren</h2><p><strong>Consolideren</strong> is het correct verwerken van de wijzigingen qua geldigheid op een <a href="#begrip-initieel-besluit">initieel besluit</a>
+na zijn inwerkingtreding, op basis van de wijzigingsinstructies die in navolgende <a href="#begrip-besluit">besluiten</a> zijn bekendgemaakt.
+Het proces van consolidatie is in het leven geroepen om uit de bekendgemaakte en in werking zijnde besluiten af te leiden wat op elk moment 
+in de tijd de geldende regelgeving is.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-functie" data-format="markdown"><!--OddPage--><h2 id="x12-functie"><span class="secno">12. </span>Functie</h2><p>Een <strong>functie</strong> is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde <a href="#begrip-locatie">locatie</a> heeft. Het is één
+van de <a href="#begrip-annotatie-annoteren">annotaties</a> die vallen onder een <a href="#begrip-gebiedsaanwijzing">gebiedsaanwijzing</a>.
+Functie is beschikbaar voor omgevingsplan en omgevingsverordening, dat machineleesbaar maakt dat een Juridische regel of een beleidstekst en 
+de bijbehorende Locatie(s) een gebied aanwijzen van het type Functie, waarmee de betreffende functie op een bepaalde locatie wordt vastgelegd.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-functiegroep" data-format="markdown"><!--OddPage--><h2 id="x13-functiegroep"><span class="secno">13. </span>Functiegroep</h2><p><strong>Functiegroep</strong> is de categorie waartoe de <a href="#begrip-functie">functie</a> behoort. Voor functiegroep bestaat een <a href="#begrip-limitatieve-waardelijst">limitatieve waardelijst</a> 'Functiegroep'.</p><p><em>bron: TPOD</em></p></section><section id="begrip-gebied" data-format="markdown"><!--OddPage--><h2 id="x14-gebied"><span class="secno">14. </span>Gebied</h2><p><strong>Gebied</strong> is een op zichzelf staande geometrisch afgebakende ‘ruimte’ in een virtuele weergave van de fysieke leefomgeving. 
+Gebied is één van de verschijningsvormen van&nbsp;<a href="#begrip-locatie">Locatie</a>.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-gebiedengroep" data-format="markdown"><!--OddPage--><h2 id="x15-gebiedengroep"><span class="secno">15. </span>Gebiedengroep</h2><p><strong>Gebiedengroep</strong> is een groep of verzameling van bij elkaar behorende <a href="#begrip-gebied">Gebieden</a>, die samen de <a href="#begrip-locatie">Locatie</a> vormen. 
+Gebiedengroep is één van de verschijningsvormen van Locatie.
+</p><p><em>bron TPOD</em></p></section><section id="begrip-gebiedsaanwijzing" data-format="markdown"><!--OddPage--><h2 id="x16-gebiedsaanwijzing"><span class="secno">16. </span>Gebiedsaanwijzing</h2><p><strong>Gebiedsaanwijzing</strong> is een type <a href="#begrip-gebied">gebied</a>, aangewezen door een <a href="#begrip-juridische-regel">Juridische regel</a> of een <a href="#begrip-tekstdeel">Tekstdeel</a>. 
+Voorbeelden hiervan zijn Functie, Geluid en Ruimtelijk gebruik.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-geconsolideerde-versie" data-format="markdown"><!--OddPage--><h2 id="x17-geconsolideerde-versie"><span class="secno">17. </span>Geconsolideerde versie</h2><p>Een <strong>geconsolideerde versie</strong> bevat de inhoud van een <a href="#begrip-regeling">regeling</a> zoals die geldt op een bepaald moment. De geconsolideerde versie wordt
+afgeleid uit het <a href="#begrip-initieel-besluit">initiële besluit</a> waarin steeds de (in werking getreden) wijzigingen uit de <a href="#begrip-wijzigingsbesluit">wijzigingsbesluiten</a> zijn verwerkt tot een doorlopende versie
+van een type OW-besluit bijvoorbeeld een doorlopende versie van het omgevingsplan.</p><p>In de terminologie van de bekendmakingsregelgeving wordt zo'n geconsolideerde versie ook wel de regeling genoemd.</p><p><em>bron: STOP</em></p></section><section id="begrip-geografisch-informatieobject" data-format="markdown"><!--OddPage--><h2 id="x18-geografisch-informatieobject"><span class="secno">18. </span>Geografisch informatieobject</h2><p>Een <strong>geografisch informatieobject</strong> is een <a href="#begrip-informatieobject">Informatieobject</a> waarmee de <a href="#begrip-locatie">Locatie</a> of Locaties die 
+het <a href="#begrip-werkingsgebied">werkingsgebied</a> van <a href="#begrip-juridische-regel">Juridische regel</a> of <a href="#begrip-tekstdeel">Tekstdeel</a> in omgevingsdocumenten 
+worden vastgelegd.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-geometrie" data-format="markdown"><!--OddPage--><h2 id="x19-geometrie"><span class="secno">19. </span>Geometrie</h2><p><strong>Geometrie</strong> is het object dat de geometrie bevat: de geometrische bepaling van een <a href="#begrip-gebied">Gebied</a>, <a href="#begrip-lijn">Lijn</a> of <a href="#begrip-punt">Punt</a> 
+door middel van coördinaten.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-hoofdlijn" data-format="markdown"><!--OddPage--><h2 id="x20-hoofdlijn"><span class="secno">20. </span>Hoofdlijn</h2><p><strong>Hoofdlijn</strong> is een element dat de hoofdlijn weergeeft van het beleid voor of de kwaliteit, ontwikkeling of staat van de fysieke leefomgeving dat of die 
+in het <a href="#begrip-tekstdeel">Tekstdeel</a> wordt beschreven.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-idealisatie" data-format="markdown"><!--OddPage--><h2 id="x21-idealisatie"><span class="secno">21. </span>Idealisatie</h2><p><strong>Idealisatie</strong> is het attribuut dat vastlegt op welke manier de begrenzing van <a href="#begrip-locatie">Locatie</a> voor de bijbehorende <a href="#begrip-juridische-regel">Juridische regel</a> 
+geïnterpreteerd moet worden en door het bevoegd gezag bedoeld is. Voor Idealisatie geldt een <a href="#begrip-limititatieve-waardelijst">limititatieve waardelijst</a> 'Idealisatie'.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-informatieobject" data-format="markdown"><!--OddPage--><h2 id="x22-informatieobject"><span class="secno">22. </span>Informatieobject</h2><p>Een <strong>informatieobject</strong> is niet-tekstuele informatie die onderdeel uitmaakt van de voorschriften 
+en regels maar die niet in de tekst van de regeling is beschreven.
+</p><p>Het is een op zichzelf staand geheel van gegevens, zoals een lijst, een register, een <a href="#begrip-geometrie">geometrie</a> 
+of een database. Het is machineleesbare informatie die niet direct door mensen gelezen kan worden, maar
+die met algemene beschikbare software te lezen is. In de tekst van het <a href="#begrip-authentiek-besluit">authentieke besluit</a> 
+wordt een verwijzing opgenomen naar het informatieobject, waardoor de inhoud ervan onderdeel wordt van de beslissing. 
+Het informatieobject heeft een juridische status.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-initieel-besluit" data-format="markdown"><!--OddPage--><h2 id="x23-initieel-besluit"><span class="secno">23. </span>Initieel besluit</h2><p>Een <strong>initieel besluit</strong> is het eerste <a href="#begrip-besluit">besluit</a> waarbij een volledig omgevingsdocument wordt vastgesteld. Het besluit dat leidt tot de eerste versie van de
+<a href="#begrip-consolideren">(geconsolideerde)</a>
+<a href="#begrip-regeling">regeling</a>.</p><p><em>bron: STOP</em></p></section><section id="begrip-instructieregel" data-format="markdown"><!--OddPage--><h2 id="x24-instructieregel"><span class="secno">24. </span>Instructieregel</h2><p><strong>Instructieregel</strong> is één van de drie typen van <a href="#begrip-juridische-regel">Juridische regel</a> die in een omgevingsdocument met <a href="#begrip-artikelstructuur">Artikelstructuur</a> 
+voor kan komen. Het is een regel als bedoeld in paragraaf 2.5.1 Omgevingswet, gericht tot een ander bestuursorgaan of bestuurlijke organisatie.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-intrekkingsbesluit" data-format="markdown"><!--OddPage--><h2 id="x25-intrekkingsbesluit"><span class="secno">25. </span>Intrekkingsbesluit</h2><p>Een <strong>intrekkingsbesluit</strong> is een <a href="#begrip-besluit">besluit</a> waarin de intrekking van een <a href="#begrip-regeling">regeling</a> geregeld wordt.</p><p><em>bron: STOP</em></p></section><section id="begrip-inwerkingtredingsbesluit" data-format="markdown"><!--OddPage--><h2 id="x26-inwerkingtredingsbesluit"><span class="secno">26. </span>Inwerkingtredingsbesluit</h2><p>Een <strong>inwerkingstredingsbesluit</strong> is een <a href="#begrip-besluit">besluit</a> waarin de inwerkingtreding van een of meer <a href="#begrip-regeling">regelingen</a> wordt geregeld.</p><p><em>bron: STOP</em></p></section><section id="begrip-juridisch-authentiek-product" data-format="markdown"><!--OddPage--><h2 id="x27-juridisch-authentiek-product"><span class="secno">27. </span>Juridisch authentiek product</h2><p>Een <strong>juridisch authentiek product</strong> is een productwaarvan de inhoud via een juridisch voorgeschreven procedure door een overheid vastgesteld en gepubliceerd
+wordt.</p><p><em>bron: STOP</em></p></section><section id="begrip-juridische-regel" data-format="markdown"><!--OddPage--><h2 id="x28-juridische-regel"><span class="secno">28. </span>Juridische regel</h2><p><strong>Juridische regel</strong> is een abstract concept dat een regel met juridische werkingskracht beschrijft. Juridische regel wordt gebruikt om aan verschillende
+onderdelen van een <a href="#begrip-regeltekst">Regeltekst</a>
+<a href="#begrip-locatie">Locaties</a> en inhoudelijke <a href="#begrip-annotatie-annoteren">annotaties</a> te kunnen koppelen.</p><p><em>bron: TPOD</em></p></section><section id="begrip-kenmerken" data-format="markdown"><!--OddPage--><h2 id="x29-kenmerken"><span class="secno">29. </span>Kenmerken</h2><p><strong>Kenmerken</strong> van <a href="#begrip-regeltekst">regeltekst</a> geven aan voor welke onderwerpen een juridische tekst relevant is zonder aan te geven wat er over in de
+tekst is vastgelegd.</p><p><em>bron: STOP</em></p></section><section id="begrip-lijn" data-format="markdown"><!--OddPage--><h2 id="x30-lijn"><span class="secno">30. </span>Lijn</h2><p><strong>Lijn</strong> is een op zichzelf staande geometrisch afgebakende lijnlocatie in een virtuele weergave van de fysieke leefomgeving. Lijn is één van de verschijningsvormen van&nbsp;<a href="#begrip-locatie">Locatie</a>.</p><p><em>bron: TPOD</em></p></section><section id="begrip-lijnengroep" data-format="markdown"><!--OddPage--><h2 id="x31-lijnengroep"><span class="secno">31. </span>Lijnengroep</h2><p><strong>Lijnengroep</strong> is een groep of verzameling van bij elkaar behorende <a href="#begrip-lijn">Lijnen</a>, die samen de <a href="#begrip-locatie">Locatie</a> vormen. 
+Lijnengroep is één van de verschijningsvormen van Locatie.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip limitatieve waardelijst" data-format="markdown"><!--OddPage--><h2 id="x32-limitatieve-waardelijst"><span class="secno">32. </span>Limitatieve waardelijst</h2><p>Een <strong>limitatieve waardelijst</strong> is een lijst met vooraf gedefinieerde waarden waaruit gekozen moet worden. 
+Deze <a href="#begrip-waardelijst">waardelijst</a> wordt centraal beheerd in de Stelselcatalogus en kan alleen beheermatig
+per versie van de standaard gewijzigd worden, omdat deze direct effect heeft op de werking van en functionaliteiten
+van de applicaties van het DSO en LVBB.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-locatie" data-format="markdown"><!--OddPage--><h2 id="x33-locatie"><span class="secno">33. </span>Locatie</h2><p><strong>Locatie</strong> legt vast wat het <a href="#begrip-werkingsgebied">werkingsgebied</a> van een <a href="#begrip-regeltekst">Regeltekst</a> of <a href="#begrip-tekstdeel">Tekstdeel</a> is en geeft
+aan waar een <a href="#begrip-juridische-regel">Juridische regel</a>, Tekstdeel en inhoudelijke <a href="#begrip-annotatie-annoteren">annotaties</a> van toepassing zijn.</p><p><em>bron: TPOD</em></p></section><section id="begrip-locatieaanduiding" data-format="markdown"><!--OddPage--><h2 id="x34-locatieaanduiding"><span class="secno">34. </span>Locatieaanduiding</h2><p>Een <strong>locatieaanduiding</strong> is de verwijzing van een specifieke <a href="#begrip-juridische-regel">Juridische regel</a>, <a href="#begrip-tekstdeel">Tekstdeel</a>, <a href="#begrip-activiteit">Activiteit</a>, 
+<a href="#begrip-omgevingsnorm">Omgevingsnorm</a>, <a href="#begrip-omgevingswaarde">Omgevingswaarde</a> of type <a href="#begrip-gebiedsaanwijzing">Gebiedsaanwijzing</a> naar (de identificatie van) de bijbehorende
+<a href="#begrip-locaite">Locatie(s)</a>.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-muteren" data-format="markdown"><!--OddPage--><h2 id="x35-muteren"><span class="secno">35. </span>Muteren</h2><p><strong>Muteren</strong> is een ander woord voor wijzigen. In de terminologie van de bekendmakingsregelgeving wordt daarmee bedoeld het aanbrengen van wijzigen in de
+<a href="#begrip-regeling">regeling</a>.</p><p><em>bron: STOP</em></p></section><section id="begrip-naamgevingsconventie" data-format="markdown"><!--OddPage--><h2 id="x36-naamgevingsconventie"><span class="secno">36. </span>Naamgevingsconventie</h2><p><strong>Naamgevingsconventie</strong> is een gestandariseerde manier om documenten, delen van documenten of objecten te identificeren.</p><p><em>bron: STOP</em></p></section><section id="begrip-noemer" data-format="markdown"><!--OddPage--><h2 id="x37-noemer"><span class="secno">37. </span>Noemer</h2><p>De&nbsp;<strong>Noemer</strong>&nbsp;is de mensleesbare naam of frase waarmee de <a href="#begrip-locatie">Locatie</a> wordt aangeduid. Uit de tekst van <a href="#begrip-juridische-regel">Juridische regel</a> of 
+<a href="#begrip-tekstdeel">Tekstdeel</a> moet duidelijk blijken welke Locatie er bij hoort. Daarom wordt in de tekst deze verwijzing naar de locatie opgenomen.
+Hierdoor is het duidelijk dat Locatie en Juridische regel respectievelijk Tekstdeel bij elkaar horen. Diezelfde noemer wordt in de locatie vastgelegd.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-norm" data-format="markdown"><!--OddPage--><h2 id="x38-norm"><span class="secno">38. </span>Norm</h2><p>Een <strong>norm</strong> is een <a href="#begrip-omgevingswaarde">omgevingswaarde</a> of een <a href="#begrip-omgevingsnorm">omgevingsnorm</a> met een normatief
+karakter, die beschreven worden middels <a href="#begrip-normwaarde">normwaarden</a>. Een normwaarde kan kwalitatief of kwantitatief zijn.</p><p><em>bron: TPOD</em></p></section><section id="begrip-normwaarde" data-format="markdown"><!--OddPage--><h2 id="x39-normwaarde"><span class="secno">39. </span>Normwaarde</h2><p>attribuut waarmee kan worden vastgelegd welke waarde een omgevingswaarde op een bepaalde locatie heeft. normwaarde kan kwantitatief (oftewel numeriek) of kwalitatief (oftewel in woorden) worden uitgedrukt of in de Regeltekst worden opgenomen.</p><p><strong>Normwaarde</strong> is het attribuut waarmee kan worden vastgelegd welke waarde een <a href="#begrip-omgevingsnorm">omgevingsnorm</a> of <a href="#begrip-omgevingswaarde">omgevingswaarde</a> op een bepaalde <a href="#begrip-locatie">Locatie</a> heeft. Normwaarde kan kwantitatief (oftewel numeriek) of kwalitatief (oftewel in woorden) worden uitgedrukt.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-officiële-bekendmaking" data-format="markdown"><!--OddPage--><h2 id="x40-officiele-bekendmaking"><span class="secno">40. </span>Officiële bekendmaking</h2><p>De <strong>officiële bekendmaking</strong> is de bekendmaking van de (wijzigingen in) wet- en regelgeving en verdragen van de centrale overheid, maar ook (wijzigings)besluiten
+van decentrale overheden die door de bij wet verplichte officiële bekendmaking hun rechtsgeldigheid verwerven. De officiële bekendmaking wordt gepubliceerd in een 
+voor betreffend soort <a href="#begrip-besluit">besluit</a> bij wet aangewezen publicatieblad.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-omgevingsnorm" data-format="markdown"><!--OddPage--><h2 id="x41-omgevingsnorm"><span class="secno">41. </span>Omgevingsnorm</h2><p>Een <strong>omgevingsnorm</strong> is het objecttype voor omgevingsdocumenten met Artikelstructuur(#begrip-artikelstructuur) dat machineleesbaar maakt dat een 
+Juridische regel(#begrip-juridische regel) en de bijbehorende Locatie(s) gaan over een [norm] over de fysieke leefomgeving die in een kwantitatieve of kwalitatieve waarde wordt 
+uitgedrukt en geen omgevingswaarde is.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-omgevingsnormgroep" data-format="markdown"><!--OddPage--><h2 id="x42-omgevingsnormgroep"><span class="secno">42. </span>Omgevingsnormgroep</h2><p><strong>Omgevingsnormgroep</strong> is de categorie waartoe de <a href="#begrip-omgevingsnorm">Omgevingsnorm</a> behoort. 
+Voor Omgevingsnormgroep bestaat een <a href="#begrip-limitatieve-waardelijst">limitatieve waardelijst</a> 'Omgevingsnormgroep'.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-omgevingswaarde" data-format="markdown"><!--OddPage--><h2 id="x43-omgevingswaarde"><span class="secno">43. </span>Omgevingswaarde</h2><p>Een <strong>Omgevingswaarde</strong> is een <a href="#begrip-norm">norm</a> die voor (een onderdeel van) de fysieke leefomgeving de gewenste staat of kwaliteit, de toelaatbare
+belasting door activiteiten en/of de toelaatbare concentratie of depositie van stoffen als beleidsdoel vastlegt. Omgevingswaarde wordt in een kwantitatieve
+of kwalitatieve waarde  uitgedrukt.</p><p><em>bron: TPOD</em></p></section><section id="begrip-omgevingswaardegroep" data-format="markdown"><!--OddPage--><h2 id="x44-omgevingswaardegroep"><span class="secno">44. </span>Omgevingswaardegroep</h2><p><strong>Omgevingswaardegroep</strong> is de categorie waartoe de <a href="#begrip-omgevingswaarde">Omgevingswaarde</a> behoort. 
+Voor Omgevingswaardegroep bestaat een <a href="#begrip-limitatieve-waardelijst">limitatieve waardelijst</a> 'Omgevingswaardegroep'.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-omgevingswaarderegel" data-format="markdown"><!--OddPage--><h2 id="x45-omgevingswaarderegel"><span class="secno">45. </span>Omgevingswaarderegel</h2><p><strong>Omgevingswaarderegel</strong> is één van de drie typen van <a href="#begrip-juridische-regel">Juridische regel</a> die in een omgevingsdocument met <a href="#begrip-artikelstructuur">Artikelstructuur</a>
+voor kan komen. Het is een regel over een <a href="#begrip-omgevingswaarde">omgevingswaarde</a> als bedoeld in afdeling 2.3 Omgevingswet, die op zichzelf alleen gericht is tot de bestuursorganen 
+van het bevoegd gezag dat de omgevingswaarde heeft vastgesteld.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-punt" data-format="markdown"><!--OddPage--><h2 id="x46-punt"><span class="secno">46. </span>Punt</h2><p><strong>Punt</strong> is een op zichzelf staande geometrisch afgebakende puntlocatie in een virtuele weergave van de fysieke leefomgeving. Punt is één van de 
+verschijningsvormen van&nbsp;<a href="#begrip-locatie">Locatie</a>.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-puntengroep" data-format="markdown"><!--OddPage--><h2 id="x47-puntengroep"><span class="secno">47. </span>Puntengroep</h2><p><strong>Puntengroep</strong> is een groep of verzameling van bij elkaar behorende <a href="#begrip-punt">Punten</a>, die samen de <a href="#begrip-locatie">Locatie</a> vormen. 
+Puntengroep is één van de verschijningsvormen van Locatie.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-raadpleegverzoek" data-format="markdown"><!--OddPage--><h2 id="x48-raadpleegverzoek"><span class="secno">48. </span>Raadpleegverzoek</h2><p>Een <strong>raadpleegverzoek</strong> is een technische bevraging aan de raadpleegservice van de LVBB.&nbsp;De raadpleegservice zendt via het <a href="#begrip-bronhouderskoppelvlak">bronhouderskoppelvlak</a> 
+de gevraagde gegevens terug aan de bevragende partij, uiteraard mits die partij bevoegd is de gegevens in te zien.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-regel-voor-iedereen" data-format="markdown"><!--OddPage--><h2 id="x49-regel-voor-iedereen"><span class="secno">49. </span>Regel voor iedereen</h2><p><strong>Regel voor iedereen</strong> is één van de drie typen van <a href="#begrip-juridische-regel">Juridische regel</a> die in een omgevingsdocument met <a href="#begrip-artikelstructuur">Artikelstructuur</a>
+voor kunnen komen. Het is een regel die voor eenieder relevant is of relevant kan zijn en geen <a href="#begrip-instructieregel">Instructieregel</a> of <a href="#begrip-omgevingswaarderegel">Omgevingswaarderegel</a> is.</p><p><em>bron: TPOD</em></p></section><section id="begrip-regeling" data-format="markdown"><!--OddPage--><h2 id="x50-regeling"><span class="secno">50. </span>Regeling</h2><p>Een <strong>regeling</strong> is een tekst die juridische voorschriften van algemene strekking of beleidsregels bevat.Deze ontstaat 
+door de bekendmaking van een <a href="#begrip-besluit">besluit</a> waarin zelfstandig werkende <a href="#begrip-juridische-regel">juridische regels</a> 
+zijn vastgelegd. Wanneer de regeling later wordt aangepast door middel van <a href="#begrip-wijzigingsbesluit">wijzigingsbesluiten</a>, 
+bestaat de regeling uit de stapeling van het <a href="#begrip-initieel-besluit">initiële besluit</a> en alle volgende wijzigingsbesluiten. 
+Zo ontstaat een doorlopende versie van een type besluit die inhoud bevat die geldt op een bepaald moment. In STOP wordt regeling 
+ook gebruikt voor instrumenten met <a href="#begrip-vrijetekststructuur">Vrijetekststructuur</a>.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-regelingstructuur" data-format="markdown"><!--OddPage--><h2 id="x51-regelingstructuur"><span class="secno">51. </span>Regelingstructuur</h2><p>De <strong>regelingstructuur</strong> is de documentstructuur volgens welke een formele regeling wordt opgebouwd en regelt dat de componenten RegelingOpschrift,
+Aanhef, Lichaam en Sluiting aanwezig zijn.</p><p><em>bron: STOP</em></p></section><section id="begrip-regeltekst" data-format="markdown"><!--OddPage--><h2 id="x52-regeltekst"><span class="secno">52. </span>Regeltekst</h2><p>Een <strong>regeltekst</strong> is de kleinste zelfstandige eenheid van (een of meer) bij elkaar horende <a href="#begrip-juridische-regel">Juridische regels</a> in 
+die onderdelen van omgevingsdocumenten die de <a href="#begrip-artikelstructuur">Artikelstructuur</a> hebben, te weten een artikel of een lid.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-service-informatie" data-format="markdown"><!--OddPage--><h2 id="x53-service-informatie"><span class="secno">53. </span>Service-informatie</h2><p><strong>Service-informatie</strong> is informatie die is afgeleid uit<a href="#begrip-juridisch-authentiek-product">juridisch authentieke producten</a> en waarvoor geen juridisch
+voorgeschreven procedure bestaat om vast te stellen dat de inhoud juridisch correct is. Zie ook <a href="#begrip-serviceproduct">serviceproduct</a>.</p><p><em>bron: STOP</em></p></section><section id="begrip-serviceproduct" data-format="markdown"><!--OddPage--><h2 id="x54-serviceproduct"><span class="secno">54. </span>Serviceproduct</h2><p>Een <strong>serviceproduct</strong> is een product waarvan de informatie is afgeleid uit <a href="#begrip-juridisch-authentiek-product">juridisch authentieke producten</a> 
+en waarvoor geen juridisch voorgeschreven procedure bestaat om vast te stellen dat de inhoud juridisch correct is.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-structuurelementen" data-format="markdown"><!--OddPage--><h2 id="x55-structuurelementen"><span class="secno">55. </span>Structuurelementen</h2><p>Ter ondersteuning van de weergave kent STOP een model waarin de (hiërarchische) structuur van de tekst beschreven is. De lopende tekst wordt daarin 
+opgedeeld en beschreven met tekstblokken. De secties worden beschreven met behulp van <strong>structuurelementen</strong>, die de tekstblokken en eventuele structuurelementen 
+van lagere niveaus bevatten. Zo ontstaat een hiërarchisch model van de tekst. Structuurelementen zijn die elementen die de tekst structureren, maar geen 
+inhoud bevatten; voorbeelden hiervan zijn Hoofdstuk en Paragraaf.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-symbolisatietabel" data-format="markdown"><!--OddPage--><h2 id="x56-symbolisatietabel"><span class="secno">56. </span>Symbolisatietabel</h2><p>Een <strong>symbolisatietabel</strong> is een koppeling die gebruikt wordt bijde presentatie van <a href="#begrip-locatie">locaties</a> en waarden op een kaartbeeld. 
+In de symbolisatietabel zijn afspraken vastgelegd voor de inhoud van de <a href="#begrip-annotatie-annoteren">annotatie</a> en de bijbehorende symboliek. 
+Het koppelt de waarde uit een <a href="#begrip-gesloten-waardelijst">gesloten waardelijst</a> aan de bijbehorende, afgesproken, symboolcode. De symbolisatietabel 
+wordt alleen gebruikt bij de vergelijkbare of geharmoniseerde weergave. Het bevoegd gezag kan voor de <a href="#begrip-offici%C3%ABle-bekendmaking">officiële bekendmaking</a>
+hier wel van afwijken.
+</p><p><em>bron: Presentatiemodel</em></p></section><section id="begrip-tekstdeel" data-format="markdown"><!--OddPage--><h2 id="x57-tekstdeel"><span class="secno">57. </span>Tekstdeel</h2><p><strong>Tekstdeel</strong> is het object dat de relatie vormt tussen een beleids- of realisatietekst en de daarmee samenhangende <a href="#begrip-annotatie-annoteren">annotaties</a>.</p><p><em>bron: TPOD</em></p></section><section id="begrip-tekststructuur" data-format="markdown"><!--OddPage--><h2 id="x58-tekststructuur"><span class="secno">58. </span>Tekststructuur</h2><p>De <strong>tekststructuur</strong> is de, al dan niet hiërarchische, ordening van de tekstblokken die tezamen de tekstuele inhoud van de bekendmaking vormen. 
+IMOP kent twee soorten tekststructuur: <a href="#begrip-artikelstructuur">Artikelstructuur</a> voor regelingen met artikelen en <a href="#begrip-vrijetekststructuur">Vrijetekststructuur</a> 
+voor regelingen zonder artikelen.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-thema" data-format="markdown"><!--OddPage--><h2 id="x59-thema"><span class="secno">59. </span>Thema</h2><p><strong>Thema</strong> is een attribuut van <a href="#begrip-juridische-regel">Juridische regel</a> en <a href="#begrip-tekstdeel">Tekstdeel</a> dat kernachtig de grondgedachte van de tekst weergeeft. 
+Vaak is het een aanduiding van het sectorale aspect waar het Tekstdeel over gaat. Voor Thema bestaat een <a href="#begrip-uitbreidbare-waardelijst">uitbreidbare waardelijst</a> ‘Thema’.
+</p><p><em>bron: STOP en TPOD</em></p></section><section id="begrip-tijdreizen" data-format="markdown"><!--OddPage--><h2 id="x60-tijdreizen"><span class="secno">60. </span>Tijdreizen</h2><p><strong>Tijdreizen</strong> is een mechanisme om vragen te stellen over hoe een <a href="#begrip-regeling">regeling</a> er uit zag (of wat de waarde van gegevens was) op een tijdstip
+in het verleden (of in de toekomst).</p><p><em>bron: STOP</em></p></section><section id="begrip-toepassingsprofiel" data-format="markdown"><!--OddPage--><h2 id="x61-toepassingsprofiel"><span class="secno">61. </span>Toepassingsprofiel</h2><p>Het <strong>toepassingsprofiel</strong> bevat domeinspecifieke afspraken(hier voor de Omgevingswet) voor officiële overheidspublicaties. 
+Het is een nadere invulling c.q. beperking van de algemene Standaard voor officiële publicaties (STOP). De toepassingsprofielen 
+geven voor het specifieke domein aan welke specifieke regels er gelden t.a.v. inhoud en metadata (eigenschappen en
+<a href="#begrip-waardelijst">waardelijsten</a>). Voor de Omgevingswet is het Toepassingsprofiel omgevingsdocumenten (TPOD) van toepassing 
+en er is voor elk soort omgevingsdocument een apart toepassingsprofiel, bijvoorbeeld toepassingsprofiel omgevingsplan,
+toepassingsprofiel projectbesluit, toepassingsprofiel waterschapsverordening, etc.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-toestand" data-format="markdown"><!--OddPage--><h2 id="x62-toestand"><span class="secno">62. </span>Toestand</h2><p>De <a href="#begrip-geconsolideerde-versie">geconsolideerde versie</a> wordt in STOP gemodelleerd via <strong>toestanden</strong> die de inhoud van de 
+geconsolideerde versie op een bepaald moment in de tijd weergeven.
+</p><p>De LVBB maakt een toestand door mutaties op volgorde te leggen:</p><p>Een toestand van een geconsolideerde regeling ontstaat door consolidatie van<a href="#begrip-besluit">besluiten</a> waarin de <a href="#begrip-regeling">regeling</a>
+ingesteld, gewijzigd of beëindigd wordt. De LVBB bepaalt welke versie van de regeling overeenkomt met de inhoud van de toestand.</p><p><em>bron: STOP</em></p></section><section id="begrip uitbreidbare waardelijst" data-format="markdown"><!--OddPage--><h2 id="x63-uitbreidbare-waardelijst"><span class="secno">63. </span>Uitbreidbare waardelijst</h2><p>Een <strong>uitbreidbare waardelijst</strong> is een <a href="#begrip-waardelijst">waardelijst</a> met vooraf gedefinieerde waarden. 
+Wanneer de gewenste waarde op de waardelijst voorkomt, wordt deze gebruikt. Als de gewenste waarde niet op de
+waardelijst voorkomt, wordt door het bevoegd gezag een eigen waarde gedefinieerd. Deze waarde wordt overigens
+niet aan de waardelijst toegevoegd.
+</p><p><em>bron: TPOD</em></p></section><section id="begrip-verrijkt-besluit" data-format="markdown"><!--OddPage--><h2 id="x64-verrijkt-besluit"><span class="secno">64. </span>Verrijkt besluit</h2><p>Een <strong>verrijkt besluit</strong> is een <a href="#begrip-serviceproduct">serviceproduct</a> van de bekendmaking, bijvoorbeeld in de vorm van een webversie. 
+Aan het <a href="#begrip-besluit">besluit</a> kan extra context zijn toegevoegd, waardoor de inhoud van het besluit op diverse manieren raadpleegbaar 
+en bevraagbaar is. Het is daardoor toegankelijker, maar niet <a href="#begrip-authentiek-besluit">authentiek</a>.
+Het zijn toevoegingen die geen juridische status hebben, maar die de inhoud beter raadpleegbaar, bevraagbaar en begrijpbaar maken.
+</p><p><em>bron: STOP</em></p></section><section id="begrip-vervanging" data-format="markdown"><!--OddPage--><h2 id="x65-vervanging"><span class="secno">65. </span>Vervanging</h2><p>Een <strong>vervanging</strong> is een soort <a href="#begrip-muteren">mutatie</a> welke leidt tot een wijziging van een tekst of <a href="#begrip-regeling">regeling</a>. Deze bestaat uit
+de specificatie van een geheel nieuwe versie van de component, waarbij de vorige versie komt te vervallen, ongeacht hoe die vorige versie luidde.</p><p><em>bron: STOP</em></p></section><section id="begrip-vrijetekststructuur" data-format="markdown"><!--OddPage--><h2 id="x66-vrijetekststructuur"><span class="secno">66. </span>Vrijetekststructuur</h2><p><strong>Vrijetekststructuur</strong> is de <a href="#begrip-tekststructuur">tekststructuur</a> die wordt gebruikt voor die onderdelen van (formele)<a href="#begrip-regeling">regelingen</a>
+die geen artikelen bevatten.</p><p><em>bron: STOP en TPOD</em></p></section><section id="begrip-waardelijst" data-format="markdown"><!--OddPage--><h2 id="x67-waardelijst"><span class="secno">67. </span>Waardelijst</h2><p>Een <strong>waardelijst</strong> is een collectie van waarden die gebruikt kunnen worden bij het <a href="#begrip-annotatie-annoteren">annoteren</a>. 
+Bij veel attributen van annotaties hoort een waardelijst met vooraf gedefinieerde waarden die het attribuut kan aannemen. Waardelijsten
+zijn er in twee vormen: <a href="#begrip-limitatieve-waardelijst">limitatieve waardelijsten</a> en <a href="#begrip-uitbreidbare-waardelijst">uitbreidbare waardelijsten</a>.
+</p><p><em>bron: STOP en TPOD</em></p></section><section id="begrip-werkingsgebied" data-format="markdown"><!--OddPage--><h2 id="x68-werkingsgebied"><span class="secno">68. </span>Werkingsgebied</h2><p>Het <strong>werkingsgebied</strong> is een abstract, conceptueel begrip: het gebied waar een <a href="#begrip-regeltekst">Regeltekst</a> of <a href="#begrip-divisie">Divisie</a> 
+zijn werking heeft. Het begrip werkingsgebied wordt in de STOP-standaard gebruikt voor de computerleesbare verbinding tussen een regeltekst en 
+de GIO's.
+</p><p><em>bron: TPOD en STOP</em></p></section><section id="begrip-wijzigingsbesluit" data-format="markdown"><!--OddPage--><h2 id="x69-wijzigingsbesluit"><span class="secno">69. </span>Wijzigingsbesluit</h2><p>Een <strong>wijzigingsbesluit</strong> is een <a href="#begrip-besluit">besluit</a> waarin de wijziging van een tekst of <a href="#begrip-regeling">regeling</a> bekend wordt gemaakt.</p><p><em>bron: STOP</em></p></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Naar begin">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

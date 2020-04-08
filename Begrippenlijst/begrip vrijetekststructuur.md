@@ -1,5 +1,6 @@
 # Vrijetekststructuur
 
-**Vrijetekststructuur** is de [tekststructuur](#begrip-tekststructuur) die wordt gebruikt voor juridisch authentieke documenten waarvan het lichaam van de [regeling](#begrip-regeling) geen artikelen bevat, zoals visiedocumenten en projectbesluiten.
+**Vrijetekststructuur** is de [tekststructuur](#begrip-tekststructuur) die wordt gebruikt voor die onderdelen van (formele)[regelingen](#begrip-regeling)
+die geen artikelen bevatten.
 
-*bron: STOP*
+*bron: STOP en TPOD*
