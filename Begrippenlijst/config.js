@@ -59,7 +59,7 @@ var respecConfig =
   //-- de namen van de Editor(s) ------------------------------------------------------
   //-- vul in: per Editor: name:, company:, companyURL: -------------------------------
   //-- de github repository waar je documentn in staat --------------------------------
-  github: "https://github.com/geonovum/TPOD",
+  github: "https://github.com/geonovum/TPOD/Begrippenlijst",
   editors: 
  [
   {
@@ -154,8 +154,8 @@ var respecConfig =
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
   previousPublishDate: "2019-12-11",  	    // Format is "YYY-MM-DD"
   //previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
-  previousMaturity: "VV",  	                // kies 1 van deze 2 regels
-  //previousMaturity: "WV",  	                // Deze heb ik toegevoegd als test om een nieuwe werkversie te maken
+  //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
+  previousMaturity: "WV",  	                // Deze heb ik toegevoegd als test om een nieuwe werkversie te maken GK
   
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
