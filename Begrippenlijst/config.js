@@ -7,7 +7,8 @@
 //-- Door. . . :  Jan van Gelder
 //-------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------
-//-- Log . . . :  20181015 - JvG - Initiele versie 
+//-- Log . . . :  20181015 - JvG - Initiele versie
+//-- 			  20200408 - GK - Aanpassing voor Begrippenlijst STOP/TPOD v.98.2-kern
 //-------------------------------------------------------------------------------------
 
 //-- Postprocessors -------------------------------------------------------------------
@@ -66,11 +67,11 @@ var respecConfig =
       company:    "Geonovum",
       companyURL: "https://www.geonovum.nl/geo-standaarden/omgevingswet"
     }, 
-//    {
-//      name:       "Editor-2",
-//      company:    "Geonovum",
-//      companyURL: "https://www.geonovum.nl"
-//    }, 
+    {
+      name:       "Lindy Heesters",
+      company:    "Geonovum",
+      companyURL: "https://www.geonovum.nl"
+    }, 
   ],
   //-- de namen van de Author(s) ------------------------------------------------------
   //-- vul in: per Author: name:, company:, companyURL: -------------------------------
@@ -112,7 +113,7 @@ var respecConfig =
   licence: "cc-by",              //-- Attribution, met bronvermelding
   
   //-- localBiblio: lokale bibliografie, voor verwijzigingen
-  //-- NB: kijk eesrt naar de beschikbare www.specref.org voor verwijziging 
+  //-- NB: kijk eerst naar de beschikbare www.specref.org voor verwijziging 
   localBiblio: 
   {
     "PUB-1":
@@ -151,10 +152,11 @@ var respecConfig =
   postProcess:[custGHPG],
 
   //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beiden aan/uit! 
-  //previousPublishDate: "2018-09-18",  	    // Format is "YYY-MM-DD"
+  previousPublishDate: "2019-12-11",  	    // Format is "YYY-MM-DD"
   //previousMaturity: "CV",                   // kies 1 van deze 2 regels  	  
-  //previousMaturity: "VV",  	                // kies 1 van deze 2 regels
-
+  previousMaturity: "VV",  	                // kies 1 van deze 2 regels
+  //previousMaturity: "WV",  	                // Deze heb ik toegevoegd als test om een nieuwe werkversie te maken
+  
   //-- Optionele parameters:
   //emailComments: "mim@geonovum.nl",         // reactie mailadres, alleen bij CV!
   //subtitle: "iets",                         // Subtitel van het document
