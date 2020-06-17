@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ =================================================================== 
+ Geonovum, Beheerorganisatie Geo-Standaarden. http://www.geonovum.nl
+==================================================================== 
+Versie info:
+2020-03-27: versie 1.0.0 gepubliceerd.
+Let op! De OGC schemalocatie http://schemas.opengis.net/gml/3.2.1/gml.xsd bevat de gml 3.2.2 schema's.
+Het basisigeometrie schema is dus een implementatie van gml 3.2.2
+ =================================================================== 
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlsf="http://www.opengis.net/gmlsf" xmlns:geo="http://www.geostandaarden.nl/basisgeometrie/1.0" targetNamespace="http://www.geostandaarden.nl/basisgeometrie/1.0" elementFormDefault="qualified" version="1.0.0">
+   <import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="../gml/3.2.2/gml.xsd"/>
+   <import namespace="http://www.opengis.net/gmlsf/2.0" schemaLocation="../gml/gmlsfLevels.xsd"/>
+   <annotation>
+      <appinfo source="http://schemas.opengis.net/gmlsfProfile/2.0/gmlsfLevels.xsd">
+         <gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
+      </appinfo>
+   </annotation>
+   <element name="FeatureCollectionGeometrie" type="geo:FeatureCollectionGeometrieType" substitutionGroup="gml:AbstractGML"/>
+   <complexType name="FeatureCollectionGeometrieType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence minOccurs="0" maxOccurs="unbounded">
+               <element name="featureMember">
+                  <complexType>
+                     <complexContent>
+                        <extension base="gml:AbstractFeatureMemberType">
+                           <sequence>
+                              <element ref="gml:AbstractFeature"/>
+                           </sequence>
+                        </extension>
+                     </complexContent>
+                  </complexType>
+               </element>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+   <element name="Geometrie" type="geo:GeometrieType" substitutionGroup="gml:AbstractFeature"/>
+   <complexType name="GeometrieType">
+      <complexContent>
+         <extension base="gml:AbstractFeatureType">
+            <sequence>
+               <element name="id" type="string" minOccurs="1" maxOccurs="1"/>
+               <element name="geometrie" type="gml:GeometryPropertyType" minOccurs="1" maxOccurs="1"/>
+            </sequence>
+         </extension>
+      </complexContent>
+   </complexType>
+</schema>
