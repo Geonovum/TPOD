@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg version="1.1" 
+    xmlns="http://www.w3.org/2000/svg"  
+    width="48.000000pt" 
+    height="48.000000pt" 
+    viewBox="0 0 48.000000 48.000000"  
+    preserveAspectRatio="xMidYMid meet">
+    <line x1="1mm" y1="0" x2="1mm" y2="48mm" style="stroke:rgb(0,0,0);stroke-width:2mm" />
+    <line x1="9mm" y1="0" x2="9mm" y2="48mm" style="stroke:rgb(0,0,0);stroke-width:2mm" />
+    <line x1="17mm" y1="0" x2="17mm" y2="48mm" style="stroke:rgb(0,0,0);stroke-width:2mm" />
+    <line x1="25mm" y1="0" x2="25mm" y2="48mm" style="stroke:rgb(0,0,0);stroke-width:2mm" />
+    <line x1="33mm" y1="0" x2="33mm" y2="48mm" style="stroke:rgb(0,0,0);stroke-width:2mm" />
+    <line x1="41mm" y1="0" x2="41mm" y2="48mm" style="stroke:rgb(0,0,0);stroke-width:2mm" />
+</svg>
