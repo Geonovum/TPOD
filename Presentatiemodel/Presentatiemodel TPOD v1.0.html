@@ -1,0 +1,703 @@
+<!DOCTYPE html><html lang="nl"><!-- HTML-Header - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta charset="utf-8"><meta name="generator" content="ReSpec 24.5.2">
+        
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- File. . . :  index.html                                                                 -->
+        <!-- Bevat . . :  Template voor de index.html die verplicht is voor respec                   -->
+        <!--              Gebaseerd op https://github.com/Geonovum/respec/wiki                       -->
+        <!--              Deze file moet worden neergezet in de root-directory van de                -->
+        <!--              betreffende standaard.                                                     -->
+        <!-- Door. . . :  Jan van Gelder                                                             -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- Log . . . :  20181015 - JvG - Initiele versie                                           -->
+        <!-- - - - - - - -20200909 - GRK - ReSpec file Presentatiemodel TPOD v1.0.0 -  -->
+		<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        <!-- meta tags - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        
+        
+        <!-- Invullen: de titel van de standaard of het document - - - - - - - - - - - - - - - - - - -->
+        <title>Presentatiemodel TPOD versie 1.0</title>    
+
+        <!-- Kan hier een 'ondertitel' tag worden gemaakt? -->
+		
+        <!-- Invullen: de naam van de lokale CSS file  - - - - - - - - - - - - - - - - - - - - - - - -->
+        <link rel="stylesheet" type="text/css" href="./media/Geonovumstyle.css">
+		<link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico">
+        
+        
+    <style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+#references :target {
+  background: #eaf3ff;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd>p:first-child {
+  margin-top: 0;
+}
+
+.section dd>p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary>ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details>* {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: 0.3em;
+  background-color: white;
+  padding-bottom: 0.5em;
+}
+
+details.respec-tests-details[open]>summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details>ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details>li {
+  padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><link rel="stylesheet" href="https://tools.geostandaarden.nl/respec/style/GN-DEF.css"><link rel="shortcut icon" type="image/x-icon" href="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.ico"><script id="initialUserConfig" type="application/json">{
+  "specStatus": "GN-DEF",
+  "specType": "ST",
+  "format": "markdown",
+  "publishDate": "2020-09-07",
+  "github": "https://github.com/Geonovum/TPOD/tree/master/Presentatiemodel",
+  "editors": [
+    {
+      "name": "PR33",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Gineke van Putten",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Irina Entrop",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Kasper Lingbeek",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    },
+    {
+      "name": "Richard de Graaf",
+      "company": "Geonovum",
+      "companyURL": "https://www.geonovum.nl"
+    }
+  ],
+  "shortName": "pmTPOD",
+  "pubDomain": "tpod",
+  "licence": "cc-by",
+  "localBiblio": {
+    "PUB-1": {
+      "title": "Titel van Publicatie-1",
+      "href": "https://www.link-naar-publicatie-1.nl",
+      "status": "V1.0.1",
+      "publisher": "Publisher-1",
+      "company": "Companynaam"
+    },
+    "PUB-2": {
+      "title": "Titel van Publicatie-2",
+      "href": "https://www.link-naar-publicatie-2.nl",
+      "status": "V1.0.1",
+      "publisher": "Publisher-2",
+      "company": "Companynaam"
+    },
+    "PUB-3": {
+      "title": "Titel van Publicatie-3",
+      "href": "https://www.link-naar-publicatie-3.nl",
+      "status": "V1.0.1",
+      "publisher": "Publisher-3",
+      "company": "Companynaam"
+    }
+  },
+  "publishISODate": "2020-09-07T00:00:00.000Z",
+  "generatedSubtitle": "Vastgestelde versie 07 september 2020"
+}</script><script type="application/ld+json">{
+  "@context": [
+    "http://schema.org",
+    {
+      "@vocab": "http://schema.org/",
+      "@language": "nl",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "datePublished": {
+        "@type": "http://www.w3.org/2001/XMLSchema#date"
+      },
+      "inLanguage": {
+        "@language": null
+      },
+      "isBasedOn": {
+        "@type": "@id"
+      },
+      "license": {
+        "@type": "@id"
+      }
+    }
+  ],
+  "id": "https://docs.geostandaarden.nl/tpod/def-st-pmTPOD-20200907/",
+  "type": [
+    "TechArticle"
+  ],
+  "name": "Presentatiemodel TPOD versie 1.0",
+  "inLanguage": "nl",
+  "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "datePublished": "2020-09-07",
+  "copyrightHolder": {
+    "name": "Geonovum",
+    "url": "https://www.geonovum.nl/"
+  },
+  "discussionUrl": "https://github.com/Geonovum/TPOD/tree/master/Presentatiemodel/issues/",
+  "alternativeHeadline": "",
+  "editor": [
+    {
+      "type": "Person",
+      "name": "PR33",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD"
+      }
+    }
+  ],
+  "contributor": [
+    {
+      "type": "Person",
+      "name": "Gineke van Putten",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Irina Entrop",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Kasper Lingbeek",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl"
+      }
+    },
+    {
+      "type": "Person",
+      "name": "Richard de Graaf",
+      "worksFor": {
+        "name": "Geonovum",
+        "url": "https://www.geonovum.nl"
+      }
+    }
+  ],
+  "citation": []
+}</script></head>
+    <!-- HTML-Body - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <body class="h-entry"><div class="head">
+  <a href="https://www.geonovum.nl/" class="logo"><img id="Geonovum" alt="Geonovum" src="https://tools.geostandaarden.nl/respec/style/logos/Geonovum.svg" width="132" height="67"></a>
+  <h1 class="title p-name" id="title">Presentatiemodel TPOD versie 1.0</h1>
+  
+  <h2>Geonovum Standaard<br>
+  Vastgestelde versie <time class="dt-published" datetime="2020-09-07">07 september 2020</time></h2>
+  <dl>
+    <dt>Deze versie:</dt><dd><a class="u-url" href="https://docs.geostandaarden.nl/tpod/def-st-pmTPOD-20200907/">https://docs.geostandaarden.nl/tpod/def-st-pmTPOD-20200907/</a></dd><dt>Laatst gepubliceerde versie:</dt><dd><a href="https://docs.geostandaarden.nl/tpod/pmTPOD/">https://docs.geostandaarden.nl/tpod/pmTPOD/</a></dd>
+    
+    
+    <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/TPOD/">https://geonovum.github.io/TPOD/</a></dd>
+    <dt>Redacteur:</dt>
+    <dd class="p-author h-card vcard"><span class="p-name fn">PR33</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD">Geonovum</a></dd>
+    <dt>Auteurs:</dt><dd class="p-author h-card vcard"><span class="p-name fn">Gineke van Putten</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl">Geonovum</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Irina Entrop</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl">Geonovum</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Kasper Lingbeek</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl">Geonovum</a></dd><dd class="p-author h-card vcard"><span class="p-name fn">Richard de Graaf</span>, <a class="p-org org h-org h-card" href="https://www.geonovum.nl">Geonovum</a></dd>
+    <dt>Doe mee:</dt><dd>
+      <a href="https://github.com/Geonovum/TPOD/tree/master/Presentatiemodel/">GitHub Geonovum/TPOD</a>
+    </dd><dd>
+      <a href="https://github.com/Geonovum/TPOD/tree/master/Presentatiemodel/issues/">Dien een melding in</a>
+    </dd><dd>
+      <a href="https://github.com/Geonovum/TPOD/tree/master/Presentatiemodel/commits/gh-pages">Revisiehistorie</a>
+    </dd><dd>
+      <a href="https://github.com/Geonovum/TPOD/tree/master/Presentatiemodel/pulls/">Pull requests</a>
+    </dd>
+  </dl>
+  
+  
+    <dl>
+          <dt>Rechtenbeleid:</dt>
+          <dd>
+            <div class="copyright" style="margin: 0.25em 0;">
+              <abbr title="Creative Commons Attribution 4.0 International Public License">
+              <a href="https://creativecommons.org/licenses/by/4.0/legalcode"><img src="https://tools.geostandaarden.nl/respec/style/logos/cc-by.svg" alt="Creative Commons Attribution 4.0 International Public License" width="115" height="40"></a>
+            </abbr>
+              <div style="display:inline-block; vertical-align:top">
+                <p style="font-size: small;">Creative Commons Attribution 4.0 International Public License<br>(CC-BY)</p>
+              </div>
+            </div>
+          </dd>
+        </dl>
+  <hr title="Separator for header">
+</div><section id="abstract" data-format="markdown" data-include="" class="introductory"><h2></h2></section><section id="sotd" class="introductory"><h2>Status van dit document</h2><p>
+    <em>Deze paragraaf beschrijft de status van dit document ten tijde van publicatie. Het is mogelijk dat er actuelere versies van dit document bestaan. Een lijst van Geonovum publicaties en de laatste gepubliceerde versie van dit document zijn te vinden op <a href="https://www.geonovum.nl/geo-standaarden/alle-standaarden">https://www.geonovum.nl/geo-standaarden/alle-standaarden</a>.</em>
+  </p><p>
+
+    Dit is de definitieve versie van de standaard. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.
+
+
+
+
+
+ De programmaraad van Geonovum heeft deze standaard goedgekeurd.
+
+
+</p><p>Presentatiemodel TPOD v1.0</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#H001"><span class="secno">1. </span>Inleiding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#bedoeling-van-het-presentatiemodel"><span class="secno">1.1 </span>Bedoeling van het presentatiemodel</a></li><li class="tocline"><a class="tocxref" href="#context"><span class="secno">1.2 </span>Context</a></li><li class="tocline"><a class="tocxref" href="#leeswijzer"><span class="secno">1.3 </span>Leeswijzer</a></li></ol></li><li class="tocline"><a class="tocxref" href="#H002"><span class="secno">2. </span>Principes van symbolisatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#bepalen-van-symbolisatie"><span class="secno">2.1 </span>Bepalen van Symbolisatie</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#annoteren"><span class="secno">2.1.1 </span>Annoteren</a></li><li class="tocline"><a class="tocxref" href="#waardelijsten"><span class="secno">2.1.2 </span>Waardelijsten</a></li><li class="tocline"><a class="tocxref" href="#symboolcode"><span class="secno">2.1.3 </span>Symboolcode</a></li></ol></li><li class="tocline"><a class="tocxref" href="#symbolenbibliotheek"><span class="secno">2.2 </span>Symbolenbibliotheek</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#punten"><span class="secno">2.2.1 </span>Punten</a></li><li class="tocline"><a class="tocxref" href="#lijnen"><span class="secno">2.2.2 </span>Lijnen</a></li><li class="tocline"><a class="tocxref" href="#vlakken"><span class="secno">2.2.3 </span>Vlakken</a></li><li class="tocline"><a class="tocxref" href="#normwaarden"><span class="secno">2.2.4 </span>Normwaarden</a></li></ol></li><li class="tocline"><a class="tocxref" href="#ow-objecten"><span class="secno">2.3 </span>OW-objecten</a></li></ol></li><li class="tocline"><a class="tocxref" href="#H003"><span class="secno">3. </span>Principes van symbolisatie bij presentatie in kaartbeeld</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#standaardweergave"><span class="secno">3.1 </span>Standaardweergave</a></li><li class="tocline"><a class="tocxref" href="#specifieke-weergave"><span class="secno">3.2 </span>Specifieke weergave</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#activiteitlocatieaanduiding"><span class="secno">3.2.1 </span>Activiteitlocatieaanduiding</a></li><li class="tocline"><a class="tocxref" href="#gebiedsaanwijzing"><span class="secno">3.2.2 </span>Gebiedsaanwijzing</a></li><li class="tocline"><a class="tocxref" href="#normwaarde"><span class="secno">3.2.3 </span>Normwaarde</a></li></ol></li><li class="tocline"><a class="tocxref" href="#presentatie-van-specifieke-kaarten"><span class="secno">3.3 </span>Presentatie van specifieke kaarten</a></li></ol></li></ol></nav><div id="H000" data-format="markdown"><p><strong>Versiebeheer</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Datum</strong></th>
+<th><strong>Door</strong></th>
+<th><strong>Versie</strong></th>
+<th><strong>Wijziging</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3-9-2019</td>
+<td>GVP</td>
+<td>0.97</td>
+<td>Paragraaf 2.2 en 2.3 over symboliseren zijn toegevoegd.</td>
+</tr>
+<tr>
+<td>10-9-2019</td>
+<td>GVP/FJP</td>
+<td>0.98-kern</td>
+<td>Opgeleverde versie 0.98-kern</td>
+</tr>
+<tr>
+<td>5-11-2019</td>
+<td>GVP</td>
+<td>0.98.1-kern</td>
+<td>De methode afwijkende presentatie van naam veranderd; de methode heet eigen presentatie. Dit is in de tekst overal aangepast.</td>
+</tr>
+<tr>
+<td>11-2019</td>
+<td>GVP</td>
+<td>0.98.2-kern</td>
+<td>Uitbreiding van het hoofdstuk over tekstpresentatie.</td>
+</tr>
+<tr>
+<td>11-2019</td>
+<td>GVP</td>
+<td>0.98.2-kern</td>
+<td>De term noemer uit het presentatiemodel (hoofdstuk 4) is aangepast naar tekstuele aanduiding (van de verwijzing naar geografisch informatieobject).</td>
+</tr>
+<tr>
+<td>12-2019</td>
+<td>GVP</td>
+<td>0.98.3-kern</td>
+<td>Diverse tekstuele wijzigingen doorgevoerd in het hele document. En een aantal afbeeldingen zijn geactualiseerd. Geen grote inhoudelijke wijzigingen. Samenvatting toegevoegd.</td>
+</tr>
+<tr>
+<td>08-2020</td>
+<td>RdG en IE</td>
+<td>1.0</td>
+<td>Aantal tekstuele wijzigingen t.o.v. 0.98.3-kern: - Besluit aangepast naar Regeling - OP-verbeelding buiten scope geplaatst - Document aangepast naar 1.0-standaard</td>
+</tr>
+</tbody></table>
+</div><section id="H001" data-format="markdown"><!--OddPage--><h2 id="x1-inleiding"><span class="secno">1. </span>Inleiding</h2><p>De inhoud van een omgevingsdocument dient kenbaar te zijn. Daarom dient een omgevingsdocument niet alleen machineleesbaar te worden aangeboden, maar is ook een voor de mens te interpreteren weergave noodzakelijk. Uitgangspunt is dat de raadpleger tekstfragmenten (regeltekst of teksten met een vrijetekststructuur) en de corresponderende werkingsgebieden overzichtelijk kan interpreteren.
+</p><section id="bedoeling-van-het-presentatiemodel"><h3 id="x1-1-bedoeling-van-het-presentatiemodel"><span class="secno">1.1 </span>Bedoeling van het presentatiemodel</h3><p>Het presentatiemodel richt zich op het presenteren van een digitaal opgemaak bestand. Onder presenteren wordt verstaan; het weergeven, visualiseren van de inhoud van een regeling conform een afgesproken standaard. Het presentatiemodel gaat over het verbeelden van geometrieën.
+Het presentatiemodel is één van de drie onderdelen van ToepassingsProfielen OmgevingsDocumenten (TPOD), zie Figuur 1. Met deze versie 1.0 beperkt het presentatiemodel zich tot duiding van weergave van Omgevingswet(OW)-informatie, dus de TPOD. De officiële publicatie (OP)-standaard (STOP) wordt niet beschreven in dit presentatiemodel.
+</p><p><img src="media/Fig13-onderdelen-vaneen-standaard.png" alt="" width="830" height="425"></p><p><em>Figuur 1: de drie onderdelen van de TPOD-standaard</em></p><p>Het presentatiemodel kan gebruikt worden:</p><p>•    In het Omgevingsloket (DSO-viewer)</p><p>•    In een eigen vorm: publicatie of viewer op een eigen website van bevoegd gezag.
+</p></section><section id="context"><h3 id="x1-2-context"><span class="secno">1.2 </span>Context</h3><p>In dit presentatiemodel 1.0 is worden de volgende onderwerpen behandeld:</p><p>•    Het presenteren van annotaties in het DSO-LV via OZON op basis van een standaardweergave</p><p>•    Het presenteren van annotaties in het DSO-LV op basis van een zelf bepaalde weergave</p><p>De volgende onderwerpen worden in dit presentatiemodel niet behandeld:</p><p>•    Het presenteren  van besluiten in het DSO-LV
+</p><p>•    Het presenteren van regelingen en besluiten buiten het DSO-LV</p><p>•    Het presenteren van gegevens uit de OP-standaard</p><p>De besluiten, regelingen en gegevens van de OP-standaard worden in het presentatiemodel voor STOP is omschreven door het Kennis- en Exploitatiecentrum Officiele Overheidspublicatie (KOOP). Deze is te vinden via de website van KOOP.
+</p></section><section id="leeswijzer"><h3 id="x1-3-leeswijzer"><span class="secno">1.3 </span>Leeswijzer</h3><p>Het presentatiemodel TPOD beschrijft de principes van presentatie in een kaartbeeld. In hoofdstuk 2 wordt het principe van annoteren, symboliseren en presenteren beschreven. Er zijn verschillende symbolisatiemethoden, deze zijn in hoofdstuk 3 beschreven.</p></section></section><section id="H002" data-format="markdown"><!--OddPage--><h2 id="x2-principes-van-symbolisatie"><span class="secno">2. </span>Principes van symbolisatie</h2><p>Het uitgangspunt voor de mens te interpreteren presentatie van locaties is dat
+gebruik gemaakt wordt van de annotatie met IMOW-objecten (activiteit,
+gebiedsaanwijzing, omgevingswaarde, omgevingsnorm), waardelijsten en
+symbolenbibliotheek[^1]: ofwel de inhoudelijke annotatie is bepalend voor de
+symboliek (kleur/arcering) waarmee een locatie wordt weergegeven. Deze worden
+door de viewer van het DSO herkent waardoor de juiste symboliek wordt
+weergegeven.</p><p>[^1]: De symbolenbibliotheek is onderdeel van dit Presentatiemodel en is te
+downloaden via de website van Geonovum: (<a href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD">https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD</a>)</p><p>In dit hoofdstuk wordt uitgelegd hoe de weergave van locaties in een kaartbeeld
+tot stand komt.</p><section id="bepalen-van-symbolisatie"><h3 id="x2-1-bepalen-van-symbolisatie"><span class="secno">2.1 </span>Bepalen van Symbolisatie</h3><p>Om locaties te kunnen presenteren in een digitale kaartview is het van belang om
+gebruik te maken van symbolisatie. Welke symboliek (kleur/arcering) aan een
+locatie wordt gegeven is afhankelijk van de annotaties.</p><section id="annoteren"><h4 id="x2-1-1-annoteren"><span class="secno">2.1.1 </span>Annoteren</h4><p>Annoteren is het toevoegen van gegevens aan regelingen, waardoor de regeling
+objectgericht doorzoekbaar wordt. Uit de tekst worden OW-objecten bepaald, deze
+worden gekoppeld aan locaties. Onder locatie wordt een geometrisch afgebakend
+gebied verstaan. Door middel van deze locaties worden vooralsnog de volgende
+thema’s op de kaart getoond:</p><ul>
+<li><p>activiteiten</p>
+</li>
+<li><p>gebiedsaanwijzingen</p>
+</li>
+<li><p>omgevingswaarden</p>
+</li>
+<li><p>omgevingsnormen</p>
+</li>
+<li><p>(werkingsgebieden)</p>
+</li>
+</ul><p>Het annoteren wordt ook gebruikt om toepasbare regels (vragenbomen) aan te
+wijzen.</p><p>Deze locaties moeten in een digitale kaartviewer getoond kunnen worden. Bij deze
+locaties bepaalt het OW-object met welke stijl (kleur/arcering/symbool) de
+locatie in een kaartbeeld wordt weergegeven. Hiervoor worden groepen met
+waardelijsten en bijbehorende stijlen gebruikt.</p></section><section id="waardelijsten"><h4 id="x2-1-2-waardelijsten"><span class="secno">2.1.2 </span>Waardelijsten</h4><p>Een waardelijst is een collectie van vooraf gedefinieerde waarden die gebruikt
+worden bij annoteren van OW-objecten, zie 2.3. Waardelijsten zijn er in twee
+vormen:</p><ul>
+<li><p>gesloten waardelijst: een lijst met vooraf gedefinieerde waarden waaruit
+gekozen moet worden. Deze waardelijst wordt centraal beheerd en kan alleen
+beheermatig gewijzigd worden, aangezien een wijziging direct effect heeft op
+de werking van het DSO.</p>
+</li>
+<li><p>open waardelijst: een lijst met vooraf gedefinieerde waarden. Wanneer de
+gewenste waarde op de waardelijst voorkomt, wordt die gebruikt. Als de
+gewenste waarde niet op de waardelijst voorkomt, wordt door het bevoegd
+gezag een eigen waarde gedefinieerd. Het gebruik van de open waardelijst is
+nog in ontwikkeling bij het stelsel.</p>
+</li>
+</ul><p>Aan de waardes van een gesloten waardelijst die betrekking hebben op de
+verbeelding op een kaart wordt automatisch een symboolcode toegevoegd. Hierdoor
+is er een geharmoniseerde weergave beschikbaar.</p><p>Zie hieronder een voorbeeld van de waarde ‘uitritactiviteit’ uit de waardelijst
+zoals dit ‘onder water’ getoond wordt. Hierbij wordt een symboolcode gekoppeld
+die door de viewer van het DSO herkend wordt:</p><p><img src="media/waarde.png" alt="" width="854" height="289"></p></section><section id="symboolcode"><h4 id="x2-1-3-symboolcode"><span class="secno">2.1.3 </span>Symboolcode</h4><p>De symboolcode is een zogenaamde enkelvoudige code, dat wil zeggen dat er maar 1
+code is voor de complete symboliek. Bij de ‘standaard presentatiemethode’ wordt
+gebruikt gemaakt van de symbolisatietabel waarin afspraken zijn vastgelegd over
+de symboliek waarmee een IMOW-object, zoals bijvoorbeeld een activiteit, wordt
+gepresenteerd. Het mechanisme koppelt de groepwaarde aan de bijbehorende,
+afgesproken, symboolcode uit de STOP/TPOD standaard. Het bevoegd gezag kan, als
+het dat wenselijk vindt, afwijken van de standaardpresentatie en een eigen
+symbolisatie kiezen en dan een specifieke symboolcode meeleveren. Dit wordt
+beschreven in Hoofdstuk 3.</p><p>In de waardelijst 1.0 hebben de gesloten waardelijsten van werkingsgebieden,
+activiteiten, gebiedsaanwijzingen, omgevingswaarden en omgevingsnormen een
+symboolcode voor de standaardweergave. Het bevoegd gezag heeft de mogelijkheid
+af te wijken van de standaardweergave door een eigen symbolisatie mee te geven,
+verder toegelicht 3.1. De keuze is beperkt tot symboolcodes uit de
+symbolenbibliotheek.</p><p>In Figuur 2 wordt het symbolisatieprincipe met een voorbeeld geïllustreerd. In
+dit voorbeeld wordt in de tekst van artikel 2.14 een annotatie gemaakt van de
+activiteit ‘uitrit aanleggen’.</p><p><img src="media/Figuur2Annoteren-Symboliseren-presenteren_Uitritaanleggen.png" alt="" width="3334" height="3945"></p><p><em>Figuur 2: Symboliseren op basis van de standaardweergave</em></p><p>Een activiteit is een IMOW-object met een attribuut ‘activiteitengroep’ waarbij
+de inhoud gekozen moet worden uit een gesloten waardelijst. Het bevoegd gezag
+kiest in dit geval dat de activiteit ‘uitrit aanleggen’ valt onder de
+activiteitengroep ‘uitritactiviteit’.</p><p>In de waardelijst bij activiteitengroep is voor ‘uitritactiviteit’ vastgelegd
+dat daarvoor symboolcode ‘vag421’ de standaardweergave is. Hierdoor wordt
+activiteit ‘uitrit aanleggen’ met activiteitgroep ‘uitritactiviteit’ in de kaart
+weergeven als een vlak met een groene rand en een groen gestippelde vlakvulling.</p></section></section><section id="symbolenbibliotheek"><h3 id="x2-2-symbolenbibliotheek"><span class="secno">2.2 </span>Symbolenbibliotheek</h3><p>De symbolenbibliotheek bevat alle stijlen waaruit gekozen kan worden bij
+OW-objecten. Hiermee worden de stijlen die zichtbaar zijn op de kaartviewer
+beperkt. Het beperken van de stijlen heeft als doel dat in de viewer de
+verschillende omgevingsdocumenten beter te vergelijken zijn (harmonisatie).</p><p>De TPOD-standaard maakt in het presentatiemodel gebruik van symboolcodes voor de
+presentatie van OW-objecten op de kaart. Alleen aan de hand van symboolcodes
+kunnen verbeeldingen bepaald worden. Bij elke symboolcode hoort een specifieke
+stijl, zie onderstaande figuur 3 als voorbeeld.</p><p><img src="media/Figuur3vbsymboolcode.png" alt="" width="830" height="633"></p><p><em>Figuur 3: symboolcodes en visualisatie</em></p><p>In de symbolenbibliotheek STOP/TPOD staat bij elke stijl hoe deze is opgebouwd.
+Deze symbolenbibliotheek wordt voor zowel de presentatiemodel van STOP als TPOD
+gebruikt. Zo is in de symbolenbibliotheek informatie terug te vinden over o.a.:
+de hex-codes van de kleuren, de dikte van de lijnen, het soort symbool incl.
+formaat (bij punten) en de transparantie van het vlak.</p><p>Voor de symbolenbibliotheek wordt verwezen naar de volgende bestanden[^2]:</p><p>[^2]: De bestanden van de symbolenbibliotheek zijn te downloaden via de volgende
+link: <a href="https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD">https://www.geonovum.nl/geo-standaarden/omgevingswet/STOPTPOD</a></p><ul>
+<li><p>‘SLD_Symbolenbibliotheek_STOPTPOD_punten.xml’</p>
+</li>
+<li><p>‘SLD_Symbolenbibliotheek_STOPTPOD_lijnen.xml’</p>
+</li>
+<li><p>‘SLD_Symbolenbibliotheek_STOPTPOD_vlakken.xml’</p>
+</li>
+<li><p>‘SLD_Symbolenbibliotheek_STOPTPOD_normwaarden.xml’</p>
+</li>
+</ul><p>De symbolenbibliotheek is in de vorm van de Symbology Encoding (SE-)standaard
+(van de OGC).</p><section id="punten"><h4 id="x2-2-1-punten"><span class="secno">2.2.1 </span>Punten</h4><p>Er is een symbolenbibliotheek-bestand voor punten waarin de verschillende
+symbolen zijn opgenomen waarmee je een bepaald punt op een kaart kunt
+verbeelden, zie ook Figuur 4.</p><p><img src="media/Figuur4punten.jpg" alt="" width="978" height="520"></p><p><em>Figuur 4: afbeelding van de punten uit de symbolenbibliotheek</em></p></section><section id="lijnen"><h4 id="x2-2-2-lijnen"><span class="secno">2.2.2 </span>Lijnen</h4><p>Er is een symbolenbibliotheek-bestand voor lijnen waarin de verschillende
+symbolen zin opgenomen waarmee je een lijn op een kaart kunt verbeelden, zie ook
+Figuur 5.</p><p><img src="media/Figuur5lijnen.jpg" alt="" width="1168" height="616"></p><p><em>Figuur 5: afbeelding van de lijnen uit de symbolenbibliotheek</em></p></section><section id="vlakken"><h4 id="x2-2-3-vlakken"><span class="secno">2.2.3 </span>Vlakken</h4><p>Er is een symbolenbibliotheek-bestand voor vlakken waarin de stijlen ten behoeve
+van de vlakken zijn opgenomen. Deze bestaan altijd uit het vlak zelf en de
+omlijning, zie Figuur 6.</p><p><img src="media/Figuur6vlakken.jpg" alt="" width="1284" height="947"></p><p><em>Figuur 6: Afbeelding van de vlakken uit de symbolenbibliotheek</em></p></section><section id="normwaarden"><h4 id="x2-2-4-normwaarden"><span class="secno">2.2.4 </span>Normwaarden</h4><p>Er is een symbolenbibliotheek voor normwaarden waarin de symboolcodes zijn
+gerangschikt voor kleurverloop, zie ook Figuur 7.</p><p><img src="media/Figuur7normwaarden.jpg" alt="" width="1590" height="612"></p><p><em>Figuur 7: Afbeelding van de symbolenbibliotheek voor normwaarden</em></p></section></section><section id="ow-objecten"><h3 id="x2-3-ow-objecten"><span class="secno">2.3 </span>OW-objecten</h3><p>In Figuur 8 is te zien hoe de OW-objecten en hun locaties die bij het annoteren
+zijn gedefinieerd. Dit is het volledige informatiemodel OW (IMOW) in UML[^3],
+hierin zijn de objecten die een standaardweergave krijgen op de kaart groen
+weergeven. Dit zijn: activiteit, gebiedsaanwijzing, omgevingswaarde en
+omgevingsnorm.</p><p>[^3]: De Unified Modeling Language, afgekort UML, is een modelmatige taal om
+objectgeoriënteerde analyses en ontwerpen voor een informatiesysteem te kunnen
+maken</p><p><img src="media/fig8IMOWschema.png" alt="" width="589" height="627"></p><p><em>Figuur 8: Het IMOW-diagram in UML</em></p><p>De bovengenoemde OW-objecten worden verwezen vanuit een Juridische Regel, welke
+zelf ook een locatie heeft. De som van alle locaties van een juridische regel is
+het werkingsgebied van het OW-object Regeltekst (blauw). Het OW-object
+Regeltekst is om een verwijzing naar het artikel of lid te doen.</p><p>Het werkingsgebied wordt gebruikt om te duiden waar een regeltekst (artikel of
+lid) zijn werking heeft (voor ‘klik op de kaart’). Er wordt hier geen
+symbolisatie voor meegegeven, dit wordt aan de kaartviewer overgelaten, zie ook
+Figuur 9</p><p><img src="media/Figuur9activiteitregelkwalificatieinDSO-viewer.png" alt="" width="916" height="493"></p><p><em>Figuur 9: Weergave van een viewer waarin het werkingsgebied wordt gepresenteerd.
+In deze afbeelding is het werkingsgebied met een gestreepte lijn verbeeld.</em></p><p>Bij omgevingsdocumenten met een vrijetekststructuur heeft het OW-object Divisie
+ook een werkingsgebied. Bij deze is het de som van alle locaties van de
+annotaties van het OW-object Tekstdeel.</p></section></section><section id="H003" data-format="markdown"><!--OddPage--><h2 id="x3-principes-van-symbolisatie-bij-presentatie-in-kaartbeeld"><span class="secno">3. </span>Principes van symbolisatie bij presentatie in kaartbeeld</h2><p>Het presentatiemodel bedient verschillende mogelijkheden om de locatie op een
+kaartbeeld in een viewer weer te geven:</p><ol>
+<li><p>Symbolisatie op basis van een afgesproken standaard symbolisatie.</p>
+</li>
+<li><p>Een eigen symbolisatie die afwijkt van de standaard symbolisatie.</p>
+</li>
+<li><p>Een symbolisatie specifiek bedoeld voor een kaartviewer, afwijkend van
+bovenstaande symbolisatie.</p>
+</li>
+</ol><section id="standaardweergave"><h3 id="x3-1-standaardweergave"><span class="secno">3.1 </span>Standaardweergave</h3><p>Vanuit de OW-objecten worden bij de volgende attributen standaardweergave
+toegepast:</p><ul>
+<li><p>Activiteit.groep</p>
+</li>
+<li><p>Omgevingsnorm.groep</p>
+</li>
+<li><p>Omgevingswaarde.groep</p>
+</li>
+<li><p>Gebiedsaanwijzing.groep</p>
+</li>
+</ul><p><img src="media/Figuur10PM_Standaardpresentatie.png" alt="" width="6588" height="2584"></p><p><em>Figuur 10: de OW-objecten waar een standaardweergave voor geldt</em></p><p>Het uitgangspunt voor de weergave van OW-objecten is dat de waarde uit de
+waardelijst bepaalt met welke stijl een locatie in een kaartbeeld wordt
+weergegeven. Hiermee wordt harmonisatie bevorderd. Voor de standaardweergave is
+de symboolcode via de waardelijsten geregeld. De waarde die van de
+attribuutsoort groep is bepalend voor de stijl in het kaartbeeld.</p></section><section id="specifieke-weergave"><h3 id="x3-2-specifieke-weergave"><span class="secno">3.2 </span>Specifieke weergave</h3><p>In de TPOD-standaard 1.0 heeft het bevoegd gezag de mogelijkheid om een stijl
+die kiezen die afwijkt van de standaardweergave. Vanuit de OW-objecten moet
+daarbij bij de volgende attributen een specifieke weergave worden meegegeven
+(optioneel):</p><ul>
+<li><p>ActiviteitLocatieaanduiding.specifiekeSymbolisatie</p>
+</li>
+<li><p>Gebiedsaanwijzing.specifiekeSymbolisatie</p>
+</li>
+<li><p>Normwaarde.specifiekeSymbolisatie</p>
+</li>
+</ul><p><img src="media/Figuur11Standaardpresentatiemodel.png" alt="" width="3796" height="1992"></p><p><em>Figuur 11: OW-objecten met een specifiekeSymbolisatie, deze kunnen o.b.v. eigen
+weergave getoond worden</em></p><p>Bij de specifiekeSymbolisatie kan naar keuze een symboolcode ingevuld worden
+voor een weergave die afwijkt van de standaardweergave.</p><p><img src="media/Figuur12PM_EigenPresentatie-activiteit.png" alt="" width="6589" height="2584"></p><p><em>Figuur 12: Een voorbeeld waarbij van een standaardsymbool uit de
+harmonisatietabel wordt afgeweken met een specifiekeSymbolisatie</em></p><p>In het voorbeeld hebben twee functies (‘Waterkering verleggen’ en ‘Waterberging
+realiseren’) identieke symbolen gekregen, omdat ze tot dezelfde semantische
+groep behoren. Om toch onderscheid te hebben, wordt voor ‘Waterberging
+realiseren’ afgeweken van de standaard. Voor de presentatie van ‘Waterberging
+realiseren’ stuurt de bronhouder in dit geval de symboolcode mee.</p><section id="activiteitlocatieaanduiding"><h4 id="x3-2-1-activiteitlocatieaanduiding"><span class="secno">3.2.1 </span>Activiteitlocatieaanduiding</h4><p>Een ActiviteitLocatieaanduiding geeft een activiteit uit een specifieke regel
+een locatie. Het is bij het annoteren van een activiteitlocatieaanduiding
+verplicht om een activiteitregelkwalificatie op te geven. Bij gebruik van de
+specifiekeSymbolisatie wordt het mogelijk om verschillende waarden van de
+activiteitregelkwalificatie te verbeelden, zie Figuur 13.</p><p><img src="media/Figuur13TPOD_PM_Symbolisatietabel_Afwijkendepresentatieobvsymbolisatietabel.png" alt="" width="6589" height="2584"></p><p><em>Figuur 13: weergave van een viewer bij het annoteren van specifiekeSymbolisatie
+van activiteitregelkwalificatie.</em></p></section><section id="gebiedsaanwijzing"><h4 id="x3-2-2-gebiedsaanwijzing"><span class="secno">3.2.2 </span>Gebiedsaanwijzing</h4><p>Gebiedsaanwijzing hebben een verwijzing naar één of meer Locaties. Op deze
+manier is van iedere Juridische regel, ongeacht het object of de objecten
+waarmee het is geannoteerd, duidelijk voor welke Locatie(s) deze geldt.</p></section><section id="normwaarde"><h4 id="x3-2-3-normwaarde"><span class="secno">3.2.3 </span>Normwaarde</h4><p><img src="media/Figuur14Eigenpresentatiemethode.png" alt="" width="3796" height="1992"></p><p>Bij het annoteren van een Omgevingsnorm en een Omgevingswaarde staat de groep
+gedefinieerd op het OW-object. De onderliggende normwaarden van het maximum
+geluidsniveau van een Omgevingsnormgroep ‘geluid’ worden hierdoor met dezelfde
+kleur verbeeld.</p><p>De TPOD-standaard maakt mogelijk dat iedere Normwaarde een specifieke kleur
+krijgt. Dit maakt het mogelijk om verschillende normwaarden met verschillende
+kleuren te verbeelden. Voor de raadpleger wordt het onderscheid tussen de
+verschillende normwaarden duidelijker. Zie figuur 14.</p><p>In Figuur 15 wordt de werking van de standaardweergave en de specifieke weergave
+getoond.</p><p><img src="media/Figuur15TPOD_PMAnnoteren-symboliseren-presenteren_Eigenverbeelding.png" alt=""></p><p>Figuur 15: Principe van annoteren, symboliseren en presenteren bij presenteren
+van locaties op de kaart. Hier zijn de beide presentatiemethoden verbeeld.</p></section></section><section id="presentatie-van-specifieke-kaarten"><h3 id="x3-3-presentatie-van-specifieke-kaarten"><span class="secno">3.3 </span>Presentatie van specifieke kaarten</h3><p>In de 1.0-versie van de TPOD-standaard is het mogelijk om te duiden welke
+informatie op een kaartbeeld getoond moet worden bij een bepaalde
+tekst/artikel/lid.</p><p>Het OW-object Kaart maakt het mogelijk om een selectie te maken uit alle
+beschikbare OW-objecten en deze op een eigen kaart in de viewer te tonen, zie
+Figuur 16. Het doel hiervan is dat een bepaald onderwerp toegelicht kan worden,
+bijvoorbeeld het in samenhang tonen van meerdere OW-objecten die te maken hebben
+met water.</p><p><img src="media/Figuur16PM_Specifieksymbool.png" alt=""></p><p><em>Figuur 16: het informatiemodel van het OW-object Kaart</em></p><p>Bij het aanleveren van een Kaart wordt gebruik gemaakt van kaartlagen, deze
+kunnen in een viewer aan- en uitgezet worden. Bij een kaartlaag is het mogelijk
+om verschillende objecten te gebruiken, zoals een activiteitlocatieaanduiding,
+een gebiedsaanwijzing en een norm (met diens normwaarden).</p><p>In de 1.0-versie van de TPOD-standaard wordt het kleurobject bepaald door
+definitie van het OW-object.</p></section></section><p role="navigation" id="back-to-top"><a href="#title">
+  <abbr title="Naar begin">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
