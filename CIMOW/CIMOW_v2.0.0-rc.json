@@ -1,0 +1,2498 @@
+{
+   "$schema": "http://json-schema.org/draft-06/schema#",
+   "title": "MIMCM/CIMOW/20210601",
+   "json": {
+      "definitions": {
+         "Regeling": {
+            "title": "Regeling",
+            "description": "Een tekst (met eventuele afbeeldingen en andere multimedia-elementen) die juridische voorschriften van algemene strekking of beleidsregels bevat.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Omgevingsdocument"
+               },
+               {
+                  "required": [
+                     "type",
+                     "heeftRegelingsgebied"
+                  ],
+                  "properties": {
+                     "type": {
+                        "title": "type",
+                        "$ref": "#/definitions/SoortRegeling"
+                     },
+                     "citeerTitel": {
+                        "title": "citeerTitel",
+                        "type": "string",
+                        "minItems": 0
+                     },
+                     "opschrift": {
+                        "title": "opschrift",
+                        "type": "string",
+                        "minItems": 0
+                     },
+                     "conditie": {
+                        "title": "conditie",
+                        "type": "string",
+                        "minItems": 0
+                     },
+                     "opvolgerVan": {
+                        "title": "opvolgerVan",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Regeling"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     },
+                     "heeftRegelingsgebied": {
+                        "title": "heeft regelingsgebied",
+                        "description": "Het gebied waar de regeling geldt.",
+                        "$ref": "#/definitions/Locatie"
+                     },
+                     "tijdelijkDeelVan": {
+                        "title": "tijdelijkDeelVan",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Regeling"},
+                        "minItems": 0
+                     }
+                  }
+               }
+            ]
+         },
+         "BevoegdGezag": {
+            "title": "BevoegdGezag",
+            "type": "object",
+            "required": [
+               "naam",
+               "bestuurslaag",
+               "code"
+            ],
+            "properties": {
+               "naam": {
+                  "title": "naam",
+                  "type": "string"
+               },
+               "bestuurslaag": {
+                  "title": "bestuurslaag",
+                  "type": "string"
+               },
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               }
+            }
+         },
+         "Besluit": {
+            "title": "Besluit",
+            "type": "object",
+            "required": [
+               "besluitStatus",
+               "identificatie",
+               "publicatieID"
+            ],
+            "properties": {
+               "besluitStatus": {
+                  "title": "besluitStatus",
+                  "$ref": "#/definitions/BesluitStatus"
+               },
+               "identificatie": {
+                  "title": "identificatie",
+                  "type": "string"
+               },
+               "publicatieID": {
+                  "title": "publicatie-ID",
+                  "type": "string",
+                  "maxItems": "unbounded"
+               },
+               "aangemaaktVanuit": {
+                  "title": "aangemaakt vanuit",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/DocumentComponent"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "SoortRegeling": {
+            "title": "soortRegeling",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Omgevingsdocument": {
+            "title": "Omgevingsdocument",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "officieleTitel",
+               "aangeleverdDoorEen"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "type": "string"
+               },
+               "officieleTitel": {
+                  "title": "officieleTitel",
+                  "type": "string"
+               },
+               "aangeleverdDoorEen": {
+                  "title": "aangeleverd door een",
+                  "$ref": "#/definitions/BevoegdGezag"
+               }
+            }
+         },
+         "BesluitStatus": {
+            "title": "BesluitStatus",
+            "type": "object",
+            "properties": {
+               "onherroepelijkVanaf": {
+                  "title": "onherroepelijkVanaf",
+                  "type": "string",
+                  "format": "date-time",
+                  "minItems": 0
+               },
+               "geschorstVanaf": {
+                  "title": "geschorstVanaf",
+                  "type": "string",
+                  "format": "date-time",
+                  "minItems": 0
+               },
+               "toelichtingURL": {
+                  "title": "toelichtingURL",
+                  "type": "string",
+                  "minItems": 0
+               }
+            }
+         },
+         "Identificatie": {
+            "title": "Identificatie",
+            "type": "string"
+         },
+         "EId": {
+            "title": "eId",
+            "type": "string"
+         },
+         "WId": {
+            "title": "wId",
+            "type": "string"
+         },
+         "WaardeEenheid": {
+            "title": "WaardeEenheid",
+            "description": "Een specifieke datatype voor het vastleggen van waarden met een eenheid, zoals 5 meter, 30 decibel en andere. ",
+            "type": "object",
+            "required": [
+               "waarde",
+               "eenheid"
+            ],
+            "properties": {
+               "waarde": {"type": "number"},
+               "eenheid": {"type": "string"}
+            }
+         },
+         "Waardelijst": {
+            "title": "Waardelijst",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Functiegroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Kop": {
+            "title": "Kop",
+            "type": "object",
+            "properties": {
+               "label": {
+                  "title": "label",
+                  "type": "string",
+                  "minItems": 0
+               },
+               "nummer": {
+                  "title": "nummer",
+                  "type": "string",
+                  "minItems": 0
+               },
+               "opschrift": {
+                  "title": "opschrift",
+                  "type": "string",
+                  "minItems": 0
+               }
+            }
+         },
+         "DocumentComponent": {
+            "title": "DocumentComponent",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "expressie",
+               "type",
+               "volgordeNummer",
+               "isOnderdeelVan"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/WId"
+               },
+               "expressie": {
+                  "title": "expressie",
+                  "$ref": "#/definitions/EId"
+               },
+               "type": {
+                  "title": "type",
+                  "type": "string"
+               },
+               "volgordeNummer": {
+                  "title": "volgordeNummer",
+                  "type": "integer"
+               },
+               "kop": {
+                  "title": "kop",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Kop"},
+                  "minItems": 0
+               },
+               "inhoud": {
+                  "title": "inhoud",
+                  "type": "string",
+                  "minItems": 0
+               },
+               "gereserveerd": {
+                  "title": "gereserveerd",
+                  "type": "boolean",
+                  "minItems": 0
+               },
+               "vervallen": {
+                  "title": "vervallen",
+                  "type": "boolean",
+                  "minItems": 0
+               },
+               "isOnderdeelVan": {
+                  "title": "is onderdeel van",
+                  "$ref": "#/definitions/Regeling"
+               },
+               "valtOnder": {
+                  "title": "Valt onder",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/DocumentComponent"},
+                  "minItems": 0
+               },
+               "verwijstNaar": {
+                  "title": "Verwijst naar",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/DocumentComponent"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Beperkingengebied": {
+            "title": "Beperkingengebied",
+            "description": "nog niet bepaald",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) naam van het beperkingengebied. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Beperkingengebiedgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Bodem": {
+            "title": "Bodem",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Bodemgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Defensie": {
+            "title": "Defensie",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Defensiegroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Energievoorziening": {
+            "title": "Energievoorziening",
+            "description": "nog niet bepaald",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) naam van het beperkingengebied. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Energievoorzieninggroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Erfgoed": {
+            "title": "Erfgoed",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Erfgoedgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "ExterneVeiligheid": {
+            "title": "Externe veiligheid",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Externeveiligheidgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Functie": {
+            "title": "Functie",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Functiegroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Geluid": {
+            "title": "Geluid",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Geluidgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Geur": {
+            "title": "Geur",
+            "description": "nog niet bepaald",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) naam van het beperkingengebied. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Geurgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Landschap": {
+            "title": "Landschap",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Landschapgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Leiding": {
+            "title": "Leiding",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Leidinggroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Lucht": {
+            "title": "Lucht",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Luchtgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Mijnbouw": {
+            "title": "Mijnbouw",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Mijnbouwgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Natuur": {
+            "title": "Natuur",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Natuurgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Recreatie": {
+            "title": "Recreatie",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Recreatiegroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "RuimtelijkGebruik": {
+            "title": "Ruimtelijk gebruik",
+            "description": "nog niet bepaald",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) naam van het beperkingengebied. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Ruimtelijkgebruikgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Verkeer": {
+            "title": "Verkeer",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Verkeergroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "WaterEnWatersysteem": {
+            "title": "Water en watersysteem",
+            "description": "Een functie is het gebruiksdoel of de bijzondere eigenschap die een onderdeel van de fysieke leefomgeving op een bepaalde locatie heeft.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Gebiedsaanwijzing"
+               },
+               {
+                  "required": [
+                     "label",
+                     "naam",
+                     "groep"
+                  ],
+                  "properties": {
+                     "label": {
+                        "title": "label",
+                        "type": "string"
+                     },
+                     "naam": {
+                        "title": "naam",
+                        "description": "Een (korte) omschrijving van de functie.. ",
+                        "type": "string"
+                     },
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/WaterEnWatersysteemgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Gebiedsaanwijzing": {
+            "title": "Gebiedsaanwijzing",
+            "description": "Type gebied aangewezen door een juridische regel.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "wijstAan"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "description": "De unieke identificatie waaronder elk object van dit type bekend is. ",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "wijstAan": {
+                  "title": "wijst aan",
+                  "description": "Deze specifieke Gebiedsaanwijzing is toegekend aan deze specifieke locatie(s).",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Beperkingengebiedgroep": {
+            "title": "Beperkingengebiedgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Bodemgroep": {
+            "title": "Bodemgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Defensiegroep": {
+            "title": "Defensiegroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Energievoorzieninggroep": {
+            "title": "Energievoorzieninggroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Erfgoedgroep": {
+            "title": "Erfgoedgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Externeveiligheidgroep": {
+            "title": "Externeveiligheidgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Functiegroep": {
+            "title": "Functiegroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Geluidgroep": {
+            "title": "Geluidgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Geurgroep": {
+            "title": "Geurgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Landschapgroep": {
+            "title": "Landschapgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Leidinggroep": {
+            "title": "Leidinggroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Functiegroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Luchtgroep": {
+            "title": "Luchtgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Mijnbouwgroep": {
+            "title": "Mijnbouwgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Functiegroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Natuurgroep": {
+            "title": "Natuurgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Recreatiegroep": {
+            "title": "Recreatiegroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Ruimtelijkgebruikgroep": {
+            "title": "Ruimtelijkgebruikgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Verkeergroep": {
+            "title": "Verkeergroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "WaterEnWatersysteemgroep": {
+            "title": "Water-en-watersysteemgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Beperkingengebiedgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Kaart": {
+            "title": "Kaart",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "naam",
+               "uitsnede",
+               "bevat"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "naam": {
+                  "title": "naam",
+                  "type": "string"
+               },
+               "nummer": {
+                  "title": "nummer",
+                  "type": "string",
+                  "minItems": 0
+               },
+               "uitsnede": {
+                  "title": "uitsnede",
+                  "$ref": "#/definitions/Kaartextent"
+               },
+               "bevat": {
+                  "title": "bevat",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Kaartlaag"},
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Kaartlaag": {
+            "title": "Kaartlaag",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "niveau"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "naam": {
+                  "title": "naam",
+                  "type": "string",
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "niveau": {
+                  "title": "niveau",
+                  "type": "integer"
+               },
+               "toontEenActiviteit": {
+                  "title": "toontEenActiviteit",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/ActiviteitLocatieaanduiding"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "toontEenGebiedsaanwijzing": {
+                  "title": "toont een gebiedsaanwijzing",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Gebiedsaanwijzing"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "toontEenNorm": {
+                  "title": "toont een norm",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Norm"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Kaartextent": {
+            "title": "Kaartextent",
+            "description": "Minimale en maximale x en y waarden van de coordinaten in de kaart.",
+            "type": "object",
+            "required": [
+               "minX",
+               "minY",
+               "maxX",
+               "maxY"
+            ],
+            "properties": {
+               "minX": {
+                  "title": "minX",
+                  "type": "number"
+               },
+               "minY": {
+                  "title": "minY",
+                  "type": "number"
+               },
+               "maxX": {
+                  "title": "maxX",
+                  "type": "number"
+               },
+               "maxY": {
+                  "title": "maxY",
+                  "type": "number"
+               }
+            }
+         },
+         "Gebied": {
+            "title": "Gebied",
+            "description": "Een op zichzelf staande geometrisch afgebakende 'ruimte' in de fysieke leefomgeving. De geometrische afbakening is juridisch van aard, oftewel is niet fysiek van aard en bevindt zich niet in de fysieke werkelijkheid. Anders gezegd, de afbakening is virtueel.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Locatie"
+               },
+               {
+                  "required": ["geometrie"],
+                  "properties": {
+                     "geometrie": {
+                        "title": "geometrie",
+                        "description": "De geometrische bepaling van het gebied door middel van coördinaten.",
+                        "$ref": "#/definitions/VlakOfMultivlak"
+                     },
+                     "hoogte": {
+                        "title": "hoogte",
+                        "description": "De hoogte waarop de geometrie ligt, in meters.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/WaardeEenheid"},
+                        "minItems": 0
+                     },
+                     "bron": {
+                        "title": "bron",
+                        "description": "De bron die is gebruikt voor, dan wel de wijze van inwinning van de geometrie. ",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Bron"},
+                        "minItems": 0
+                     }
+                  }
+               }
+            ]
+         },
+         "Locatie": {
+            "title": "Locatie",
+            "description": "Duiding van een geografische positie.\nIndien er naar een locatie verwezen wordt vanuit een BevoegdGezag dan betreft dit een ambtsgebied.",
+            "type": "object",
+            "required": ["identificatie"],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "description": "De unieke identificatie waaronder elk object van dit type bekend is.",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "noemer": {
+                  "title": "noemer",
+                  "description": "Tekstuele beschrijving van een Locatie, zodat er als zodanig over deze locatie gesproken kan worden. De beschrijving kan een bepaalde naam zijn waaronder de Locatie bekend staat, maar (lang) niet elke Locatie heef een naam.",
+                  "type": "string",
+                  "minItems": 0
+               }
+            }
+         },
+         "Gebiedengroep": {
+            "title": "Gebiedengroep",
+            "description": "Een groep of verzameling van bij elkaar behorende gebieden. De gebieden zijn gegroepeerd voor een bepaald doel, te weten om samen één locatie vormen, welke als zodanig gebruikt kan worden. ",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Locatie"
+               },
+               {
+                  "required": ["omvat"],
+                  "properties": {
+                     "omvat": {
+                        "title": "omvat",
+                        "description": "Een gebied van een gebiedengroep.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Gebied"},
+                        "maxItems": "unbounded"
+                     }
+                  }
+               }
+            ]
+         },
+         "BestuurlijkeGrenzenVerwijzing": {
+            "title": "BestuurlijkeGrenzenVerwijzing",
+            "type": "object",
+            "required": [
+               "domein",
+               "bestuurlijkeGrenzenID",
+               "geldigOp"
+            ],
+            "properties": {
+               "domein": {
+                  "title": "domein",
+                  "type": "string"
+               },
+               "bestuurlijkeGrenzenID": {
+                  "title": "bestuurlijkeGrenzenID",
+                  "type": "string"
+               },
+               "geldigOp": {
+                  "title": "geldigOp",
+                  "type": "string",
+                  "format": "date-time"
+               }
+            }
+         },
+         "Lijn": {
+            "title": "Lijn",
+            "description": "Een op zichzelf staande geometrisch afgebakende lijnlocatie in de fysieke leefomgeving. De geometrische afbakening is juridisch van aard, oftewel is niet fysiek van aard en bevindt zich niet in de fysieke werkelijkheid. Anders gezegd, de afbakening is virtueel.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Locatie"
+               },
+               {
+                  "properties": {
+                     "geometrie": {
+                        "title": "geometrie",
+                        "description": "De geometrische bepaling van de lijn door middel van coördinaten.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/LineStringSegment"},
+                        "minItems": 0
+                     },
+                     "hoogte": {
+                        "title": "hoogte",
+                        "description": "De hoogte waarop de geometrie ligt, in meters.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/WaardeEenheid"},
+                        "minItems": 0
+                     },
+                     "bron": {
+                        "title": "bron",
+                        "description": "De bron die is gebruikt voor, dan wel de wijze van inwinning van de geometrie. ",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Bron"},
+                        "minItems": 0
+                     }
+                  }
+               }
+            ]
+         },
+         "Lijnengroep": {
+            "title": "Lijnengroep",
+            "description": "Een groep of verzameling van bij elkaar behorende lijnen. De lijnen zijn gegroepeerd voor een bepaald doel, te weten om samen één locatie vormen, welke als zodanig gebruikt kan worden.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Locatie"
+               },
+               {
+                  "required": ["omvat"],
+                  "properties": {
+                     "omvat": {
+                        "title": "omvat",
+                        "description": "Een lijn van een lijnengroep.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Lijn"},
+                        "maxItems": "unbounded"
+                     }
+                  }
+               }
+            ]
+         },
+         "Ambtsgebied": {
+            "title": "Ambtsgebied",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Locatie"
+               },
+               {
+                  "required": [
+                     "bestuurlijkeGrenzenVerwijzing",
+                     "geometrie"
+                  ],
+                  "properties": {
+                     "bestuurlijkeGrenzenVerwijzing": {
+                        "title": "bestuurlijkeGrenzenVerwijzing",
+                        "$ref": "#/definitions/BestuurlijkeGrenzenVerwijzing"
+                     },
+                     "geometrie": {
+                        "title": "geometrie",
+                        "$ref": "#/definitions/VlakOfMultivlak"
+                     }
+                  }
+               }
+            ]
+         },
+         "Punt": {
+            "title": "Punt",
+            "description": "Een op zichzelf staande geometrisch afgebakende puntlocatie in de fysieke leefomgeving. De geometrische afbakening is juridisch van aard, oftewel is niet fysiek van aard en bevindt zich niet in de fysieke werkelijkheid. Anders gezegd, de afbakening is virtueel.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Locatie"
+               },
+               {
+                  "required": ["geometrie"],
+                  "properties": {
+                     "geometrie": {
+                        "title": "geometrie",
+                        "description": "De geometrische bepaling van de punt door middel van coördinaten.",
+                        "$ref": "#/definitions/Point"
+                     },
+                     "hoogte": {
+                        "title": "hoogte",
+                        "description": "De hoogte waarop de geometrie ligt, in meters.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/WaardeEenheid"},
+                        "minItems": 0
+                     },
+                     "bron": {
+                        "title": "bron",
+                        "description": "De bron die is gebruikt voor, dan wel de wijze van inwinning van de geometrie. ",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Bron"},
+                        "minItems": 0
+                     }
+                  }
+               }
+            ]
+         },
+         "Puntengroep": {
+            "title": "Puntengroep",
+            "description": "Een groep of verzameling van bij elkaar behorende punten. De punten zijn gegroepeerd voor een bepaald doel, te weten om samen één locatie vormen, welke als zodanig gebruikt kan worden.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Locatie"
+               },
+               {
+                  "required": ["omvat"],
+                  "properties": {
+                     "omvat": {
+                        "title": "omvat",
+                        "description": "Een punt van een puntengroep.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Punt"},
+                        "maxItems": "unbounded"
+                     }
+                  }
+               }
+            ]
+         },
+         "Bron": {
+            "title": "Bron",
+            "description": "Een limitatieve lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. ",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "VlakOfMultivlak": {
+            "title": "VlakOfMultivlak",
+            "description": "Een datatype die verschillende formaten als mogelijke keuze biedt:  vlak of multivlak. ",
+            "oneOf": [
+               {"$ref": "#/definitions/MultiSurface"},
+               {"$ref": "#/definitions/Surface"}
+            ]
+         },
+         "Omgevingsvergunning": {
+            "title": "Omgevingsvergunning",
+            "description": "Een vergunning verleend voor het gebruiken van gronden of bouwwerken in strijd met geldende omgevingsdocumenten.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Omgevingsdocument"
+               },
+               {
+                  "required": [
+                     "referentienummer",
+                     "type",
+                     "omschrijving",
+                     "publicatieID",
+                     "heeftVergunningsgebied"
+                  ],
+                  "properties": {
+                     "referentienummer": {
+                        "title": "referentienummer",
+                        "type": "string"
+                     },
+                     "type": {
+                        "title": "type",
+                        "$ref": "#/definitions/SoortVergunning"
+                     },
+                     "omschrijving": {
+                        "title": "omschrijving",
+                        "type": "string"
+                     },
+                     "iMROPlanidentificatie": {
+                        "title": "IMRO-planidentificatie",
+                        "description": "het IMRO-plan-ID waar deze vergunning bij hoort/van afwijkt.",
+						"type": "array",
+                        "items": {"type": "string"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     },
+                     "publicatieID": {
+                        "title": "publicatie-ID",
+                        "type": "string"
+                     },
+                     "heeftVergunningsgebied": {
+                        "title": "heeft vergunningsgebied",
+                        "description": "Het gebied waar de vergunning geldt.",
+                        "$ref": "#/definitions/Locatie"
+                     }
+                  }
+               }
+            ]
+         },
+         "SoortVergunning": {
+            "title": "soortVergunning",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Pons": {
+            "title": "Pons",
+            "description": "Duiding van een geografische positie.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "bevat"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "bevat": {
+                  "title": "bevat",
+                  "$ref": "#/definitions/Locatie"
+               }
+            }
+         },
+         "Instructieregel": {
+            "title": "Instructieregel",
+            "description": "De naam van het instrument waartoe de instructieregel zich richt.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/JuridischeRegel"
+               },
+               {
+                  "properties": {
+                     "instructieregelInstrument": {
+                        "title": "instructieregelInstrument",
+                        "description": "Het type bestuursorgaan dat of organisatie die de taak waarover de instructieregel gaat moet uitvoeren.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Instrument"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     },
+                     "instructieregelTaakuitoefening": {
+                        "title": "instructieregelTaakuitoefening",
+                        "description": "Het type bestuursorgaan dat of organisatie die de taak waarover de instructieregel gaat moet uitvoeren.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Adressaat"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     },
+                     "beschrijftEenOmgevingsnorm": {
+                        "title": "beschrijft een omgevingsnorm",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Omgevingsnorm"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     }
+                  }
+               }
+            ]
+         },
+         "Omgevingswaarderegel": {
+            "title": "Omgevingswaarderegel",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/JuridischeRegel"
+               },
+               {
+                  "properties": {
+                     "beschrijftEenOmgevingswaarde": {
+                        "title": "beschrijft een omgevingswaarde",
+                        "description": "Bij een regel die een omgevingswaarde vastlegt geeft deze relatie aan om welke norm het gaat. De bijbehorende locatie(s) waar het om gaat is/zijn bij de normwaardes van de norm zelf te vinden.",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Omgevingswaarde"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     }
+                  }
+               }
+            ]
+         },
+         "RegelVoorIedereen": {
+            "title": "Regel voor iedereen",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/JuridischeRegel"
+               },
+               {
+                  "properties": {
+                     "normeertEenActiviteit": {
+                        "title": "normeertEenActiviteit",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/ActiviteitLocatieaanduiding"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     },
+                     "beschrijftEenOmgevingsnorm": {
+                        "title": "beschrijft een omgevingsnorm",
+                        "type": "array",
+                        "items": {"$ref": "#/definitions/Omgevingsnorm"},
+                        "minItems": 0,
+                        "maxItems": "unbounded"
+                     }
+                  }
+               }
+            ]
+         },
+         "ActiviteitLocatieaanduiding": {
+            "title": "ActiviteitLocatieaanduiding",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "activiteitregelkwalificatie",
+               "betreftEenActiviteit",
+               "kwalificeert"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "activiteitregelkwalificatie": {
+                  "title": "activiteitregelkwalificatie",
+                  "$ref": "#/definitions/Activiteitregelkwalificatie"
+               },
+               "betreftEenActiviteit": {
+                  "title": "betreft een activiteit",
+                  "description": "Bij een regel die een activiteit vastlegt geeft deze relatie aan om welke activiteit het gaat. De bijbehorende locatie(s) waar het om gaat is/zijn bij de activiteit zelf te vinden.",
+                  "$ref": "#/definitions/Activiteit"
+               },
+               "kwalificeert": {
+                  "title": "kwalificeert",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Regeltekst": {
+            "title": "Regeltekst",
+            "description": "Een Regeltekst is de kleinste zelfstandige eenheid van (een of meer) bij elkaar behorende juridische regels. Deze regels horen onlosmakelijk bij elkaar en hebben gezamenlijk één werkingsgebied.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "omschrijving",
+               "isRegelstructuurannotatieBij",
+               "heeftWerkingIn"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "description": "De unieke identificatie waaronder elk object van dit type bekend is.",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "omschrijving": {
+                  "title": "omschrijving",
+                  "description": "De letterlijke tekst waarmee de Regeltekst is omschreven, in een artikel of een lid. Een Regeltekst is altijd één doorlopend stuk juridische tekst, welke juridische regels bevat.",
+                  "type": "string"
+               },
+               "thema": {
+                  "title": "thema",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Thema"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "isRegelstructuurannotatieBij": {
+                  "title": "is regelstructuurannotatie bij",
+                  "$ref": "#/definitions/DocumentComponent"
+               },
+               "heeftWerkingIn": {
+                  "title": "heeft werking in",
+                  "description": "Het werkingsgebied c.q. de locatie begrenst de juridische werking van de regeltekst, in juridische zin, te weten dat deze regeltekst alleen binnen dit werkingsgebied juridische werkingskracht heeft.\nHet werkingsgebied van de regeltekst is altijd aanwezig. Deze is dekkend voor de locaties/gebieden die in de regeltekst zijn genoemd. Deze locaties/gebieden worden genoemd in regels die gaan over een activiteit, functie, omgevingsnorm, omgevingswaarde of beperkingengebied. Het werkingsgebied van de regeltekst is maximaal het grondgebied van het bevoegde gezag zelf. ",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "JuridischeRegel": {
+            "title": "Juridische regel",
+            "description": "De beschrijving van een regel met juridische werkingskracht. Een regel betreft binnen de Omgevingswet veelal activiteiten, en/of normen en/of functies en/of beperkingengebieden.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "idealisatie",
+               "omschrijving",
+               "definieert",
+               "isOpgenomenIn"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "idealisatie": {
+                  "title": "idealisatie",
+                  "description": "Vastlegging van de manier de begrenzing van Locatie voor deze Juridische regel geïnterpreteerd moet worden en door het bevoegd gezag bedoeld is.",
+                  "$ref": "#/definitions/Idealisatie"
+               },
+               "omschrijving": {
+                  "title": "omschrijving",
+                  "description": "Één doorlopend stuk juridische tekst, van een artikel of een lid, die omschrijvingen van (een of meer) juridische regels bevat. ",
+                  "type": "string"
+               },
+               "thema": {
+                  "title": "thema",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Thema"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "definieert": {
+                  "title": "definieert",
+                  "description": "De locatieaanduiding begrenst de juridische werking van de regel in juridische zin, te weten dat de regel alleen binnen dit werkingsgebied werkingskracht heeft. ",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "maxItems": "unbounded"
+               },
+               "bevat": {
+                  "title": "bevat",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Kaart"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "beschrijftEenGebiedsaanwijzing": {
+                  "title": "beschrijft een gebiedsaanwijzing",
+                  "description": "Bij een regel die een gebiedsaanwijzing vastlegt geeft deze relatie aan om welk gebied en type gebied het gaat. De bijbehorende locatie(s) waar het om gaat is/zijn bij de gebiedsaanwijzing zelf te vinden.",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Gebiedsaanwijzing"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "isOpgenomenIn": {
+                  "title": "is opgenomen in",
+                  "description": "Artikel of lid is waar de Juridische regel onderdeel van is.",
+                  "$ref": "#/definitions/Regeltekst"
+               }
+            }
+         },
+         "Thema": {
+            "title": "Thema",
+            "description": "Een limitatieve lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Thema",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Adressaat": {
+            "title": "Adressaat",
+            "description": "Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:InstructieregelTaakuitoefening",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Instrument": {
+            "title": "Instrument",
+            "description": "Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:InstructieregelInstrument",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Activiteitregelkwalificatie": {
+            "title": "Activiteitregelkwalificatie",
+            "description": "Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Activiteitregel",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Idealisatie": {
+            "title": "Idealisatie",
+            "description": "Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Idealisatie",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Norm": {
+            "title": "Norm",
+            "description": "Een omgevingswaarde of een omgevingsnorm, met een normatief karakter, die beschreven worden middels normwaarden. Een normwaarde kan kwalitatief of kwantitatief zijn.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "naam",
+               "normwaarde",
+               "type"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "description": "De unieke identificatie waaronder elk object van dit type bekend is.",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "naam": {
+                  "title": "naam",
+                  "type": "string"
+               },
+               "normwaarde": {
+                  "title": "normwaarde",
+                  "description": "Één van de kwantitatieve of kwalitatieve waarden van een norm. ",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Normwaarde"},
+                  "maxItems": "unbounded"
+               },
+               "eenheid": {
+                  "title": "eenheid",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Eenheid"},
+                  "minItems": 0
+               },
+               "type": {
+                  "title": "type",
+                  "$ref": "#/definitions/Typenorm"
+               }
+            }
+         },
+         "Normwaarde": {
+            "title": "Normwaarde",
+            "description": "Één van de kwantitatieve of kwalitatieve waarden van een norm. De normwaarde geeft aan wat de specifieke kwantitatieve of kwalitatieve eisen zijn, inclusief de toewijzing ervan aan de specifieke locatie(s) waar de normwaarde voor geldt. ",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "geldtVoor"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "kwalitatieveWaarde": {
+                  "title": "kwalitatieveWaarde",
+                  "description": "De toewijzing van een normerende waarde aan een locatie in de vorm van een beschrijving in woorden. De beschrijving geeft tekstueel de betekenis weer van de normwaarde.",
+                  "type": "string",
+                  "minItems": 0
+               },
+               "kwantitatieveWaarde": {
+                  "title": "kwantitatieveWaarde",
+                  "description": "De numerieke waarde van een norm. ",
+                  "type": "number",
+                  "minItems": 0
+               },
+               "waardeInRegeltekst": {
+                  "title": "waardeInRegeltekst",
+                  "type": "string",
+                  "minItems": 0
+               },
+               "geldtVoor": {
+                  "title": "geldt voor",
+                  "description": "De specifieke locatie(s) waarvoor een specifieke normwaarde geldt.",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Omgevingsnorm": {
+            "title": "Omgevingsnorm",
+            "description": "De in een meetbare waarde uit te drukken norm (anders dan een omgevingswaarde) die het bevoegd gezag op verschillende locaties verschillende waarden wil geven die het inzichtelijk wil weergeven.",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Norm"
+               },
+               {
+                  "required": ["groep"],
+                  "properties": {
+                     "groep": {
+                        "title": "groep",
+                        "$ref": "#/definitions/Omgevingsnormgroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Omgevingswaarde": {
+            "title": "Omgevingswaarde",
+            "description": "Norm die de gewenste staat of kwaliteit van (een onderdeel van) de fysieke leefomgeving, de toelaatbare belasting door activiteiten en/of de toelaatbare concentratie of depositie van stoffen als beleidsdoel vastlegt. ",
+            "type": "object",
+            "allOf": [
+               {
+                  "$ref": "#/definitions/Norm"
+               },
+               {
+                  "required": ["groep"],
+                  "properties": {
+                     "groep": {
+                        "title": "groep",
+                        "description": "Een categorie, of groep, waaronder een omgevingswaarde valt.",
+                        "$ref": "#/definitions/Omgevingswaardegroep"
+                     }
+                  }
+               }
+            ]
+         },
+         "Activiteit": {
+            "title": "Activiteit",
+            "description": "Een activiteit is ieder menselijk handelen waarbij, of ieder menselijk nalaten waardoor een verandering of effect in de fysieke leefomgeving wordt of kan worden bewerkstelligd.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "naam",
+               "groep",
+               "is",
+               "isGereguleerdVoor"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "description": "De unieke identificatie waaronder elk object van dit type bekend is. ",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "naam": {
+                  "title": "naam",
+                  "description": "Een (korte) omschrijving van de activiteit.",
+                  "type": "string"
+               },
+               "groep": {
+                  "title": "groep",
+                  "$ref": "#/definitions/Activiteitengroep"
+               },
+               "is": {
+                  "title": "is",
+                  "description": "Met \u201cis (een)\u201d wordt een bepaalde activiteit rechtstreeks verbonden met een andere activiteit van hetzelfde type (van specifiek naar generiek). \n**\n*Toelichting: * ; \n                              Met een activiteit van hetzelfde type wordt bedoeld dat andere regels (generieker) contextueel wel of niet relevant kunnen zijn.\n                              Met contextueel relevant wordt bedoeld dat als in de regel staat dat een (generieke) activiteit van dit type een vergunningplicht geldt, onder bepaalde condities, dat deze condities worden vergeleken met de specifieke situatie van de (specifieke) activiteit die de initiatiefnemer voornemens is om te ontplooien. Als deze hieronder vallen, dan geldt voor de voorgenomen (specifieke) activiteit een vergunningplicht. In andere gevallen niet, althans niet vanuit deze regels, mogelijk wel vanuit andere regels.\n                           ",
+                  "$ref": "#/definitions/Activiteit"
+               },
+               "gerelateerd": {
+                  "title": "gerelateerd",
+                  "description": "De regels die gelden voor de gerelateerde activiteit(en) zijn contextueel relevant voor deze activiteit.; Toelichting: \nMet contextueel relevant wordt bedoeld dat de regels die gelden voor de gerelateerde activiteit, binnen die gegeven context ook gelden voor deze activiteit. Bijvoorbeeld omdat de ene activiteit altijd samen met de andere activiteit(en) worden uitgevoerd en de regels van beide daarmee allebei tegelijk aan de orde zijn. Als de beschreven context waarin de regels behorende bij de gerelateerde activiteit gelden niet aan de orde is, dan gelden de regels van de gerelateerde activiteit niet. ; Of de context aan de orde is, is niet opgenomen als informatie. Deze relatie geeft daarom, informatiekundig gezien, aan dat elke regel die geldt voor de gerelateerde activiteit relevant kan zijn voor het uitvoeren van deze activiteit.; Gerelateerde activiteiten kunnen van hetzelfde type zijn, bijvoorbeeld twee milieubelastende activiteiten, maar dat hoeft niet.",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Activiteit"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "isGereguleerdVoor": {
+                  "title": "is gereguleerd voor",
+                  "description": "Deze specifieke activiteit is gereguleerd voor bepaalde locaties.",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Activiteitengroep": {
+            "title": "Activiteitengroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Activiteitengroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Eenheid": {
+            "title": "Eenheid",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Eenheid",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Typenorm": {
+            "title": "Typenorm",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Activiteitengroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Omgevingsnormgroep": {
+            "title": "Omgevingsnormgroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Omgevingsnormgroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "Omgevingswaardegroep": {
+            "title": "Omgevingswaardegroep",
+            "description": "Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd.  Locatie: urn:imow:Omgevingswaardegroep",
+            "type": "object",
+            "required": [
+               "code",
+               "waarde"
+            ],
+            "properties": {
+               "code": {
+                  "title": "code",
+                  "type": "string"
+               },
+               "waarde": {
+                  "title": "waarde",
+                  "type": "string"
+               }
+            }
+         },
+         "SymbolisatieItem": {
+            "title": "SymbolisatieItem",
+            "type": "object",
+            "required": ["symboolcode"],
+            "properties": {
+               "symboolcode": {
+                  "title": "symboolcode",
+                  "type": "string"
+               },
+               "symboliseertActiviteit": {
+                  "title": "symboliseertActiviteit",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/ActiviteitLocatieaanduiding"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "symboliseertGebiedsaanwijzing": {
+                  "title": "symboliseertGebiedsaanwijzing",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Gebiedsaanwijzing"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "symboliseertNormwaarde": {
+                  "title": "symboliseertNormwaarde",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Normwaarde"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Hoofdlijn": {
+            "title": "Hoofdlijn",
+            "description": "Element dat de hoofdlijn weergeeft van het beleid voor of de kwaliteit, ontwikkeling of staat van de fysieke leefomgeving dat of die in het Tekstdeel wordt beschreven.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "soort",
+               "naam"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "soort": {
+                  "title": "soort",
+                  "type": "string"
+               },
+               "naam": {
+                  "title": "naam",
+                  "type": "string"
+               },
+               "relateert": {
+                  "title": "relateert",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Hoofdlijn"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "DivisieOfDivisietekst": {
+            "title": "DivisieOfDivisietekst",
+            "type": "string"
+         },
+         "Tekstdeel": {
+            "title": "Tekstdeel",
+            "description": "Tekstdeel is de kleinste zelfstandige eenheid van (een of meer) bij elkaar horende Juridische teksten in een tekst met Vrijetekststructuur, te weten een FormeleInhoud.",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "omschrijving"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "idealisatie": {
+                  "title": "idealisatie",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Idealisatie"},
+                  "minItems": 0
+               },
+               "omschrijving": {
+                  "title": "omschrijving",
+                  "type": "string"
+               },
+               "thema": {
+                  "title": "thema",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Thema"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "bevat": {
+                  "title": "bevat",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Hoofdlijn"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "divisieverwijzing": {
+                  "title": "divisieverwijzing",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Divisie"},
+                  "minItems": 0
+               },
+               "wijstGebiedAan": {
+                  "title": "wijst gebied aan",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Gebiedsaanwijzing"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "benoemt": {
+                  "title": "benoemt",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Kaart"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               },
+               "divisietekstverwijzing": {
+                  "title": "divisietekstverwijzing",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Divisietekst"},
+                  "minItems": 0
+               },
+               "definieert": {
+                  "title": "definieert",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Divisie": {
+            "title": "Divisie",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "omschrijving",
+               "isVrijetekstannotatieBij"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "omschrijving": {
+                  "title": "omschrijving",
+                  "type": "string"
+               },
+               "isVrijetekstannotatieBij": {
+                  "title": "is vrijetekstannotatie bij",
+                  "$ref": "#/definitions/DocumentComponent"
+               },
+               "heeftWerkingIn": {
+                  "title": "heeft werking in",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "Divisietekst": {
+            "title": "Divisietekst",
+            "type": "object",
+            "required": [
+               "identificatie",
+               "omschrijving"
+            ],
+            "properties": {
+               "identificatie": {
+                  "title": "identificatie",
+                  "$ref": "#/definitions/Identificatie"
+               },
+               "omschrijving": {
+                  "title": "omschrijving",
+                  "type": "string"
+               },
+               "heeftWerkingIn": {
+                  "title": "heeft werking in",
+                  "type": "array",
+                  "items": {"$ref": "#/definitions/Locatie"},
+                  "minItems": 0,
+                  "maxItems": "unbounded"
+               }
+            }
+         },
+         "LineStringSegment": {
+            "title": "GM_LineString",
+            "type": "string"
+         },
+         "Point": {
+            "title": "GM_Point",
+            "type": "string"
+         },
+         "MultiSurface": {
+            "title": "GM_MultiSurface",
+            "type": "string"
+         },
+         "Surface": {
+            "title": "GM_Surface",
+            "type": "string"
+         }
+      }
+   }
+}
