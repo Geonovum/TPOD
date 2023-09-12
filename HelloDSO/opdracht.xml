@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Hello, DSO! - versie 27 mei 2019 -->
-<lvbb:publicatieOpdracht xmlns:lvbb="http://www.overheid.nl/2017/lvbb" xmlns:stop="http://www.overheid.nl/2017/stop" xmlns:tns="http://www.logius.nl/digikoppeling/gb/2010/10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <lvbb:idLevering>defaultPublicatie-20190509-142828-20190509-142937</lvbb:idLevering>
-    <lvbb:publicatie>Besluit.xml</lvbb:publicatie>
-    <lvbb:datumBekendmaking>2030-01-01</lvbb:datumBekendmaking>
-</lvbb:publicatieOpdracht>
