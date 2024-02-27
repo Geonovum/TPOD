@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:s="http://www.geostandaarden.nl/imow/symbolisatie"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           xmlns:r="http://www.geostandaarden.nl/imow/regels"
+           xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+           xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+           targetNamespace="http://www.geostandaarden.nl/imow/symbolisatie"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.0.0">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/symbolisatie</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20200601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2020-09-07T14:51:58Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.60.1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/symbolisatie/IMOW_Symbolisatie.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/regels"
+              schemaLocation="../../IMOW/regels/IMOW_Regel.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+              schemaLocation="../../IMOW/gebiedsaanwijzing/IMOW_Gebiedsaanwijzing.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/regelsoplocatie"
+              schemaLocation="../../IMOW/regelsoplocatie/IMOW_RegelsOpLocatie.xsd"/>
+   <xs:element name="SymbolisatieItem" type="s:SymbolisatieItem" abstract="false"/>
+   <xs:complexType name="SymbolisatieItem" abstract="false">
+      <xs:sequence>
+         <xs:element name="symboolcode" minOccurs="1" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="[a-z]{2,4}[0-9]{3,3}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="activiteitLocatieaanduidingSymbolisatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="r:ActiviteitLocatieaanduidingRef" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="gebiedsaanwijzingSymbolisatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="ga:GebiedsaanwijzingRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+         <xs:element name="normwaardeSymbolisatie" minOccurs="0" maxOccurs="1">
+            <xs:complexType>
+               <xs:sequence>
+                  <xs:element ref="rol:NormwaardeRef" minOccurs="1" maxOccurs="unbounded"/>
+               </xs:sequence>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

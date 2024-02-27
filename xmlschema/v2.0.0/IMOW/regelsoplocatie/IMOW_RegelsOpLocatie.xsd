@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:imvert="http://www.imvertor.org/schema/system"
+            xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+            xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+            xmlns:op="http://www.geostandaarden.nl/imow/opobject"
+            xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            targetNamespace="http://www.geostandaarden.nl/imow/regelsoplocatie"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            version="2.0.0">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/regelsoplocatie</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20210601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2021-06-01T10:00:00Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/regelsoplocatie/IMOW_RegelsOpLocatie.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+      schemaLocation="../../IMOW/datatypenalgemeen/IMOW_DatatypenAlgemeen.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/locatie"
+      schemaLocation="../../IMOW/locatie/IMOW_Locatie.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/opobject"
+      schemaLocation="../../IMOW/opobject/IMOW_OPobject.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/owobject"
+      schemaLocation="../../IMOW/owobject/IMOW_OWobject.xsd"/>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+      schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="Norm" type="rol:Norm" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een omgevingswaarde of een omgevingsnorm, met een normatief karakter, die beschreven worden middels normwaarden. Een normwaarde kan kwalitatief of kwantitatief zijn.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Norm" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De unieke identificatie waaronder elk object van dit type bekend is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="naam" minOccurs="1" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="type" type="rol:Typenorm" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="eenheid" type="da:Eenheid" minOccurs="0" maxOccurs="1"/>
+               <xs:element name="normwaarde" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Één van de kwantitatieve of kwalitatieve waarden van een norm. </xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="rol:Normwaarde" minOccurs="1" maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Normwaarde" type="rol:Normwaarde" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Één van de kwantitatieve of kwalitatieve waarden van een norm. De normwaarde geeft aan wat de specifieke kwantitatieve of kwalitatieve eisen zijn, inclusief de toewijzing ervan aan de specifieke locatie(s) waar de normwaarde voor geldt. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Normwaarde" abstract="false">
+      <xs:sequence>
+         <xs:element name="identificatie"
+                     type="da:NEN3610ID"
+                     minOccurs="1"
+                     maxOccurs="1"/>
+         <xs:element name="kwalitatieveWaarde" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De toewijzing van een normerende waarde aan een locatie in de vorm van een beschrijving in woorden. De beschrijving geeft tekstueel de betekenis weer van de normwaarde.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="\S.*"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="kwantitatieveWaarde"
+                     type="xs:decimal"
+                     minOccurs="0"
+                     maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De numerieke waarde van een norm. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="waardeInRegeltekst" minOccurs="0" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="waarde staat in regeltekst"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="locatieaanduiding" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De specifieke locatie(s) waarvoor een specifieke normwaarde geldt.</xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+               <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element ref="l:LocatieRef"/>
+               </xs:choice>
+            </xs:complexType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="Omgevingsnorm" type="rol:Omgevingsnorm" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De in een meetbare waarde uit te drukken norm (anders dan een omgevingswaarde) die het bevoegd gezag op verschillende locaties verschillende waarden wil geven die het inzichtelijk wil weergeven.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Omgevingsnorm" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="rol:Norm">
+            <xs:sequence>
+               <xs:element name="groep"
+                           type="rol:Omgevingsnormgroep"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een categorie, of groep, waaronder een omgevingsnorm valt.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Omgevingswaarde" type="rol:Omgevingswaarde" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Norm die de gewenste staat of kwaliteit van (een onderdeel van) de fysieke leefomgeving, de toelaatbare belasting door activiteiten en/of de toelaatbare concentratie of depositie van stoffen als beleidsdoel vastlegt. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Omgevingswaarde" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="rol:Norm">
+            <xs:sequence>
+               <xs:element name="groep"
+                           type="rol:Omgevingswaardegroep"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een categorie, of groep, waaronder een omgevingswaarde valt.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Activiteit" type="rol:Activiteit" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een activiteit is ieder menselijk handelen waarbij, of ieder menselijk nalaten waardoor een verandering of effect in de fysieke leefomgeving wordt of kan worden bewerkstelligd.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Activiteit" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De unieke identificatie waaronder elk object van dit type bekend is. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="naam" type="xs:string" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een (korte) omschrijving van de activiteit.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="groep"
+                           type="rol:Activiteitengroep"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een categorie, of groep, waaronder een juridische regel valt. Een activiteit kan gecategoriseerd worden tot een beperkte lijst van activiteitengroepen.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="gerelateerdeActiviteit" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De regels die gelden voor de gerelateerde activiteit(en) zijn contextueel relevant voor deze activiteit.Toelichting: Met contextueel relevant wordt bedoeld dat de regels die gelden voor de gerelateerde activiteit, binnen die gegeven context ook gelden voor deze activiteit. Bijvoorbeeld omdat de ene activiteit altijd samen met de andere activiteit(en) worden uitgevoerd en de regels van beide daarmee allebei tegelijk aan de orde zijn. Als de beschreven context waarin de regels behorende bij de gerelateerde activiteit gelden niet aan de orde is, dan gelden de regels van de gerelateerde activiteit niet. Of de context aan de orde is, is niet opgenomen als informatie. Deze relatie geeft daarom, informatiekundig gezien, aan dat elke regel die geldt voor de gerelateerde activiteit relevant kan zijn voor het uitvoeren van deze activiteit.Gerelateerde activiteiten kunnen van hetzelfde type zijn, bijvoorbeeld twee milieubelastende activiteiten, maar dat hoeft niet.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol:ActiviteitRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="bovenliggendeActiviteit" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Met “is (een)” wordt een bepaalde activiteit rechtstreeks verbonden met een andere activiteit van **hetzelfde type ** (van specifiek naar generiek). *****Toelichting: * * Met een activiteit van *hetzelfde type * wordt bedoeld dat andere regels (generieker) contextueel wel of niet relevant kunnen zijn.* Met contextueel relevant wordt bedoeld dat als in de regel staat dat een (generieke) activiteit van *dit type * een vergunningplicht geldt, onder bepaalde condities, dat deze condities worden vergeleken met de specifieke situatie van de (specifieke) activiteit die de initiatiefnemer voornemens is om te ontplooien. Als deze hieronder vallen, dan geldt voor de voorgenomen (*specifieke*) activiteit een vergunningplicht. In andere gevallen niet, althans niet vanuit deze regels, mogelijk wel vanuit andere regels.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="rol:ActiviteitRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="Activiteitengroep">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitengroep</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Typenorm">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Omgevingsnormgroep">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingsnormgroep</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Omgevingswaardegroep">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Omgevingswaardegroep</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="OmgevingsnormRef"
+      type="rol:OmgevingsnormRef"
+      abstract="false"/>
+   <xs:complexType name="OmgevingsnormRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="OmgevingswaardeRef"
+      type="rol:OmgevingswaardeRef"
+      abstract="false"/>
+   <xs:complexType name="OmgevingswaardeRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="ActiviteitRef" type="rol:ActiviteitRef" abstract="false"/>
+   <xs:complexType name="ActiviteitRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="NormwaardeRef" type="rol:NormwaardeRef" abstract="false"/>
+   <xs:complexType name="NormwaardeRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

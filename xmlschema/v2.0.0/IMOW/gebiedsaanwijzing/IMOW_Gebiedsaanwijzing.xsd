@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   xmlns:imvert="http://www.imvertor.org/schema/system"
+   xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+   xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+   xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+   xmlns:op="http://www.geostandaarden.nl/imow/opobject"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   targetNamespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+   elementFormDefault="qualified"
+   attributeFormDefault="unqualified"
+           version="2.0.0">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/gebiedsaanwijzing</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20210601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2021-06-01T10:00:00Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/gebiedsaanwijzing/IMOW_GebiedsAanwijzing.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+      schemaLocation="../../IMOW/datatypenalgemeen/IMOW_DatatypenAlgemeen.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/locatie"
+      schemaLocation="../../IMOW/locatie/IMOW_Locatie.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/owobject"
+      schemaLocation="../../IMOW/owobject/IMOW_OWobject.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/opobject"
+      schemaLocation="../../IMOW/opobject/IMOW_OPobject.xsd"/>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+      schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="Gebiedsaanwijzing"
+      type="ga:Gebiedsaanwijzing"
+      abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Type gebied aangewezen door een juridische regel.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Gebiedsaanwijzing" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De unieke identificatie waaronder elk object van dit type bekend is. </xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="type"
+                           type="ga:TypeGebiedsaanwijzing"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het type Gebiedsaanwijzing.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="naam" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een (korte) naam van de gebiedsaanwijzing. </xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+               <xs:element name="groep"
+                           type="ga:Gebiedsaanwijzinggroep"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De groep waartoe de Gebiedsaanwijzing behoort.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="locatieaanduiding" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Deze specifieke Gebiedsaanwijzing is toegekend aan deze specifieke locatie(s).</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="l:LocatieRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="Gebiedsaanwijzinggroep">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Gebiedsaanwijzinggroep</xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="TypeGebiedsaanwijzing">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/TypeGebiedsaanwijzing</xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="GebiedsaanwijzingRef"
+      type="ga:GebiedsaanwijzingRef"
+      abstract="false"/>
+   <xs:complexType name="GebiedsaanwijzingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

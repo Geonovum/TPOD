@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema    xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:imvert="http://www.imvertor.org/schema/system"
+              xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+              xmlns:r="http://www.geostandaarden.nl/imow/regels"
+              xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+              xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+              xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              targetNamespace="http://www.geostandaarden.nl/imow/kaart"
+              elementFormDefault="qualified"
+              attributeFormDefault="unqualified"
+              version="2.0.0"> 
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/kaartrecept</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20210601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2021-06-01T10:00:00Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/kaart/IMOW_Kaart.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+      schemaLocation="../../IMOW/datatypenalgemeen/IMOW_DatatypenAlgemeen.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/regels"
+      schemaLocation="../../IMOW/regels/IMOW_Regel.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/regelsoplocatie"
+      schemaLocation="../../IMOW/regelsoplocatie/IMOW_RegelsOpLocatie.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+      schemaLocation="../../IMOW/gebiedsaanwijzing/IMOW_Gebiedsaanwijzing.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/owobject"
+      schemaLocation="../../IMOW/owobject/IMOW_OWobject.xsd"/>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+      schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="Kaart" type="k:Kaart" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een (nog) te representeren deel van de informatie rondom een specifiek onderdeel van een beleid, ter ondersteuning van het goed in beeld brengen ervan. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Kaart" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="naam" type="xs:string" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="nummer" type="xs:string" minOccurs="0" maxOccurs="1"/>
+               <xs:element name="uitsnede" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="k:Kaartextent" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="kaartlagen" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="k:Kaartlaag" minOccurs="1" maxOccurs="unbounded"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Kaartlaag" type="k:Kaartlaag" abstract="false"/>
+   <xs:complexType name="Kaartlaag" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="naam" type="xs:string" minOccurs="0" maxOccurs="1"/>
+               <xs:element name="niveau" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+               <xs:element name="activiteitlocatieweergave" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="r:ActiviteitLocatieaanduidingRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="normweergave" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol:OmgevingsnormRef"/>
+                        <xs:element ref="rol:OmgevingswaardeRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="gebiedsaanwijzingweergave" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="ga:GebiedsaanwijzingRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Kaartextent" type="k:Kaartextent" abstract="false"/>
+   <xs:complexType name="Kaartextent" abstract="false">
+      <xs:sequence>
+         <xs:element name="minX" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="minY" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="maxX" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+         <xs:element name="maxY" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:simpleType name="Kaartobjecttype">
+      <xs:restriction base="xs:string"/>
+   </xs:simpleType>
+   <xs:element name="KaartRef" type="k:KaartRef" abstract="false"/>
+   <xs:complexType name="KaartRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

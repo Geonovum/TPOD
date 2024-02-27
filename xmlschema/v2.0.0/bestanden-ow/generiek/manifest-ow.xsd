@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  xmlns:mow="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+  targetNamespace="http://www.geostandaarden.nl/bestanden-ow/manifest-ow"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  version="1.0.4">
+  <xs:element name="Aanleveringen">
+    <xs:annotation>
+      <xs:documentation>Root element van CIM-OW.xml.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="mow:domein"/>
+        <xs:element maxOccurs="1" minOccurs="0" ref="mow:IMOWversie"/>
+        <xs:element maxOccurs="unbounded" minOccurs="1" ref="mow:Aanlevering"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="domein">
+    <xs:annotation>
+      <xs:documentation>Het domein geeft het wetgevingsdomein aan en is nodig om de verwerking in de keten beter te laten verlopen. Het element een vaste waarde "omgevingswet".</xs:documentation>
+    </xs:annotation>
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="omgevingswet"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="Aanlevering">
+    <xs:annotation>
+      <xs:documentation>bestanden die horen bij een specifieke versie van een regeling.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="mow:WorkIDRegeling"/>
+        <xs:element maxOccurs="1" minOccurs="1" ref="mow:DoelID"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="mow:Bestand">
+          <xs:annotation>
+            <xs:documentation>Bestandsnaam van de module volgens CIM-OW opmaak. Het bestand moet ook in de manifest voorkomen.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IMOWversie" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>De IMOW-versie waarmee is aangeleverd. Per 1.0.4 alleen noodzakelijk als aangeleverd is met een oudere versie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="DoelID" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>Verwijzing naar Doel van het besluit.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="WorkIDRegeling" type="xs:anyURI">
+    <xs:annotation>
+      <xs:documentation>Verwijzing naar WorkID van de Regeling.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Bestand">
+    <xs:annotation>
+      <xs:documentation>Basistype voor alle leveringen via Digikoppeling ebMS.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="mow:naam"/>
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="mow:objecttype"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="naam" type="mow:naamType">
+    <xs:annotation>
+      <xs:documentation>Naam van het bestand; moet overeenkomen met de naam zoals in manifest.xml is opgenomen.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="objecttype" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Type van de objecten die in het bestand voorkomen. De toegestane waarde voor het objecttype is beschreven in de CIM-OW documentatie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!--Types-->
+  <xs:simpleType name="naamType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-Za-z\._-]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:op="http://www.geostandaarden.nl/imow/opobject"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:imvert="http://www.imvertor.org/schema/system"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            targetNamespace="http://www.geostandaarden.nl/imow/opobject"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            version="2.0.0">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/opobject</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">1</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20210601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2021-06-01T10:00:00Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/opobject/IMOW_OPobject.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+      schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="OPRegeltekst" type="op:OPRegeltekst" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Abstracte superklasse van het IMOP-model.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="OPRegeltekst" abstract="true">
+      <xs:sequence>
+         <xs:element name="status" minOccurs="0" maxOccurs="1">
+            <!--bij het niet invullen van de status wordt het gezien als nieuw object of mutatie van een bestaand object.-->
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="beëindigen"></xs:enumeration>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="procedurestatus" minOccurs="0" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:enumeration value="ontwerp"></xs:enumeration>
+               </xs:restriction>
+            </xs:simpleType>            
+         </xs:element>
+      </xs:sequence>
+      <xs:attributeGroup ref="op:juridischebron"/>
+   </xs:complexType>
+   <xs:attributeGroup name="juridischebron">
+      <xs:annotation>
+         <xs:documentation>Een identificatie van een work van een regeling, en daarbinnen van de identificatie van een work van een artikel of een formele inhoud (de kleinste eenheid van beheer aan de kant van de officiele publicatie). Voor het op juiste wijze invullen van dit attribute, bekijk de bijbehorende IMOW specificatie.</xs:documentation>
+      </xs:annotation>
+      <xs:attribute name="wId" use="required"/>
+      <!-- van een lid of een artikel -->
+   </xs:attributeGroup>
+   <xs:element name="OPRegeltekstRef"
+      type="op:OPRegeltekstRef"
+      abstract="false"/>
+   <xs:complexType name="OPRegeltekstRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:l="http://www.geostandaarden.nl/imow/locatie" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:imvert="http://www.imvertor.org/schema/system" xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen" xmlns:ow="http://www.geostandaarden.nl/imow/owobject" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.geostandaarden.nl/imow/locatie" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0.0">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/locatie</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20210601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2021-06-01T10:00:00Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/locatie/IMOW_Locatie.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion"> This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org. </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen" schemaLocation="../../IMOW/datatypenalgemeen/IMOW_DatatypenAlgemeen.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/owobject" schemaLocation="../../IMOW/owobject/IMOW_OWobject.xsd"/>
+   <xs:import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="Gebied" type="l:Gebied" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een op zichzelf staande geometrisch afgebakende 'ruimte' in de fysieke leefomgeving. De geometrische afbakening is juridisch van aard, oftewel is niet fysiek van aard en bevindt zich niet in de fysieke werkelijkheid. Anders gezegd, de afbakening is virtueel.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Gebied" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="l:Locatie">
+            <xs:sequence>
+               <xs:element name="hoogte" type="da:WaardeEenheid" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De hoogte waarop de geometrie ligt, in meters.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geometrie" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verwijzing naar een extern beschikbare geometrie, conform simplefeaturetype specification niveau 2: surface, polygon, multisurface. </xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="l:GeometrieRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Locatie" type="l:Locatie" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Duiding van een geografische positie.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Locatie" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie" type="da:NEN3610ID" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De unieke identificatie waaronder elk object van dit type bekend is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="noemer" minOccurs="0" maxOccurs="1">
+                  <xs:simpleType>
+                     <xs:restriction base="xs:string">
+                        <xs:pattern value="\S.*"/>
+                     </xs:restriction>
+                  </xs:simpleType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Gebiedengroep" type="l:Gebiedengroep" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een groep of verzameling van bij elkaar behorende gebieden. De gebieden zijn gegroepeerd voor een bepaald doel, te weten om samen één locatie vormen, welke als zodanig gebruikt kan worden. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Gebiedengroep" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="l:Locatie">
+            <xs:sequence>
+               <xs:element name="groepselement" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een gebied van een gebiedengroep.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="l:GebiedRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Punt" type="l:Punt" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een op zichzelf staande geometrisch afgebakende puntlocatie in de fysieke leefomgeving. De geometrische afbakening is juridisch van aard, oftewel is niet fysiek van aard en bevindt zich niet in de fysieke werkelijkheid. Anders gezegd, de afbakening is virtueel.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Punt" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="l:Locatie">
+            <xs:sequence>
+               <xs:element name="geometrie" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verwijzing naar een extern beschikbare geometrie, conform simplefeaturetype specification niveau 2: Point</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="l:GeometrieRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="hoogte" type="da:WaardeEenheid" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De hoogte waarop de geometrie ligt, in meters.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Puntengroep" type="l:Puntengroep" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een groep of verzameling van bij elkaar behorende punten. De punten zijn gegroepeerd voor een bepaald doel, te weten om samen één locatie vormen, welke als zodanig gebruikt kan worden.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Puntengroep" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="l:Locatie">
+            <xs:sequence>
+               <xs:element name="groepselement" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een punt van een puntengroep.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="l:PuntRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Lijnengroep" type="l:Lijnengroep" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een groep of verzameling van bij elkaar behorende lijnen. De lijnen zijn gegroepeerd voor een bepaald doel, te weten om samen één locatie vormen, welke als zodanig gebruikt kan worden.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Lijnengroep" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="l:Locatie">
+            <xs:sequence>
+               <xs:element name="groepselement" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een lijn van een lijnengroep.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="l:LijnRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Lijn" type="l:Lijn" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een op zichzelf staande geometrisch afgebakende lijnlocatie in de fysieke leefomgeving. De geometrische afbakening is juridisch van aard, oftewel is niet fysiek van aard en bevindt zich niet in de fysieke werkelijkheid. Anders gezegd, de afbakening is virtueel.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Lijn" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="l:Locatie">
+            <xs:sequence>
+               <xs:element name="hoogte" type="da:WaardeEenheid" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De hoogte waarop de geometrie ligt, in meters.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="geometrie" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Verwijzing naar een extern beschikbare geometrie, conform simplefeaturetype specification niveau 2: Curve</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="l:GeometrieRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Ambtsgebied" type="l:Ambtsgebied" abstract="false"/>
+   <xs:complexType name="Ambtsgebied" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="l:Locatie">
+            <xs:sequence>
+               <xs:element name="bestuurlijkeGrenzenVerwijzing" minOccurs="1" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:sequence>
+                        <xs:element ref="l:BestuurlijkeGrenzenVerwijzing" minOccurs="1" maxOccurs="1"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="BestuurlijkeGrenzenVerwijzing" type="l:BestuurlijkeGrenzenVerwijzing" abstract="false"/>
+   <xs:complexType name="BestuurlijkeGrenzenVerwijzing" abstract="false">
+      <xs:sequence>
+         <xs:element name="bestuurlijkeGrenzenID" minOccurs="1" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="(GM|PV|WS|LND)[A-Z0-9.]{1,7}"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="domein" minOccurs="1" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:string">
+                  <xs:pattern value="NL.BI.BestuurlijkGebied"/>
+               </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+         <xs:element name="geldigOp" minOccurs="1" maxOccurs="1">
+            <xs:simpleType>
+               <xs:restriction base="xs:date"> </xs:restriction>
+            </xs:simpleType>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="GebiedRef" type="l:GebiedRef" abstract="false"/>
+   <xs:complexType name="GebiedRef" abstract="false">
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="LocatieRef" type="l:LocatieRef" abstract="false"/>
+   <xs:complexType name="LocatieRef" abstract="false">
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="PuntRef" type="l:PuntRef" abstract="false"/>
+   <xs:complexType name="PuntRef" abstract="false">
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="LijnRef" type="l:LijnRef" abstract="false"/>
+   <xs:complexType name="LijnRef" abstract="false">
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="GeometrieRef" type="l:GeometrieRef" abstract="false"/>
+   <xs:complexType name="GeometrieRef" abstract="false">
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>
