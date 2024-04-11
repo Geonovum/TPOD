@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:imvert="http://www.imvertor.org/schema/system"
+           targetNamespace="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2.0.0">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/datatypenalgemeen</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20210601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2021-06-01T10:00:00Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/datatypenalgemeen/IMOW_DatatypenAlgemeen.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+   </xs:annotation>
+   <xs:element name="WaardeEenheid" type="da:WaardeEenheid" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een specifieke datatype voor het vastleggen van waarden met een eenheid, zoals 5 meter, 30 decibel en andere. </xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="WaardeEenheid" abstract="false">
+      <xs:sequence>
+         <xs:element name="waarde" type="xs:decimal" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een numerieke waarde. </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="eenheid" type="da:Eenheid" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+               <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De grootheid waarin een numerieke waarde wordt uitgedrukt.</xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="NEN3610ID" type="da:NEN3610ID" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Identificatiegegevens voor de universeel unieke identificatie van een object.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:simpleType name="NEN3610ID">
+      <xs:annotation>
+         <xs:documentation>This complex datatype is transformed to a simple type because a content pattern is defined.</xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:string">
+         <xs:pattern value="nl\.imow-(gm|pv|ws|mnre)[0-9]{1,6}\.(regeltekst|gebied|gebiedengroep|lijn|lijnengroep|punt|puntengroep|activiteit|gebiedsaanwijzing|omgevingswaarde|omgevingsnorm|pons|kaart|tekstdeel|hoofdlijn|divisie|kaartlaag|juridischeregel|activiteitlocatieaanduiding|normwaarde|regelingsgebied|ambtsgebied|divisietekst)\.[A-Za-z0-9]{1,32}"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Eenheid">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://wetgeving.omgevingswet.overheid.nl/id/waardelijst/Eenheid</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een uitbreidbare lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

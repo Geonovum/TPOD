@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:r="http://www.geostandaarden.nl/imow/regels"
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:imvert="http://www.imvertor.org/schema/system"
+            xmlns:da="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+            xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+            xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+            xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+            xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+            xmlns:ow="http://www.geostandaarden.nl/imow/owobject"
+            xmlns:op="http://www.geostandaarden.nl/imow/opobject"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            targetNamespace="http://www.geostandaarden.nl/imow/regels"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            version="2.0.0">
+   <xs:annotation>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/uri">http://www.geostandaarden.nl/imow/regels</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/version">1.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/phase">2</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/release">20210601</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generated">2021-06-01T10:00:00Z</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/generator">1.58.0</xs:appinfo>
+      <xs:appinfo source="http://www.imvertor.org/schema-info/owner">Geonovum</xs:appinfo>
+      <xs:documentation source="http://www.imvertor.org/schema-info/file-location">IMOW/regels/IMOW_Regel.xsd</xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/conversion">
+        This schema is based on an UML specification, which is transformed by the Imvertor software. Imvertor modules are in the public domain, see http://www.imvertor.org.
+    </xs:documentation>
+      <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Juridische regels in het domein van de omgevingswet t.b.v. digitaal stelsel omgevingswet. </xs:documentation>
+   </xs:annotation>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/datatypenalgemeen"
+      schemaLocation="../../IMOW/datatypenalgemeen/IMOW_DatatypenAlgemeen.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+      schemaLocation="../../IMOW/gebiedsaanwijzing/IMOW_Gebiedsaanwijzing.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/kaart"
+      schemaLocation="../../IMOW/kaart/IMOW_Kaart.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/locatie"
+      schemaLocation="../../IMOW/locatie/IMOW_Locatie.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/regelsoplocatie"
+      schemaLocation="../../IMOW/regelsoplocatie/IMOW_RegelsOpLocatie.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/owobject"
+      schemaLocation="../../IMOW/owobject/IMOW_OWobject.xsd"/>
+   <xs:import namespace="http://www.geostandaarden.nl/imow/opobject"
+      schemaLocation="../../IMOW/opobject/IMOW_OPobject.xsd"/>
+   <xs:import namespace="http://www.w3.org/1999/xlink"
+      schemaLocation="../../xlink/1.0.0/xlinks.xsd"/>
+   <xs:element name="JuridischeRegel" type="r:JuridischeRegel" abstract="true">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De beschrijving van een regel met juridische werkingskracht. Een regel betreft binnen de Omgevingswet veelal activiteiten, en/of normen en/of functies en/of beperkingengebieden.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="JuridischeRegel" abstract="true">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="idealisatie"
+                           type="r:Idealisatie"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Vastlegging van de manier de begrenzing van Locatie voor deze Juridische regel geïnterpreteerd moet worden en door het bevoegd gezag bedoeld is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="artikelOfLid" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Artikel of lid is waar de Juridische regel onderdeel van is.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element ref="r:RegeltekstRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="thema" type="r:Thema" minOccurs="0" maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Kernachtige weergave van de grondgedachte achter een regel. Een thema kent geen locatie.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="locatieaanduiding" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De locatieaanduiding begrenst de juridische werking van de regel in juridische zin, te weten dat de regel alleen binnen dit werkingsgebied werkingskracht heeft. </xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="l:LocatieRef"/> 
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="gebiedsaanwijzing" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="ga:GebiedsaanwijzingRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="kaartaanduiding" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="k:KaartRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Omgevingswaarderegel"
+               type="r:Omgevingswaarderegel"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Regel over een omgevingswaarde als bedoeld in afdeling 2.3 Omgevingswet, die op zichzelf alleen gericht is tot de bestuursorganen van het bevoegd gezag dat de omgevingswaarde heeft vastgesteld.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Omgevingswaarderegel" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:JuridischeRegel">
+            <xs:sequence>
+               <xs:element name="omgevingswaardeaanduiding" minOccurs="0" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Bij een regel die een omgevingsnorm of omgevingswaarde vastlegt geeft deze relatie aan om welke norm het gaat. De bijbehorende locatie(s) waar het om gaat is/zijn bij de normwaardes van de norm zelf te vinden.</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol:OmgevingswaardeRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="RegelVoorIedereen"
+               type="r:RegelVoorIedereen"
+               abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Juridische regel die voor een ieder relevant is of relevant kan zijn en geen Instructieregel of Omgevingswaarderegel is.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="RegelVoorIedereen" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:JuridischeRegel">
+            <xs:sequence>
+               <xs:element name="activiteitaanduiding" minOccurs="0" maxOccurs="unbounded">
+                  <xs:complexType>
+                     <xs:sequence minOccurs="1" maxOccurs="1">
+                        <xs:choice>
+                           <xs:element ref="rol:ActiviteitRef"/>
+                        </xs:choice>
+                        <xs:element ref="r:ActiviteitLocatieaanduiding"/>
+                     </xs:sequence>
+                  </xs:complexType>
+               </xs:element>
+               <xs:element name="omgevingsnormaanduiding" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol:OmgevingsnormRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Regeltekst" type="r:Regeltekst" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een Regeltekst is de kleinste zelfstandige eenheid van (een of meer) bij elkaar behorende juridische regels. Deze regels horen onlosmakelijk bij elkaar en hebben gezamenlijk één werkingsgebied.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Regeltekst" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="op:OPRegeltekst">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">De unieke identificatie waaronder elk object van dit type bekend is.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="gerelateerdeRegeltekst" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="r:RegeltekstRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="Instructieregel" type="r:Instructieregel" abstract="false">
+      <xs:annotation>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Regel als bedoeld in paragraaf 2.5.1 Omgevingswet, gericht tot een ander bestuursorgaan.</xs:documentation>
+      </xs:annotation>
+   </xs:element>
+   <xs:complexType name="Instructieregel" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="r:JuridischeRegel">
+            <xs:sequence>
+               <xs:element name="instructieregelInstrument"
+                           type="r:Instrument"
+                           minOccurs="0"
+                           maxOccurs="unbounded"/>
+               <xs:element name="instructieregelTaakuitoefening"
+                           type="r:Adressaat"
+                           minOccurs="0"
+                           maxOccurs="unbounded">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Het type bestuursorgaan dat of organisatie die de taak waarover de instructieregel gaat moet uitvoeren.</xs:documentation>
+                  </xs:annotation>
+               </xs:element>
+               <xs:element name="omgevingsnormaanduiding" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="rol:OmgevingsnormRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:element name="ActiviteitLocatieaanduiding"
+               type="r:ActiviteitLocatieaanduiding"
+               abstract="false"/>
+   <xs:complexType name="ActiviteitLocatieaanduiding" abstract="false">
+      <xs:complexContent>
+         <xs:extension base="ow:OWobject">
+            <xs:sequence>
+               <xs:element name="identificatie"
+                           type="da:NEN3610ID"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="activiteitregelkwalificatie"
+                           type="r:Activiteitregelkwalificatie"
+                           minOccurs="1"
+                           maxOccurs="1"/>
+               <xs:element name="locatieaanduiding" minOccurs="1" maxOccurs="1">
+                  <xs:annotation>
+                     <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Deze specifieke activiteit is toegekend aan deze specifieke locatie(s).</xs:documentation>
+                  </xs:annotation>
+                  <xs:complexType>
+                     <xs:choice minOccurs="1" maxOccurs="unbounded">
+                        <xs:element ref="l:LocatieRef"/>
+                     </xs:choice>
+                  </xs:complexType>
+               </xs:element>
+            </xs:sequence>
+         </xs:extension>
+      </xs:complexContent>
+   </xs:complexType>
+   <xs:simpleType name="Thema">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://wetgeving.omgevingswet.overheid.nl/id/waardelijst/Thema</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een limitatieve lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Instrument">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelInstrument</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Adressaat">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/InstructieregelTaakuitoefening</xs:appinfo>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Idealisatie">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Idealisatie</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="Activiteitregelkwalificatie">
+      <xs:annotation>
+         <xs:appinfo source="http://www.imvertor.org/data-info/uri">http://standaarden.omgevingswet.overheid.nl/id/waardelijst/Activiteitregelkwalificatie</xs:appinfo>
+         <xs:documentation source="http://www.imvertor.org/schema-info/technical-documentation">Een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. </xs:documentation>
+      </xs:annotation>
+      <xs:restriction base="xs:anyURI">
+         <xs:pattern value="(http|https)://(wetgeving|standaarden|regelgeving)\.omgevingswet\.overheid\.nl/.*"/>
+      </xs:restriction>
+   </xs:simpleType>
+   <xs:element name="JuridischeRegelRef"
+      type="r:JuridischeRegelRef"
+      abstract="false"/>
+   <xs:complexType name="JuridischeRegelRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="OmgevingswaarderegelRef"
+      type="r:OmgevingswaarderegelRef"
+      abstract="false"/>
+   <xs:complexType name="OmgevingswaarderegelRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="RegelVoorIedereenRef"
+      type="r:RegelVoorIedereenRef"
+      abstract="false"/>
+   <xs:complexType name="RegelVoorIedereenRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="RegeltekstRef" type="r:RegeltekstRef" abstract="false"/>
+   <xs:complexType name="RegeltekstRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="InstructieregelRef"
+      type="r:InstructieregelRef"
+      abstract="false"/>
+   <xs:complexType name="InstructieregelRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+   <xs:element name="ActiviteitLocatieaanduidingRef"
+      type="r:ActiviteitLocatieaanduidingRef"
+      abstract="false"/>
+   <xs:complexType name="ActiviteitLocatieaanduidingRef" abstract="false">
+      <xs:attribute name="type" type="xs:string" fixed="simple"/>
+      <xs:attribute ref="xlink:href" use="required"/>
+   </xs:complexType>
+</xs:schema>

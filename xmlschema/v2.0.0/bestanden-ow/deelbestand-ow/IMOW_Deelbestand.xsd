@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 rel. 2 sp2 (http://www.altova.com) by Paul Janssen (Geonovum) -->
+<xs:schema 
+	xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek"
+	xmlns:ga="http://www.geostandaarden.nl/imow/gebiedsaanwijzing"
+	xmlns:k="http://www.geostandaarden.nl/imow/kaart"
+	xmlns:l="http://www.geostandaarden.nl/imow/locatie" 
+	xmlns:p="http://www.geostandaarden.nl/imow/pons"
+	xmlns:r="http://www.geostandaarden.nl/imow/regels" 
+	xmlns:rg="http://www.geostandaarden.nl/imow/regelingsgebied"
+	xmlns:rol="http://www.geostandaarden.nl/imow/regelsoplocatie"
+	xmlns:s="http://www.geostandaarden.nl/imow/symbolisatie"
+	xmlns:vt="http://www.geostandaarden.nl/imow/vrijetekst" 
+	targetNamespace="http://www.geostandaarden.nl/imow/bestanden/deelbestand" 
+	elementFormDefault="qualified" version="2.0.0">
+	
+	<xs:import namespace="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek" schemaLocation="../generiek/standlevering-generiek.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/locatie" schemaLocation="../../IMOW/locatie/IMOW_Locatie.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/regels" schemaLocation="../../IMOW/regels/IMOW_Regel.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/regelsoplocatie" schemaLocation="../../IMOW/regelsoplocatie/IMOW_RegelsOpLocatie.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/gebiedsaanwijzing" schemaLocation="../../IMOW/gebiedsaanwijzing/IMOW_Gebiedsaanwijzing.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/kaart" schemaLocation="../../IMOW/kaart/IMOW_Kaart.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/pons" schemaLocation="../../IMOW/pons/IMOW_Pons.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/vrijetekst" schemaLocation="../../IMOW/vrijetekst/IMOW_VrijeTekst.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/regelingsgebied" schemaLocation="../../IMOW/regelingsgebied/IMOW_RegelingsGebied.xsd"/>
+	<xs:import namespace="http://www.geostandaarden.nl/imow/symbolisatie" schemaLocation="../../IMOW/symbolisatie/IMOW_Symbolisatie.xsd"/>
+	<xs:element name="owBestand">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sl:standBestand"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="owObject" type="ow-dc:owObject" substitutionGroup="sl:modelObject"/>
+	<xs:complexType name="owObject">
+		<xs:complexContent>
+			<xs:extension base="sl:modelObject">
+				<xs:choice>
+					<xs:element ref="r:Regeltekst"/>
+					<xs:element ref="r:RegelVoorIedereen"/>
+					<xs:element ref="r:Instructieregel"/>
+					<xs:element ref="r:Omgevingswaarderegel"/>
+					<xs:element ref="rol:Activiteit"/>
+					<xs:element ref="rol:Omgevingsnorm"/>
+					<xs:element ref="rol:Omgevingswaarde"/>
+					<xs:element ref="ga:Gebiedsaanwijzing"/>
+					<xs:element ref="l:Gebied"/>
+					<xs:element ref="l:Gebiedengroep"/>
+					<xs:element ref="l:Punt"/>
+					<xs:element ref="l:Puntengroep"/>
+					<xs:element ref="l:Lijn"/>
+					<xs:element ref="l:Lijnengroep"/>
+					<xs:element ref="l:Ambtsgebied"/>
+					<xs:element ref="vt:Divisie"/>
+					<xs:element ref="vt:Divisietekst"/>
+					<xs:element ref="k:Kaartlaag"/>
+					<xs:element ref="k:Kaart"/>
+					<xs:element ref="p:Pons"/>
+					<xs:element ref="vt:Tekstdeel"/>
+					<xs:element ref="vt:Hoofdlijn"/>
+					<xs:element ref="rg:Regelingsgebied"/>
+					<xs:element ref="s:SymbolisatieItem"/>
+				</xs:choice>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
