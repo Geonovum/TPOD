@@ -1,0 +1,4 @@
+Vervang de inhoud van versie door '4.2.0'.
+Vervang de inhoud van publicatiedatum door '2024-10-14'.
+Voeg aan alle waarden eigenschap 'deprecated' is 'false' toe.
+Vervang de inhoud van eigenschap 'deprecated' van waarde met uri 'http://standaarden.omgevingswet.overheid.nl/waterenwatersysteem/id/concept/BoringsvijeZone' door 'true'.
