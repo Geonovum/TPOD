@@ -1,0 +1,5 @@
+De stroke-color van lijnen lt020, lm020, ls020, lth020, lmh020, lsh020 is veranderd van #cdcdcd naar #0000ff.
+De stroke-color van lijnen lt021, lm021, ls021, lth021, lmh021, lsh021 is veranderd van #0000ff naar #cdcdcd.
+De fill-color van punten pk020, pk120, pk220, pv020, pv120, pv220, pc020, pc120, pc220, ps020, ps120, ps220, pd020, pd120, pd220, pr020, pr120, pr220, px020, px120, px220 is veranderd van #cdcdcd naar #0000ff.
+De fill-color van punten pk021, pk121, pk221, pv021, pv121, pv221, pc021, pc121, pc221, ps021, ps121, ps221, pd021, pd121, pd221, pr021, pr121, pr221, px021, px121, px221 is veranderd van #0000ff naar #cdcdcd.
+De stroke-color van vlak vsg130 is veranderd van #c8a0cd naar #c3b9c3.
