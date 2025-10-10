@@ -1,1 +1,0 @@
-Om inzicht te geven in de opbouw van de symbolenbibliotheek is map weergave toegevoegd. Bestand symbolisatie.xhtml geeft de symbolisatie van lijn, punt en vlak weer, bestand waardelijsten.xhtml geeft van alle waardelijsten de gekoppelde weergave weer. De detailinformatie van alle symboolcodes wordt zichtbaar door er met de muis over te gaan.
