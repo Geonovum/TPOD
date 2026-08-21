@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="-8 -8 16 16">
+   <defs>
+      <filter id="crispify">
+         <feComponentTransfer>
+            <feFuncA type="discrete" tableValues="0 1"/>
+         </feComponentTransfer>
+      </filter>
+   </defs>
+   <title>Ster 16</title>
+   <g id="ps1"
+      fill="#ff0000"
+      stroke="#999999"
+      stroke-width="1"
+      stroke-opacity="0"
+      transform="scale(8) rotate(180)"
+      filter="url(#crispify)">
+      <path d="M -0.224513988289793 0.309016994374947 l -0.726542528005361 -0.000000000000000 0.587785252292473 -0.427050983124842 -0.224513988289793 -0.690983005625053 0.587785252292473 0.427050983124842 0.587785252292473 -0.427050983124842 -0.224513988289793 0.690983005625053 0.587785252292473 0.427050983124842 -0.726542528005361 0.000000000000000 -0.224513988289793 0.690983005625053 -0.224513988289793 -0.690983005625053"/>
+   </g>
+</svg>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-15.0 -15.0 30.0 30.0">
+  <defs>
+    <pattern id="tegel" patternUnits="userSpaceOnUse" x="-12" y="-12" width="12" height="12">
+      <g transform="scale(0.25)" fill="#ebc3d7">
+        <circle cx="3" cy="3" r="1"/>
+        <circle cx="11" cy="3" r="1"/>
+        <circle cx="19" cy="3" r="1"/>
+        <circle cx="27" cy="3" r="1"/>
+        <circle cx="35" cy="3" r="1"/>
+        <circle cx="43" cy="3" r="1"/>
+        <circle cx="7" cy="7" r="1"/>
+        <circle cx="15" cy="7" r="1"/>
+        <circle cx="23" cy="7" r="1"/>
+        <circle cx="31" cy="7" r="1"/>
+        <circle cx="39" cy="7" r="1"/>
+        <circle cx="47" cy="7" r="1"/>
+        <circle cx="3" cy="11" r="1"/>
+        <circle cx="11" cy="11" r="1"/>
+        <circle cx="19" cy="11" r="1"/>
+        <circle cx="27" cy="11" r="1"/>
+        <circle cx="35" cy="11" r="1"/>
+        <circle cx="43" cy="11" r="1"/>
+        <circle cx="7" cy="15" r="1"/>
+        <circle cx="15" cy="15" r="1"/>
+        <circle cx="23" cy="15" r="1"/>
+        <circle cx="31" cy="15" r="1"/>
+        <circle cx="39" cy="15" r="1"/>
+        <circle cx="47" cy="15" r="1"/>
+        <circle cx="3" cy="19" r="1"/>
+        <circle cx="11" cy="19" r="1"/>
+        <circle cx="19" cy="19" r="1"/>
+        <circle cx="27" cy="19" r="1"/>
+        <circle cx="35" cy="19" r="1"/>
+        <circle cx="43" cy="19" r="1"/>
+        <circle cx="7" cy="23" r="1"/>
+        <circle cx="15" cy="23" r="1"/>
+        <circle cx="23" cy="23" r="1"/>
+        <circle cx="31" cy="23" r="1"/>
+        <circle cx="39" cy="23" r="1"/>
+        <circle cx="47" cy="23" r="1"/>
+        <circle cx="3" cy="27" r="1"/>
+        <circle cx="11" cy="27" r="1"/>
+        <circle cx="19" cy="27" r="1"/>
+        <circle cx="27" cy="27" r="1"/>
+        <circle cx="35" cy="27" r="1"/>
+        <circle cx="43" cy="27" r="1"/>
+        <circle cx="7" cy="31" r="1"/>
+        <circle cx="15" cy="31" r="1"/>
+        <circle cx="23" cy="31" r="1"/>
+        <circle cx="31" cy="31" r="1"/>
+        <circle cx="39" cy="31" r="1"/>
+        <circle cx="47" cy="31" r="1"/>
+        <circle cx="3" cy="35" r="1"/>
+        <circle cx="11" cy="35" r="1"/>
+        <circle cx="19" cy="35" r="1"/>
+        <circle cx="27" cy="35" r="1"/>
+        <circle cx="35" cy="35" r="1"/>
+        <circle cx="43" cy="35" r="1"/>
+        <circle cx="7" cy="39" r="1"/>
+        <circle cx="15" cy="39" r="1"/>
+        <circle cx="23" cy="39" r="1"/>
+        <circle cx="31" cy="39" r="1"/>
+        <circle cx="39" cy="39" r="1"/>
+        <circle cx="47" cy="39" r="1"/>
+        <circle cx="3" cy="43" r="1"/>
+        <circle cx="11" cy="43" r="1"/>
+        <circle cx="19" cy="43" r="1"/>
+        <circle cx="27" cy="43" r="1"/>
+        <circle cx="35" cy="43" r="1"/>
+        <circle cx="43" cy="43" r="1"/>
+        <circle cx="7" cy="47" r="1"/>
+        <circle cx="15" cy="47" r="1"/>
+        <circle cx="23" cy="47" r="1"/>
+        <circle cx="31" cy="47" r="1"/>
+        <circle cx="39" cy="47" r="1"/>
+        <circle cx="47" cy="47" r="1"/>
+      </g>
+    </pattern>
+  </defs>
+  <title>pastelroze</title>
+  <rect x="-11.5" y="-11.5" width="23" height="23" fill="url(#tegel)" stroke="#ebc3d7" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round"/>
+</svg>

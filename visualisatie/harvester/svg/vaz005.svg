@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-15.0 -15.0 30.0 30.0">
+  <defs>
+    <pattern id="tegel" patternUnits="userSpaceOnUse" x="-12" y="-12" width="12" height="12">
+      <g transform="scale(0.25)" stroke="#ffc8be" stroke-width="2" fill="none">
+        <path d="M1 0 L1 48"/>
+        <path d="M9 0 L9 48"/>
+        <path d="M17 0 L17 48"/>
+        <path d="M25 0 L25 48"/>
+        <path d="M33 0 L33 48"/>
+        <path d="M41 0 L41 48"/>
+      </g>
+    </pattern>
+  </defs>
+  <title>licht zalmroze</title>
+  <rect x="-11.5" y="-11.5" width="23" height="23" fill="url(#tegel)" stroke="#ffc8be" stroke-opacity="0" stroke-width="1" stroke-dasharray="none" stroke-linejoin="round"/>
+</svg>

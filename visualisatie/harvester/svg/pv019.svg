@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="-12.0 -12.0 24.0 24.0">
+   <defs>
+      <filter id="crispify">
+         <feComponentTransfer>
+            <feFuncA type="discrete" tableValues="0 1"/>
+         </feComponentTransfer>
+      </filter>
+   </defs>
+   <title>Vierkant 24</title>
+   <g id="pv0"
+      fill="#82c846"
+      stroke="#999999"
+      stroke-width="1"
+      stroke-opacity="0"
+      transform="scale(12)"
+      filter="url(#crispify)">
+      <path d="M -1.0 1.0 l 0.0 -2.0 2.0 0.0 0.0 2.0 -2.0 0.0"/>
+   </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-15.0 -15.0 30.0 30.0">
+  <defs>
+    <pattern id="tegel" patternUnits="userSpaceOnUse" x="-12" y="-12" width="12" height="12">
+      <g transform="scale(0.25)" stroke="#8080C0" stroke-width="2.1" image-rendering="optimizeQuality" fill="none">
+        <path d="M-0.707 2.121 L2.121 -0.707"/>
+        <path d="M-0.707 18.121 L18.121 -0.707"/>
+        <path d="M-0.707 34.121 L34.121 -0.707"/>
+        <path d="M0.707 48.707 L48.707 0.707"/>
+        <path d="M16.707 48.707 L48.707 16.707"/>
+        <path d="M32.707 48.707 L48.707 32.707"/>
+      </g>
+    </pattern>
+  </defs>
+  <title>lavendel</title>
+  <rect x="-11.5" y="-11.5" width="23" height="23" fill="url(#tegel)" stroke="#8080c0" stroke-opacity="1" stroke-width="2" stroke-dasharray="none" stroke-linejoin="round"/>
+</svg>

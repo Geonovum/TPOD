@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-15.0 -15.0 30.0 30.0">
+  <defs>
+    <pattern id="tegel" patternUnits="userSpaceOnUse" x="-12" y="-12" width="12" height="12">
+      <g transform="scale(0.25)" stroke="#ff78a0" stroke-width="2" fill="none">
+        <path d="M0 7 L48 7"/>
+        <path d="M0 15 L48 15"/>
+        <path d="M0 23 L48 23"/>
+        <path d="M0 31 L48 31"/>
+        <path d="M0 39 L48 39"/>
+        <path d="M0 47 L48 47"/>
+      </g>
+    </pattern>
+  </defs>
+  <title>acaciaroze</title>
+  <rect x="-11.5" y="-11.5" width="23" height="23" fill="url(#tegel)" stroke="#ff78a0" stroke-opacity="0" stroke-width="1" stroke-dasharray="none" stroke-linejoin="round"/>
+</svg>

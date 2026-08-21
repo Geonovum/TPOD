@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-15.0 -15.0 30.0 30.0">
+  <defs>
+    <pattern id="tegel" patternUnits="userSpaceOnUse" x="-12" y="-12" width="12" height="12">
+      <g transform="scale(0.25)" fill="#C0C0FF">
+        <circle cx="11" cy="3" r="2"/>
+        <circle cx="27" cy="3" r="2"/>
+        <circle cx="43" cy="3" r="2"/>
+        <circle cx="3" cy="11" r="2"/>
+        <circle cx="19" cy="11" r="2"/>
+        <circle cx="35" cy="11" r="2"/>
+        <circle cx="11" cy="19" r="2"/>
+        <circle cx="27" cy="19" r="2"/>
+        <circle cx="43" cy="19" r="2"/>
+        <circle cx="3" cy="27" r="2"/>
+        <circle cx="19" cy="27" r="2"/>
+        <circle cx="35" cy="27" r="2"/>
+        <circle cx="11" cy="35" r="2"/>
+        <circle cx="27" cy="35" r="2"/>
+        <circle cx="43" cy="35" r="2"/>
+        <circle cx="3" cy="43" r="2"/>
+        <circle cx="19" cy="43" r="2"/>
+        <circle cx="35" cy="43" r="2"/>
+      </g>
+    </pattern>
+  </defs>
+  <title>licht leisteenblauw</title>
+  <rect x="-11.5" y="-11.5" width="23" height="23" fill="url(#tegel)" stroke="#c0c0ff" stroke-opacity="1" stroke-width="3" stroke-dasharray="5 2" stroke-linejoin="round"/>
+</svg>
