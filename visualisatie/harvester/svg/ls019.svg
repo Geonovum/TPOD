@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12.0 -12.0 24.0 24.0">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="-12.0 -12.0 24.0 24.0">
    <defs>
       <filter id="crispify" filterUnits="userSpaceOnUse" x="-12" y="-12" width="24" height="24">
          <feComponentTransfer>
